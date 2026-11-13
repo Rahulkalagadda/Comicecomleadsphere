@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html data-theme="professional" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>StorySphere Publishing Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}html[data-theme="jungle"]{--color-surface:#F4F8EE;--color-on-surface:#1C3026;--color-surface-container:#E5EED9;--color-surface-container-high:#D9E6C9;--color-primary:#2D6A4F;--color-on-primary:#FFFFFF;--color-primary-container:#D8F3DC;--color-on-primary-container:#081C15;--color-secondary:#52796F;--color-tertiary:#DDA15E;--color-outline-variant:#CAD2C5;--card-radius:1.5rem;--shadow-tactile:0 8px 0px #C7DCB4, 0 14px 20px rgba(36, 84, 59, 0.08);}html[data-theme="professional"]{--color-surface:#F9F9FE;--color-on-surface:#1A1C1F;--color-surface-container:#EDEDF3;--color-surface-container-high:#E8E8ED;--color-primary:#584ABD;--color-on-primary:#FFFFFF;--color-primary-container:#7164D8;--color-on-primary-container:#FFFBFF;--color-secondary:#34675F;--color-tertiary:#755700;--color-outline-variant:#C8C4D5;--card-radius:0.75rem;--shadow-tactile:4px 6px 16px rgba(37, 39, 43, 0.05), -3px -3px 10px rgba(255, 255, 255, 0.8);}.theme-morph{transition:background-color 240ms cubic-bezier(0.4,0,0.2,1),color 240ms cubic-bezier(0.4,0,0.2,1),border-color 240ms cubic-bezier(0.4,0,0.2,1),box-shadow 240ms cubic-bezier(0.4,0,0.2,1);}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#5b4300", "on-background": "#1a1c1f", "inverse-surface": "#2e3035", "surface-variant": "#e2e2e7", "secondary": "#34675f", "inverse-primary": "#c7bfff", "primary": "#584abd", "secondary-container": "#b5eae0", "primary-fixed": "#e4dfff", "on-secondary-fixed": "#00201c", "inverse-on-surface": "#f0f0f6", "surface-container-low": "#f3f3f8", "surface-bright": "#f9f9fe", "surface-container-high": "#e8e8ed", "secondary-fixed-dim": "#9cd1c7", "on-primary-fixed-variant": "#4232a7", "surface-dim": "#d9dadf", "on-error": "#ffffff", "on-secondary-container": "#396b63", "surface": "#f9f9fe", "tertiary-fixed-dim": "#ebc164", "primary-fixed-dim": "#c7bfff", "on-surface-variant": "#474553", "on-secondary": "#ffffff", "surface-tint": "#5a4dc0", "tertiary-fixed": "#ffdf9e", "on-surface": "#1a1c1f", "error-container": "#ffdad6", "on-primary": "#ffffff", "surface-container-highest": "#e2e2e7", "on-tertiary-container": "#fffbff", "error": "#ba1a1a", "primary-container": "#7164d8", "surface-container-lowest": "#ffffff", "tertiary": "#755700", "on-secondary-fixed-variant": "#194f48", "on-primary-fixed": "#170065", "on-tertiary": "#ffffff", "surface-container": "#ededf3", "background": "#f9f9fe", "on-primary-container": "#fffbff", "on-error-container": "#93000a", "outline": "#787584", "outline-variant": "#c8c4d5", "secondary-fixed": "#b8ede3", "on-tertiary-fixed": "#261a00", "tertiary-container": "#916f19" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "space-2xs": "0.25rem", "gutter-desktop": "2rem", "space-2xl": "3rem", "gutter-mobile": "1rem", "space-3xl": "4.5rem", "space-xs": "0.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-sm": "0.75rem", "margin-mobile": "1rem", "margin-desktop": "3rem", "space-xl": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "label-caps": [ "Plus Jakarta Sans" ], "headline-xl": [ "Newsreader" ], "headline-md": [ "Newsreader" ], "display-hero": [ "Newsreader" ], "display-hero-mobile": [ "Newsreader" ], "body-xl": [ "\"Source Serif 4\"" ], "body-lg": [ "\"Source Serif 4\"" ], "headline-xl-mobile": [ "Newsreader" ], "body-md": [ "\"Source Serif 4\"" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Newsreader" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-caps": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-xl": [ "20px", { "lineHeight": "32px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "fontWeight": "400" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "body-md": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface theme-morph min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] theme-morph"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm group focus:outline-none" data-path="explore" href="#"><img alt="StorySphere Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCAjBma5Mu1gmLHuc_1MAwq-Vzix5_kwiqZkLGzxDHz4z4-ONvOrJ1l9nKoX2xnxhzbTl7e60iDlYM-o-mLgEN60fRSps3LUCua9rUVt1wKMBf-7YyXOHsBw3sz-wStHDfgDuFj9WOktC5bcIy_U_RRIg94Ou_xRqC5V5LIAGHunNVXEE9aaRyajVsRHWkm2HGdLw_x__txgBpngVnlAbtIpvlWaj0hUQW7cVihUVviejF3DphS3Id"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">StorySphere</span></a><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="explore" href="#">Explore</a><a aria-current="page" class="transition-colors py-space-xs text-primary font-bold" data-path="books-and-comics" href="#">Books &amp; Comics</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="podcasts" href="#">Podcasts</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="my-library" href="#">My Library</a></nav></div><div class="hidden md:flex flex-1 max-w-xs lg:max-w-md items-center"><div class="w-full flex items-center bg-surface-container-low rounded-full px-space-md py-space-2xs shadow-[inset_2px_2px_5px_rgba(37,39,43,0.04)] focus-within:ring-2 focus-within:ring-primary/40 transition-all"><span class="material-symbols-outlined text-on-surface-variant mr-space-xs text-[20px]">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline py-space-xs" placeholder="Search essays, stories, authors..." type="text"/></div></div><div class="flex items-center gap-space-sm sm:gap-space-md"><div aria-label="Platform Reading Experience Mode" class="relative flex items-center bg-surface-container p-1 rounded-full" role="radiogroup"><button aria-checked="true" class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full font-label-caps text-label-caps bg-surface-container-lowest text-on-surface shadow-sm transition-all" id="theme-prof-btn" onclick="document.documentElement.setAttribute('data-theme','professional'); document.getElementById('theme-jungle-btn').classList.remove('bg-surface-container-lowest','shadow-sm','text-on-surface'); document.getElementById('theme-jungle-btn').classList.add('text-on-surface-variant'); this.classList.add('bg-surface-container-lowest','shadow-sm','text-on-surface'); this.classList.remove('text-on-surface-variant');" type="button"><span class="material-symbols-outlined text-[16px]">auto_awesome</span><span class="hidden sm:inline">Pro</span></button><button aria-checked="false" class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all" id="theme-jungle-btn" onclick="document.documentElement.setAttribute('data-theme','jungle'); document.getElementById('theme-prof-btn').classList.remove('bg-surface-container-lowest','shadow-sm','text-on-surface'); document.getElementById('theme-prof-btn').classList.add('text-on-surface-variant'); this.classList.add('bg-surface-container-lowest','shadow-sm','text-on-surface'); this.classList.remove('text-on-surface-variant');" type="button"><span class="material-symbols-outlined text-[16px]">cruelty_free</span><span class="hidden sm:inline">Jungle</span></button></div><a aria-label="Notifications" class="relative p-space-xs rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors focus:outline-none" data-path="notifications" href="#"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-tertiary"></span></a><a aria-label="Cart" class="relative p-space-xs rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors focus:outline-none" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">local_mall</span><span class="absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full bg-primary text-on-primary font-label-caps text-[10px] leading-tight">2</span></a><div class="flex items-center pl-space-2xs"><a class="rounded-full focus:ring-2 focus:ring-primary focus:outline-none" data-path="account-settings" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHpKW167jfAOXJXUYyTmO-JfQnPTSW4sp7WUN-HxdPF8xrwqOnuO1KIHCW9MHWBknkK0LAgmabRTjcL1oCrp4egjWgsSthpu4Q2LG0ud3ERhrKLNzpAysD2mdhUru3vafTgevE9c4OYbjNFf2rOSTb9sOt9Gq8RGdoMFx_6DuAjKCKQ92CqZrxI_EY72AAUZJ9oAlvbE_4vfc_WETMrzxjT0w1RLb6zJv_0J93dNxwji9jCOtA8QTf"/></a></div><button aria-label="Toggle Mobile Menu" class="xl:hidden p-space-xs text-on-surface-variant hover:text-on-surface focus:outline-none" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button"><span class="material-symbols-outlined text-[26px]">menu</span></button></div></div><div class="hidden xl:hidden bg-surface-container-low px-margin-mobile py-space-md border-t-0 shadow-lg" id="mobile-drawer"><nav class="flex flex-col gap-space-sm mb-space-md" data-active-classes="text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-space-xs" data-path="explore" href="#">Explore</a><a aria-current="page" class="py-space-xs text-primary font-bold" data-path="books-and-comics" href="#">Books &amp; Comics</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-space-xs" data-path="podcasts" href="#">Podcasts</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-space-xs" data-path="my-library" href="#">My Library</a></nav><div class="flex md:hidden w-full items-center bg-surface-container-lowest rounded-full px-space-md py-space-2xs"><span class="material-symbols-outlined text-on-surface-variant mr-space-xs text-[20px]">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline py-space-xs" placeholder="Search essays, stories..." type="text"/></div></div></header><main class="w-full pt-20 bg-surface theme-morph flex-1"><div class="flex flex-col w-full">
+<!-- Interactive Book Header & Showcase Section -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Dimensional Clay Book Cover Canvas -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="relative group mx-auto lg:mx-0 w-full max-w-sm rounded-xl p-space-sm bg-surface-container shadow-tactile transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-surface-container-high shadow-md">
+<img class="w-full h-full object-cover select-none pointer-events-none" data-alt="Intricately illustrated fantasy graphic novel cover titled The Chronicler of Eldoria with tactile hand-sculpted clay aesthetic, mystical glowing runes, an ancient celestial astrolabe, illuminated emerald ivy foliage, rich indigo shadows and warm golden amber lantern light in tactile claymation storybook style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwtnAQTIUyx5W5WFhxZXJ8IhxQUI_B5L9Iv_8vkJUKctDoyDomc-9XtXPJfZqk9h70Eu0OGAdD7xr3Pypq2p9pN7qGGWUJwwPozNv8bSYRUy2HCfwjlcP-Yr_n1cIIjJGD0OGOkF3P1X-9evVHFtBdLd_FpXbvw0Bp4jdl-ukeBh-n4TwALovXUP4aGQwOJFfaknrwhHwvACvj-96p0L5rwkr1qSj0bNZH5z56mHI_tSK16D0mJvfz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-end p-space-md">
+<span class="inline-flex self-start items-center gap-space-2xs px-space-xs py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.92 (1,480 reviews)
+              </span>
+<p class="font-headline-sm text-headline-sm text-surface-container-lowest mt-space-2xs">Collector's Illustrated Tome</p>
+</div>
+</div>
+<!-- Anti-Piracy / Security Assurance Badge -->
+<div class="flex items-center justify-between px-space-xs pt-space-xs text-on-surface-variant">
+<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+              DRM Encrypted Preview
+            </span>
+<span class="font-label-caps text-label-caps text-outline">Ref: ELD-340P-VOL1</span>
+</div>
+</div>
+<!-- Co-Reading Companion Chip (Jungle Mode Dynamic Highlight) -->
+<div class="hidden lg:flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-tertiary-fixed shadow-inner flex items-center justify-center">
+<img alt="Mascot Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHpKW167jfAOXJXUYyTmO-JfQnPTSW4sp7WUN-HxdPF8xrwqOnuO1KIHCW9MHWBknkK0LAgmabRTjcL1oCrp4egjWgsSthpu4Q2LG0ud3ERhrKLNzpAysD2mdhUru3vafTgevE9c4OYbjNFf2rOSTb9sOt9Gq8RGdoMFx_6DuAjKCKQ92CqZrxI_EY72AAUZJ9oAlvbE_4vfc_WETMrzxjT0w1RLb6zJv_0J93dNxwji9jCOtA8QTf"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Curiosity Guide: Barnaby</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active in Jungle Mode to explain runes &amp; clues!</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Meta Information & Purchase Matrix -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Breadcrumbs & Category Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-caps text-label-caps">Graphic Folio</span>
+<span class="px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">Tactile Clay Fantasy</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Dual-Ages 9-99</span>
+<span class="ml-auto font-label-caps text-label-caps text-tertiary font-bold tracking-wider">PREVIEW 10 / 340 PAGES</span>
+</div>
+<!-- Title & Sub-header -->
+<div class="flex flex-col gap-space-2xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">The Chronicler of Eldoria</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">Book &amp; Comic Deluxe Edition — The First Key to the Forgotten Arborium</p>
+</div>
+<!-- Author / Curator Strip -->
+<div class="flex items-center gap-space-md py-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg text-label-lg shadow-sm">
+            AE
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Aria Thorne &amp; Master Sculptor Kip</span>
+<span class="font-body-sm text-body-sm text-outline">StorySphere Resident Fellow • Hand-cast clay environments</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-2xs ml-auto text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+            Audited Archival Release
+          </div>
+</div>
+<!-- Synopsis Excerpt -->
+<p class="font-body-md text-body-md text-on-surface leading-relaxed max-w-3xl">
+          Deep within the living roots of Eldoria, an apprentice cartographer discovers the Clay Curiosities: relics capable of reshaping history through touch and verse. This hand-rendered dual-state volume features 340 tactile illustrated panels, ambient read-aloud orchestrations, and interactive glyph puzzles that adapt across contemplative academic analysis and lively exploratory storytelling.
+        </p>
+<!-- Pricing Card & Primary Conversion Block (Razorpay Powered) -->
+<div class="p-space-lg rounded-xl bg-surface-container shadow-tactile flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-lg">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">$19.99</span>
+<span class="font-body-sm text-body-sm text-outline line-through">$34.90</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary text-on-tertiary font-label-caps text-label-caps">Save 42%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">One-time universal license • Instant unlock for all 340 pages • Dual-view access</p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-lg py-3 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-label-lg text-label-lg shadow-sm flex items-center gap-2 focus:outline-none" onclick="document.getElementById('interactive-reader-viewport').scrollIntoView({ behavior: 'smooth' });" type="button">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+              Read Free Preview
+            </button>
+<button class="px-space-xl py-3 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all font-label-lg text-label-lg shadow-tactile flex items-center gap-2 focus:outline-none" id="razorpay-trigger-btn" onclick="alert('Redirecting securely to Razorpay Checkout for $19.99 (USD). Seamless instant unlock of all 340 pages of The Chronicler of Eldoria.');" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lock_open</span>
+              Unlock Edition
+            </button>
+</div>
+</div>
+<!-- Feature Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm text-center">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[22px]">devices</span>
+<p class="font-label-md text-label-md text-on-surface mt-1">Universal Sync</p>
+<p class="font-label-caps text-label-caps text-outline">Tablet, Web, Audio</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[22px]">palette</span>
+<p class="font-label-md text-label-md text-on-surface mt-1">Dual Perspectives</p>
+<p class="font-label-caps text-label-caps text-outline">Pro &amp; Jungle Views</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-tertiary text-[22px]">headphones</span>
+<p class="font-label-md text-label-md text-on-surface mt-1">Spatial Audio</p>
+<p class="font-label-caps text-label-caps text-outline">Wolf Narration Engine</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[22px]">offline_bolt</span>
+<p class="font-label-md text-label-md text-on-surface mt-1">Encrypted In-App</p>
+<p class="font-label-caps text-label-caps text-outline">Zero Raw Downloads</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reader Frame Anchor -->
+<section class="w-full bg-surface-container-low py-space-2xl transition-colors" id="interactive-reader-viewport">
+<div class="max-w-6xl mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-space-lg">
+<!-- Free Preview Warning & Paywall Heads-Up Bar -->
+<div class="w-full rounded-xl bg-tertiary-fixed text-on-tertiary-fixed p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">info</span>
+<div>
+<span class="font-label-lg text-label-lg font-bold">10-Page Free Preview Sequence</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">Page 10 is the final free preview page. Unlock all 340 pages to continue your journey into Eldoria.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<span class="px-space-sm py-1 rounded-full bg-tertiary text-on-tertiary font-label-caps text-label-caps tracking-wider">
+            FREE ACCESS: 10 / 340
+          </span>
+</div>
+</div>
+<!-- Reader Deck Toolbar -->
+<div class="w-full bg-surface rounded-xl p-space-md shadow-tactile flex flex-wrap items-center justify-between gap-space-md">
+<!-- Left: Page State Navigation -->
+<div class="flex items-center gap-space-sm">
+<button class="p-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors focus:outline-none disabled:opacity-30 disabled:pointer-events-none" id="prev-page-btn" onclick="changeReaderPage(-1)" title="Previous Page" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-space-2xs px-space-sm py-1 rounded-lg bg-surface-container-low">
+<span class="font-label-caps text-label-caps text-outline">PAGE</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold" id="current-page-num">8</span>
+<span class="font-label-caps text-label-caps text-outline">OF 10 (PREVIEW)</span>
+</div>
+<button class="p-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors focus:outline-none" id="next-page-btn" onclick="changeReaderPage(1)" title="Next Page" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<!-- Center: Jump Quick Pills -->
+<div class="hidden md:flex items-center gap-space-2xs">
+<button class="page-step-chip px-2 py-0.5 rounded text-outline font-label-caps text-label-caps hover:bg-surface-container" onclick="setReaderPage(1)">1</button>
+<button class="page-step-chip px-2 py-0.5 rounded text-outline font-label-caps text-label-caps hover:bg-surface-container" onclick="setReaderPage(4)">4</button>
+<button class="page-step-chip px-2 py-0.5 rounded text-outline font-label-caps text-label-caps hover:bg-surface-container" onclick="setReaderPage(7)">7</button>
+<button class="page-step-chip px-2 py-0.5 rounded bg-primary text-on-primary font-label-caps text-label-caps" onclick="setReaderPage(8)">8</button>
+<button class="page-step-chip px-2 py-0.5 rounded text-outline font-label-caps text-label-caps hover:bg-surface-container" onclick="setReaderPage(9)">9</button>
+<button class="page-step-chip px-2 py-0.5 rounded text-outline font-label-caps text-label-caps hover:bg-surface-container" onclick="setReaderPage(10)">10 (Last)</button>
+<button class="page-step-chip px-2 py-0.5 rounded bg-error-container text-error font-label-caps text-label-caps flex items-center gap-0.5" onclick="setReaderPage(11)">
+<span class="material-symbols-outlined text-[13px]">lock</span> 11
+          </button>
+</div>
+<!-- Right: Viewport Controls & Audio/Night Mode -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-label-md font-label-md flex items-center gap-1.5 focus:outline-none" id="speech-narration-btn" onclick="toggleNarration()" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary" id="narration-icon">volume_up</span>
+<span class="hidden sm:inline" id="narration-label">Wolf Read Aloud</span>
+</button>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors focus:outline-none" onclick="document.getElementById('interactive-reader-viewport').classList.toggle('max-w-none')" title="Focus Expansion" type="button">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Reading Progress Bar (Transforms dynamically: Minimal hairline in Pro mode vs Vine Garland in Jungle mode) -->
+<div class="w-full flex flex-col gap-1 px-1">
+<div class="flex justify-between items-center text-label-caps font-label-caps text-outline">
+<span id="progress-mode-label">Free Preview Progress • Chapter 1: The Clay Workshop</span>
+<span id="progress-percent-label">80% of preview consumed</span>
+</div>
+<!-- Progress track -->
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden relative shadow-inner">
+<div class="h-full bg-primary rounded-full transition-all duration-300 relative" id="reader-progress-indicator" style="width: 80%;">
+<!-- Decorative Vine Leaf (styled via script/theme) -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-tertiary rounded-full shadow-sm flex items-center justify-center text-[10px] text-on-tertiary" id="vine-node">
+              •
+            </div>
+</div>
+</div>
+</div>
+<!-- Main Interactive Reading Canvas Window -->
+<div class="relative w-full rounded-2xl bg-surface shadow-2xl overflow-hidden min-h-[640px] flex flex-col lg:flex-row">
+<!-- Live Page Content (Page 8 Active State) -->
+<div class="w-full lg:w-3/5 p-space-xl sm:p-space-2xl flex flex-col justify-between bg-surface-bright relative select-none" id="live-page-surface">
+<!-- Top Page Meta -->
+<div class="flex items-center justify-between pb-space-md border-b-0 text-outline font-label-caps text-label-caps">
+<span>THE CHRONICLER OF ELDORIA</span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              ORIGINAL COLOR ARCHIVE
+            </span>
+<span>FOLIO 08</span>
+</div>
+<!-- Page Body & Graphic Layout -->
+<div class="py-space-md flex flex-col gap-space-lg flex-1 justify-center">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase tracking-widest">Panel Act 1 • Scene 4</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface" id="page-scene-heading">The Awakening of Barnaby's Astrolabe</h2>
+</div>
+<!-- Embedded Comic Panel Vignette -->
+<div class="relative rounded-xl overflow-hidden shadow-tactile bg-surface-container aspect-[16/9] w-full">
+<img class="w-full h-full object-cover" data-alt="Graphic novel panel showing an animated clay-sculpted brown monkey scholar with wide expressive eyes wearing a knit blue vest, excitedly studying an open miniature clay book filled with colorful glowing pictograms on an ancient wooden writing desk bathed in warm studio rim light with soft green moss in the background." id="comic-panel-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSOzyclBgdLYs0K26Wb-FqbvTpe4C7Z2Cjjw0Elx2PPTgksSiZgZ5GlWZ6t_MKUGAMszrdE4aoqEqDk9vpJKJa1_taVGOO0z-aPXum9IRp3I-FvLfzfNItdnKRxf_3Jt0aU7ELYGd4BUvie-YF5NiH0k_U6ziDbDK_Wx0wgxXuYrFljuq8I6pUtF0Mj8IKpCsqm574oseKQiogU3Ge50nqWqnN39qd7nMufWC6nVpQ0FLi-C8m_0J_"/>
+<div class="absolute bottom-2 right-2 px-space-xs py-1 rounded bg-inverse-surface/85 backdrop-blur-sm text-surface-container-lowest font-label-caps text-label-caps">
+                Panel 8 / 12
+              </div>
+</div>
+<!-- Page Dialogue & Narrative Excerpt -->
+<div class="flex flex-col gap-space-xs">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed" id="page-narrative-text">
+                “Look closely at the third dial,” Barnaby whispered, his paws delicately tracing the fired earthenware cogs. The concentric rings did not measure celestial solstices, but the memory of the trees themselves. When aligned to the zenith, the ink on the ancient page began to pulse in quiet viridian light.
+              </p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                Beyond this chamber, the vault gates shuddered. Something ancient had felt the astrolabe turn.
+              </p>
+</div>
+</div>
+<!-- Bottom Footer Navigation Hint -->
+<div class="pt-space-md flex items-center justify-between text-outline font-label-caps text-label-caps">
+<span>StorySphere Encrypted DRM • No Export</span>
+<span>PAGE 8 — FREE SAMPLER</span>
+</div>
+</div>
+<!-- Right Side / Companion Panel: Paywall Preview + Mascot Dynamic Commentary -->
+<div class="w-full lg:w-2/5 bg-surface-container p-space-lg flex flex-col justify-between gap-space-lg relative">
+<!-- Mascot Commentary Bubble (Jungle Mode / Pro Note Mode) -->
+<div class="rounded-xl p-space-md bg-surface-container-lowest shadow-tactile flex flex-col gap-space-xs relative">
+<div class="flex items-center gap-space-sm mb-1">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-tertiary-container shadow-sm flex items-center justify-center flex-shrink-0">
+<img alt="Companion Mascot Barnaby" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHpKW167jfAOXJXUYyTmO-JfQnPTSW4sp7WUN-HxdPF8xrwqOnuO1KIHCW9MHWBknkK0LAgmabRTjcL1oCrp4egjWgsSthpu4Q2LG0ud3ERhrKLNzpAysD2mdhUru3vafTgevE9c4OYbjNFf2rOSTb9sOt9Gq8RGdoMFx_6DuAjKCKQ92CqZrxI_EY72AAUZJ9oAlvbE_4vfc_WETMrzxjT0w1RLb6zJv_0J93dNxwji9jCOtA8QTf"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Barnaby's Margin Curiosity</span>
+<span class="font-label-caps text-label-caps text-tertiary">Interactive Storybook Note</span>
+</div>
+<span class="ml-auto material-symbols-outlined text-tertiary text-[20px]">psychology_alt</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="mascot-dialogue">
+              “Did you spot the spiral symbol carved into the astrolabe base? That corresponds directly to the cipher we saw back on Page 3! Just two more pages until the grand cavern opens!”
+            </p>
+</div>
+<!-- Locked Content Teaser Card (Simulating Page 11 Paywall Barrier) -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-high p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-error">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+                PAGE 11 LOCKED TEASER
+              </span>
+<span class="font-label-caps text-label-caps text-outline">330 Pages Remaining</span>
+</div>
+<!-- Blurred Snippet Preview -->
+<div class="relative rounded-lg overflow-hidden bg-surface-container-lowest p-space-sm select-none">
+<div class="filter blur-[5px] opacity-40 flex flex-col gap-2">
+<div class="h-4 bg-on-surface rounded w-3/4"></div>
+<div class="h-3 bg-outline rounded w-full"></div>
+<div class="h-3 bg-outline rounded w-5/6"></div>
+<div class="h-20 bg-surface-container-high rounded w-full"></div>
+<div class="h-3 bg-outline rounded w-2/3"></div>
+</div>
+<!-- Secure Lock Centerpiece -->
+<div class="absolute inset-0 flex flex-col items-center justify-center p-space-sm text-center bg-inverse-surface/10 backdrop-blur-[2px]">
+<div class="w-10 h-10 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center shadow-lg mb-1">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Chapter 2: The Secret of the Living Arborium</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant max-w-[200px]">Unlock to reveal full colored high-res panels and wolf voice acting</p>
+</div>
+</div>
+<!-- Instant Checkout CTA in Companion Panel -->
+<div class="flex flex-col gap-space-2xs mt-1">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md shadow-tactile transition-all flex items-center justify-center gap-2 focus:outline-none" onclick="alert('Launching secure Razorpay payment modal ($19.99)...');" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+                Unlock All 340 Pages — $19.99
+              </button>
+<div class="flex items-center justify-center gap-space-xs text-outline font-label-caps text-label-caps text-center">
+<span class="material-symbols-outlined text-[13px]">shield</span>
+                256-bit TLS encrypted via Razorpay • Instant Access
+              </div>
+</div>
+</div>
+<!-- Reader Settings Quickbar -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<span class="font-label-caps text-label-caps">FONT SIZE</span>
+<div class="flex items-center gap-space-xs">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface text-label-caps font-bold hover:bg-surface-container-high flex items-center justify-center" onclick="adjustFontSize(-1)">A-</button>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface text-label-caps font-bold hover:bg-surface-container-high flex items-center justify-center" onclick="adjustFontSize(1)">A+</button>
+</div>
+<span class="font-label-caps text-label-caps ml-space-sm">BACKGROUND</span>
+<div class="flex items-center gap-1">
+<button class="w-6 h-6 rounded-full bg-[#FAF7F0] border-0 shadow-sm" onclick="setReaderTint('warm')" title="Warm Parchment"></button>
+<button class="w-6 h-6 rounded-full bg-[#FFFFFF] border-0 shadow-sm" onclick="setReaderTint('white')" title="Pure White"></button>
+<button class="w-6 h-6 rounded-full bg-[#F0F5EC] border-0 shadow-sm" onclick="setReaderTint('sage')" title="Jungle Leaf Mist"></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Free Preview Notice Strip & Razorpay Assurance -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-md rounded-xl bg-surface-container gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">StorySphere Fair-Read Promise</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enjoy pages 1 through 10 with zero payment information required. Love it, or close anytime.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<img alt="Brand Logo" class="h-5 w-auto opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCAjBma5Mu1gmLHuc_1MAwq-Vzix5_kwiqZkLGzxDHz4z4-ONvOrJ1l9nKoX2xnxhzbTl7e60iDlYM-o-mLgEN60fRSps3LUCua9rUVt1wKMBf-7YyXOHsBw3sz-wStHDfgDuFj9WOktC5bcIy_U_RRIg94Ou_xRqC5V5LIAGHunNVXEE9aaRyajVsRHWkm2HGdLw_x__txgBpngVnlAbtIpvlWaj0hUQW7cVihUVviejF3DphS3Id"/>
+<span class="font-label-caps text-label-caps text-outline">SECURE ZERO-DOWNLOAD STREAM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Story Index & Technical Colophon -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-xl">
+<!-- Preview Chapter Breakdown -->
+<div class="flex flex-col gap-space-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Preview Chapters</h3>
+<ul class="flex flex-col gap-space-xs">
+<li class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">1. The Cartographer's Attic</span>
+<span class="font-label-caps text-label-caps text-secondary">Pages 1-3 • Unlocked</span>
+</li>
+<li class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">2. The Whispering Clay Astrolabe</span>
+<span class="font-label-caps text-label-caps text-secondary">Pages 4-7 • Unlocked</span>
+</li>
+<li class="p-space-sm rounded-lg bg-surface-container-high flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">3. Awakening of Barnaby</span>
+<span class="font-label-caps text-label-caps text-primary font-bold">Pages 8-10 • Unlocked</span>
+</li>
+<li class="p-space-sm rounded-lg bg-surface-container-low opacity-60 flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> 4. The Arborium Gates
+            </span>
+<span class="font-label-caps text-label-caps text-error">Pages 11-45 • Locked</span>
+</li>
+<li class="p-space-sm rounded-lg bg-surface-container-low opacity-60 flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> 5. Through the Emerald Canopy
+            </span>
+<span class="font-label-caps text-label-caps text-error">Pages 46-88 • Locked</span>
+</li>
+</ul>
+</div>
+<!-- Claymation Craftsmanship & Technical Specs -->
+<div class="flex flex-col gap-space-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Production Craftsmanship</h3>
+<div class="p-space-md rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">brush</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">3D Hand-Cast Clay Modeling</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every scene was physically sculpted in terracotta and polymer clay, then photogrammetry scanned for extreme tactile texture.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">surround_sound</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Binaural Wolf Audio</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recorded with live cello and forest foley acoustics to transport young readers and adults alike.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Reader Reviews & Community Voices -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface">Readers &amp; Critics</h3>
+<span class="font-label-caps text-label-caps text-secondary font-bold">1,480 VERIFIED</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+            “Switching between Professional and Jungle Mode while reading with my 8-year-old daughter is pure magic. The clay monkey mascot Barnaby keeps her giggling, while I appreciate the sublime typographic pacing.”
+          </p>
+<span class="font-label-caps text-label-caps text-outline mt-1">— Dr. Helena Vance, Oxford Literature Gazette</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript logic for Reader Pagination, Theme synchronization & Reading experience -->
+<script>
+    (function initStorySphereReader() {
+      let currentPage = 8;
+      const maxPreviewPage = 10;
+      let isNarrating = false;
+      let currentFontSizeLevel = 0; // -1, 0, 1
+
+      const pageDatabase = {
+        1: {
+          scene: "The Dust-Dappled Attic of Eldoria",
+          text: "Dust motes danced in the twilight beam slanting through the skylight. Kael stepped over rows of uncataloged clay tablets, his heart quickening as a singular wooden pedestal emerged from the gloom.",
+          mascot: "Barnaby says: Look at the top shelf on the left! That copper hourglass has been counting backwards for 400 years!",
+          panelTag: "Panel 1 / 12"
+        },
+        4: {
+          scene: "The Whispering Clay Astrolabe",
+          text: "The instrument did not feel like cold metal. It was warm, pliable terracotta that hummed like a slumbering cat. As Kael touched the inner ring, miniature constellation glyphs ignited.",
+          mascot: "Barnaby says: The glyphs are written in Old Sylvan! Can you pronounce 'Ael-dor-ian'? It means 'Where roots touch stars'!",
+          panelTag: "Panel 4 / 12"
+        },
+        7: {
+          scene: "The Geometry of Moss and Memory",
+          text: "Lines of silver sap traced paths across the desk, intersecting at coordinates not found on any imperial atlas. The world of Eldoria was breathing directly onto the vellum.",
+          mascot: "Barnaby says: You are so close to the gate reveal! Be ready to turn the dial on page 8!",
+          panelTag: "Panel 7 / 12"
+        },
+        8: {
+          scene: "The Awakening of Barnaby's Astrolabe",
+          text: "“Look closely at the third dial,” Barnaby whispered, his paws delicately tracing the fired earthenware cogs. The concentric rings did not measure celestial solstices, but the memory of the trees themselves. When aligned to the zenith, the ink on the ancient page began to pulse in quiet viridian light.",
+          mascot: "Barnaby says: Did you spot the spiral symbol carved into the astrolabe base? That corresponds directly to the cipher we saw back on Page 3! Just two more pages until the grand cavern opens!",
+          panelTag: "Panel 8 / 12"
+        },
+        9: {
+          scene: "The Luminescent Threshold",
+          text: "The attic walls dissolved into towering trunks of ancient ironwood. Vines of vibrant emerald light wove through the floorboards, pulling the library into a boundless canopy of emerald twilight.",
+          mascot: "Barnaby says: Hold onto your hat! Page 10 brings us right to the ancient stone door of Eldoria's Arborium!",
+          panelTag: "Panel 9 / 12"
+        },
+        10: {
+          scene: "The Gates of the Living Arborium (Final Free Preview)",
+          text: "Standing before a door carved from petrified amber, Kael held the key aloft. Beyond lay 330 pages of untold perils, celestial realms, and the forgotten secrets of the clay guardians.",
+          mascot: "Barnaby says: This is our last free preview page together! Click 'Unlock Edition' below so we can step through the door and meet the Sun Lion!",
+          panelTag: "Panel 10 / 12 (End of Sampler)"
+        }
+      };
+
+      window.setReaderPage = function(pageNum) {
+        if (pageNum > maxPreviewPage) {
+          alert("Page " + pageNum + " is locked! Unlock the full 340-page edition via Razorpay to continue your journey.");
+          return;
+        }
+        currentPage = pageNum;
+        updateReaderDOM();
+      };
+
+      window.changeReaderPage = function(delta) {
+        const target = currentPage + delta;
+        if (target < 1) return;
+        if (target > maxPreviewPage) {
+          alert("You have reached the end of the 10-page free preview! Unlock the full edition ($19.99) to read pages 11 through 340.");
+          return;
+        }
+        currentPage = target;
+        updateReaderDOM();
+      };
+
+      function updateReaderDOM() {
+        document.getElementById('current-page-num').innerText = currentPage;
+        const prevBtn = document.getElementById('prev-page-btn');
+        if (prevBtn) prevBtn.disabled = (currentPage === 1);
+
+        const data = pageDatabase[currentPage] || {
+          scene: "The Journey of Eldoria - Page " + currentPage,
+          text: "The path twists through the enchanted thicket as the pages turn with soft paper whispers...",
+          mascot: "Barnaby is exploring this page with you! Keep turning to reach the climax on Page 10!",
+          panelTag: "Panel " + currentPage + " / 12"
+        };
+
+        const headingEl = document.getElementById('page-scene-heading');
+        const textEl = document.getElementById('page-narrative-text');
+        const mascotEl = document.getElementById('mascot-dialogue');
+
+        if (headingEl) headingEl.innerText = data.scene;
+        if (textEl) textEl.innerText = data.text;
+        if (mascotEl) mascotEl.innerText = data.mascot;
+
+        // Update progress bar
+        const pct = (currentPage / maxPreviewPage) * 100;
+        const progBar = document.getElementById('reader-progress-indicator');
+        const progLabel = document.getElementById('progress-percent-label');
+        if (progBar) progBar.style.width = pct + "%";
+        if (progLabel) progLabel.innerText = Math.round(pct) + "% of preview consumed";
+
+        // Update chips highlight
+        document.querySelectorAll('.page-step-chip').forEach(chip => {
+          if (chip.innerText.trim().startsWith(String(currentPage))) {
+            chip.classList.add('bg-primary', 'text-on-primary');
+            chip.classList.remove('text-outline');
+          } else if (!chip.innerText.includes('11')) {
+            chip.classList.remove('bg-primary', 'text-on-primary');
+            chip.classList.add('text-outline');
+          }
+        });
+      }
+
+      window.toggleNarration = function() {
+        isNarrating = !isNarrating;
+        const icon = document.getElementById('narration-icon');
+        const label = document.getElementById('narration-label');
+        if (isNarrating) {
+          icon.innerText = "stop_circle";
+          icon.style.color = "var(--color-primary)";
+          label.innerText = "Playing Audio...";
+        } else {
+          icon.innerText = "volume_up";
+          icon.style.color = "";
+          label.innerText = "Wolf Read Aloud";
+        }
+      };
+
+      window.adjustFontSize = function(delta) {
+        currentFontSizeLevel = Math.max(-1, Math.min(1, currentFontSizeLevel + delta));
+        const narrative = document.getElementById('page-narrative-text');
+        if (!narrative) return;
+        narrative.classList.remove('text-body-sm', 'text-body-md', 'text-body-lg', 'text-body-xl');
+        if (currentFontSizeLevel === -1) narrative.classList.add('text-body-sm');
+        else if (currentFontSizeLevel === 0) narrative.classList.add('text-body-lg');
+        else if (currentFontSizeLevel === 1) narrative.classList.add('text-body-xl');
+      };
+
+      window.setReaderTint = function(tint) {
+        const page = document.getElementById('live-page-surface');
+        if (!page) return;
+        page.style.backgroundColor = "";
+        if (tint === 'warm') page.style.backgroundColor = "#FAF7F0";
+        if (tint === 'white') page.style.backgroundColor = "#FFFFFF";
+        if (tint === 'sage') page.style.backgroundColor = "#F0F5EC";
+      };
+
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low theme-morph mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-space-xl mb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="StorySphere Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCAjBma5Mu1gmLHuc_1MAwq-Vzix5_kwiqZkLGzxDHz4z4-ONvOrJ1l9nKoX2xnxhzbTl7e60iDlYM-o-mLgEN60fRSps3LUCua9rUVt1wKMBf-7YyXOHsBw3sz-wStHDfgDuFj9WOktC5bcIy_U_RRIg94Ou_xRqC5V5LIAGHunNVXEE9aaRyajVsRHWkm2HGdLw_x__txgBpngVnlAbtIpvlWaj0hUQW7cVihUVviejF3DphS3Id"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">StorySphere</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">A dual-state publishing medium balancing deep editorial contemplation with playful, kinetic storybook discoveries.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container font-label-caps text-label-caps text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary"></span> Dual-Engine Active</span></div></div><div><h4 class="font-label-caps text-label-caps text-on-surface mb-space-md uppercase tracking-wider">Editorial Core</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore" href="#">Essays &amp; Longform</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="books-and-comics" href="#">Illustrated Volumes</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="podcasts" href="#">Audio Commentary</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="creator-fellowship" href="#">Author Submissions</a></li></ul></div><div><h4 class="font-label-caps text-label-caps text-on-surface mb-space-md uppercase tracking-wider">Jungle Realm</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="books-and-comics" href="#">Mascot Quests</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="books-and-comics" href="#">Read Aloud Wolf</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-library" href="#">Family Co-Reading</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-library" href="#">Achievement Badges</a></li></ul></div><div><h4 class="font-label-caps text-label-caps text-on-surface mb-space-md uppercase tracking-wider">Transparency</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-and-privacy" href="#">Archival Standards</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-and-privacy" href="#">Parental Gates</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-and-privacy" href="#">Privacy Manifesto</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-and-privacy" href="#">Colophon</a></li></ul></div></div><div class="pt-space-lg border-t-0 flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-outline">© 2025 StorySphere Platform Inc. Handcrafted typography and tactile narrative engines.</p><div class="flex items-center gap-space-lg"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" data-path="terms-and-privacy" href="#">System Status</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" data-path="terms-and-privacy" href="#">Open Typespecs</a></div></div></div></footer></body></html>

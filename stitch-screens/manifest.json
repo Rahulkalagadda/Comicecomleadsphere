@@ -1,0 +1,92 @@
+[
+  {
+    "index": 1,
+    "id": "b9a061d85ab74d849d7c1104aa0fdcd5",
+    "title": "Lumina — Book Detail & Free Preview",
+    "width": "2560",
+    "height": "6770",
+    "imageFile": "stitch-screens/images/01_b9a061d8_lumina___book_detail___free_preview.png",
+    "htmlFile": "stitch-screens/html/01_b9a061d8_lumina___book_detail___free_preview.html"
+  },
+  {
+    "index": 2,
+    "id": "32f6b21a5ace41de82e309df0460046c",
+    "title": "Lumina Admin — Publishing & Revenue Operations",
+    "width": "2560",
+    "height": "5520",
+    "imageFile": "stitch-screens/images/02_32f6b21a_lumina_admin___publishing___revenue_operations.png",
+    "htmlFile": "stitch-screens/html/02_32f6b21a_lumina_admin___publishing___revenue_operations.html"
+  },
+  {
+    "index": 3,
+    "id": "3068688fe48847a6b720456cac84e619",
+    "title": "Cart & Checkout — Dual Theme",
+    "width": "2560",
+    "height": "2982",
+    "imageFile": "stitch-screens/images/03_3068688f_cart___checkout___dual_theme.png",
+    "htmlFile": "stitch-screens/html/03_3068688f_cart___checkout___dual_theme.html"
+  },
+  {
+    "index": 4,
+    "id": "8f807fb16b8c40ddaf405e6f276b5482",
+    "title": "Book Reader & 10-Page Preview — Dual Theme",
+    "width": "2560",
+    "height": "5582",
+    "imageFile": "stitch-screens/images/04_8f807fb1_book_reader___10-page_preview___dual_theme.png",
+    "htmlFile": "stitch-screens/html/04_8f807fb1_book_reader___10-page_preview___dual_theme.html"
+  },
+  {
+    "index": 5,
+    "id": "45facbf4f93c4d8389b347446b556bac",
+    "title": "Lumina — Podcast Player & Episode Paywall",
+    "width": "2560",
+    "height": "3140",
+    "imageFile": "stitch-screens/images/05_45facbf4_lumina___podcast_player___episode_paywall.png",
+    "htmlFile": "stitch-screens/html/05_45facbf4_lumina___podcast_player___episode_paywall.html"
+  },
+  {
+    "index": 6,
+    "id": "c26f96163cfd43a39db6ab4de4302b41",
+    "title": "Lumina — In-Browser Reader (10-Page Preview & Unlock)",
+    "width": "2560",
+    "height": "3958",
+    "imageFile": "stitch-screens/images/06_c26f9616_lumina___in-browser_reader__10-page_preview___unlock_.png",
+    "htmlFile": "stitch-screens/html/06_c26f9616_lumina___in-browser_reader__10-page_preview___unlock_.html"
+  },
+  {
+    "index": 7,
+    "id": "dd0982d24bd04024acbeb294532e0ebc",
+    "title": "Lumina — Stories Worth Getting Lost In (Homepage)",
+    "width": "2560",
+    "height": "8742",
+    "imageFile": "stitch-screens/images/07_dd0982d2_lumina___stories_worth_getting_lost_in__homepage_.png",
+    "htmlFile": "stitch-screens/html/07_dd0982d2_lumina___stories_worth_getting_lost_in__homepage_.html"
+  },
+  {
+    "index": 8,
+    "id": "7d5614a7538c4c86acf796d2cda57f1f",
+    "title": "Lumina — My Library (Personalized Sanctuary)",
+    "width": "2560",
+    "height": "3756",
+    "imageFile": "stitch-screens/images/08_7d5614a7_lumina___my_library__personalized_sanctuary_.png",
+    "htmlFile": "stitch-screens/html/08_7d5614a7_lumina___my_library__personalized_sanctuary_.html"
+  },
+  {
+    "index": 9,
+    "id": "9b895925785f42a2ac0e7e4da7b4d661",
+    "title": "Homepage — Jungle Theme",
+    "width": "2560",
+    "height": "8828",
+    "imageFile": "stitch-screens/images/09_9b895925_homepage___jungle_theme.png",
+    "htmlFile": "stitch-screens/html/09_9b895925_homepage___jungle_theme.html"
+  },
+  {
+    "index": 10,
+    "id": "03f4d4ca7370422a97827346a90e0306",
+    "title": "Homepage — Professional Theme",
+    "width": "2560",
+    "height": "7666",
+    "imageFile": "stitch-screens/images/10_03f4d4ca_homepage___professional_theme.png",
+    "htmlFile": "stitch-screens/html/10_03f4d4ca_homepage___professional_theme.html"
+  }
+]

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#c7bfff", "error": "#ba1a1a", "inverse-surface": "#2e3035", "on-secondary-fixed-variant": "#194f48", "on-primary": "#ffffff", "outline": "#787584", "on-surface-variant": "#474553", "secondary": "#34675f", "tertiary-container": "#956d34", "secondary-fixed-dim": "#9cd1c7", "surface-container-low": "#f3f3f8", "on-tertiary-fixed-variant": "#614009", "background": "#f9f9fe", "on-primary-container": "#fffbff", "secondary-container": "#b5eae0", "on-error": "#ffffff", "inverse-on-surface": "#f0f0f6", "tertiary": "#79551e", "primary-fixed-dim": "#c7bfff", "surface-container-high": "#e8e8ed", "on-tertiary-fixed": "#291800", "surface": "#f9f9fe", "on-secondary-container": "#396b63", "surface-bright": "#f9f9fe", "on-secondary-fixed": "#00201c", "primary-container": "#7164d8", "surface-container-highest": "#e2e2e7", "on-background": "#1a1c1f", "on-surface": "#1a1c1f", "error-container": "#ffdad6", "on-primary-fixed-variant": "#4232a7", "surface-container": "#ededf3", "on-primary-fixed": "#170065", "tertiary-fixed-dim": "#efbe7d", "surface-dim": "#d9dadf", "tertiary-fixed": "#ffddb3", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "primary": "#584abd", "outline-variant": "#c8c4d5", "primary-fixed": "#e4dfff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "on-tertiary-container": "#fffbff", "surface-tint": "#5a4dc0", "secondary-fixed": "#b8ede3", "surface-variant": "#e2e2e7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "title-md": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Newsreader" ], "label-md": [ "Plus Jakarta Sans" ], "display-hero": [ "Newsreader" ], "body-lg": [ "Inter" ], "headline-lg": [ "Newsreader" ], "body-sm": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Newsreader" ] }, "fontSize": { "title-md": [ "17px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "display-hero-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.015em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_16px_rgba(37,39,43,0.03)]"><div class="h-20 w-full px-margin-mobile lg:px-margin max-w-[1380px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm group" data-path="discover" href="#"><img alt="Lumina Editorial Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U6vvp9khcfgp67_SrlVyHKv0ugKpRa3pQYrn33kCG0d6Y6FgBqYo6KM2cpTcDz2Mab_8io24TcNFlu0hkGFWG0RhuQWeE1TabirPblzsNOVUhmfcT6oZaUWSc7dMxrZHzmH93FoXieLYj3NS3GWSkAS8me-DVYiGwrqz8Us3dU7eZb3cy8QkWetv3IIiTFF3NGqQvYZCDbLag4pHuNFrIHkFV7665YhZdKevEvtsJSs-PIv_w0aJfFP9E"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Lumina</span></a><nav class="hidden lg:flex items-center gap-space-xs p-space-xs bg-surface-container-low rounded-full" data-active-classes="bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(113,100,216,0.25)]"><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-md transition-all bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(113,100,216,0.25)]" data-path="discover" href="#">Discover</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="books" href="#">Books</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="comics" href="#">Comics</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="podcasts" href="#">Podcasts</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-library" href="#">My Library</a></nav></div><div class="hidden md:flex flex-1 max-w-md mx-space-md"><div class="w-full flex items-center px-space-md py-space-xs rounded-full bg-surface-container-high/60 shadow-[inset_1px_1px_3px_rgba(37,39,43,0.06)] focus-within:ring-2 focus-within:ring-primary/40 focus-within:bg-surface-container-lowest transition-all"><span class="material-symbols-outlined text-outline text-[20px] mr-space-sm">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Search titles, authors, creators..." type="text"/></div></div><div class="flex items-center gap-space-sm"><button aria-label="Theme toggle" class="flex items-center p-space-xs px-space-sm rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant transition-all shadow-[inset_0_1px_1px_rgba(255,255,255,0.85)]" title="Theme: Professional / Jungle"><span class="material-symbols-outlined text-[18px] text-secondary">eco</span><span class="hidden xl:inline font-label-sm text-label-sm ml-space-xs">Jungle / Pro</span></button><a aria-label="Wishlist" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">bookmark_heart</span></a><div class="flex items-center pl-space-xs ml-space-xs border-l border-outline-variant/30"><a class="p-0.5 rounded-full ring-2 ring-transparent hover:ring-primary/30 transition-all flex items-center justify-center" data-path="my-library" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj-LXzG4XhRrzg8AUqt28WXvrZI1szfX_bmC-Ir4au3NopDZC3842QHETfMsgeynFYDbrcx1iPrKOQ8sBzuirftJc4L5bA8IrugVGIJ8uJSnDb6COu1gugXrSp6FrGda9ADEZ_m96-OhnfD-vDUtDQDCJyVRh6E6BC4BU27c8Sj3WoLeyBpUUq_y0ZWHIYOMJgRYOoJKvoIr-rrwpkceLEP6LyqpnH0g8-B5qKcws4rm4vZ2jYVqwt"/></a></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="flex w-full min-h-[calc(100vh-5rem)]">
+<!-- Persistent Left Sub-Navigation Sidebar (Operations Hub) -->
+<aside class="w-72 flex-shrink-0 bg-surface-container-low p-space-md flex flex-col justify-between hidden xl:flex">
+<div class="flex flex-col gap-space-lg">
+<!-- Operations Header Badge -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-title-md text-title-md">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface leading-tight">Operations Hub</p>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Cluster v2.4 Live
+              </span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+            Admin
+          </span>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-1">
+<p class="font-label-sm text-label-sm text-outline px-space-sm py-1 uppercase tracking-wider">Intelligence</p>
+<a class="flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-lowest text-primary font-title-md text-title-md shadow-sm" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">space_dashboard</span>
+<span>Overview</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">query_stats</span>
+<span>Revenue Analytics</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span>Orders &amp; Payments</span>
+</a>
+<p class="font-label-sm text-label-sm text-outline px-space-sm pt-space-md pb-1 uppercase tracking-wider">Catalog &amp; Editorial</p>
+<a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+<span>Content Library</span>
+</div>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">482</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span>Books</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+<span>Comics</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">podcasts</span>
+<span>Podcasts</span>
+</a>
+<p class="font-label-sm text-label-sm text-outline px-space-sm pt-space-md pb-1 uppercase tracking-wider">Governance</p>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span>Users &amp; Cohorts</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+<span>Security &amp; Audit</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-title-md text-title-md" href="#">
+<span class="material-symbols-outlined text-[20px]">settings_slow_motion</span>
+<span>Settings</span>
+</a>
+</nav>
+</div>
+<!-- Super Admin Profile Card & System Heartbeat -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Close up editorial studio portrait of a sophisticated modern technology executive with focused and calm expression, soft natural rim lighting, muted linen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_pN0pYFujbnWfIZPNLulCn-0Nm-YhMaAA08XstP8uQfkoC3KYIQJB6TijL2wylrh8F2PjL_y6d87yrQ41G7e9llgUDQZk2w1kiN7mxEG6uZi8HkL91i5VwFj2yxFYOfIeL1RVrnsOn4EP1EuHQ1JbGsFwP64b4H1C4XhU7G_hdZ8ywRv1yPyXEr_CgaLwzevaLtGaZ4U-nzOBjbP9Vdlfy4cRQKuWOi8TQrBOyodtDNqLqoALdpT3"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="min-w-0">
+<p class="font-title-md text-title-md text-on-surface truncate">Devina Thorne</p>
+<p class="font-label-sm text-label-sm text-outline truncate">Super Admin • Ops 01</p>
+</div>
+</div>
+<button aria-label="Sign out or switch workspace" class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">sync_alt</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-sm py-1 bg-surface-container rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Razorpay TLS 1.3 Active</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">0.24ms</span>
+</div>
+</div>
+</aside>
+<!-- Main Operational Workspace -->
+<div class="flex-1 min-w-0 p-space-md lg:p-space-lg xl:p-space-xl flex flex-col gap-space-xl">
+<!-- Dashboard Top Header Bar -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+<span>SYSTEM CONSOLE • EXECUTIVE REPORTING</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mt-1">Platform Performance &amp; Catalog</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time settlement data, reader retention, and 10-page preview conversion velocity.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Currency Toggle Pill -->
+<div class="flex items-center p-1 bg-surface-container rounded-full shadow-inner">
+<button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-sm font-semibold">INR (₹)</button>
+<button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">USD ($)</button>
+<button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">EUR (€)</button>
+</div>
+<!-- Date Range Dropdown Button -->
+<div class="relative">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container-lowest text-on-surface font-title-md text-title-md shadow-sm hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline">calendar_month</span>
+<span>Last 30 Days</span>
+<span class="material-symbols-outlined text-[18px] text-outline">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Quick Action: Upload New Content -->
+<button class="flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-on-primary-container font-title-md text-title-md shadow-md hover:opacity-95 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Upload New Content</span>
+</button>
+</div>
+</section>
+<!-- KPI Summary Cards (5-Column Bento Grid with Neumorphic Elevations) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-space-md">
+<!-- Metric 1: Gross Sales -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between gap-space-sm hover:-translate-y-0.5 transition-transform">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Gross Sales</span>
+<span class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface font-bold">₹1,482,900</p>
+<div class="flex items-center gap-1 mt-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-semibold">+14.2%</span>
+<span class="text-outline">vs prior mo</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Metric 2: Net Revenue -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between gap-space-sm hover:-translate-y-0.5 transition-transform">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Net Settled</span>
+<span class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface font-bold">₹1,348,200</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">Post Razorpay gateway &amp; TDS</p>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Deductions: ₹134.7k</span>
+<span class="text-secondary font-semibold">90.9% Net</span>
+</div>
+</div>
+<!-- Metric 3: Paid Orders -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between gap-space-sm hover:-translate-y-0.5 transition-transform">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Paid Orders</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface font-bold">3,240</p>
+<div class="flex items-center gap-1 mt-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span class="font-semibold">+8.4%</span>
+<span class="text-outline">AOV ₹457</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 64%;"></div>
+</div>
+</div>
+<!-- Metric 4: Preview Conversion -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between gap-space-sm hover:-translate-y-0.5 transition-transform">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">10-Page Conversion</span>
+<span class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface font-bold">18.6%</p>
+<div class="flex items-center gap-1 mt-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-semibold">+3.1%</span>
+<span class="text-outline">preview paywall</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 52%;"></div>
+</div>
+</div>
+<!-- Metric 5: Active Readers -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between gap-space-sm hover:-translate-y-0.5 transition-transform">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Active Readers</span>
+<span class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">local_library</span>
+</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface font-bold">12,850</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">DAU / MAU: 41.8%</p>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>2,140 in active sessions</span>
+</div>
+</div>
+</section>
+<!-- Visual Analytics & Conversion Funnel (Asymmetric 8/4 Grid) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Sales & Content Breakdown Trends (8 Columns) -->
+<div class="lg:col-span-8 p-space-lg bg-surface-container-lowest rounded-2xl shadow-md flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Revenue Velocity &amp; Medium Mix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily gross receipts correlated across Books, Graphic Novels, and Video Podcasts.</p>
+</div>
+<!-- Medium Legend Pills -->
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Books (52%)
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Comics (26%)
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Podcasts (22%)
+              </span>
+</div>
+</div>
+<!-- Interactive SVG Sparkline / Multi-Bar Hybrid Trend -->
+<div class="w-full h-64 relative flex flex-col justify-end">
+<!-- Background Gridlines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full border-b border-outline"></div>
+<div class="w-full border-b border-outline"></div>
+<div class="w-full border-b border-outline"></div>
+<div class="w-full border-b border-outline"></div>
+</div>
+<!-- Stylized Stacked Bar Chart with Curated Colors -->
+<div class="w-full h-52 flex items-end justify-between gap-2 z-10 pt-4">
+<!-- Week 1: 7 days -->
+<div class="flex-1 flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-full flex flex-col gap-0.5 items-center">
+<div class="w-full max-w-[28px] bg-tertiary rounded-t-sm" style="height: 18px;"></div>
+<div class="w-full max-w-[28px] bg-secondary" style="height: 24px;"></div>
+<div class="w-full max-w-[28px] bg-primary rounded-b-sm" style="height: 58px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Oct 01</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-full flex flex-col gap-0.5 items-center">
+<div class="w-full max-w-[28px] bg-tertiary rounded-t-sm" style="height: 22px;"></div>
+<div class="w-full max-w-[28px] bg-secondary" style="height: 30px;"></div>
+<div class="w-full max-w-[28px] bg-primary rounded-b-sm" style="height: 64px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Oct 05</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-full flex flex-col gap-0.5 items-center">
+<div class="w-full max-w-[28px] bg-tertiary rounded-t-sm" style="height: 28px;"></div>
+<div class="w-full max-w-[28px] bg-secondary" style="height: 34px;"></div>
+<div class="w-full max-w-[28px] bg-primary rounded-b-sm" style="height: 82px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Oct 10</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-full flex flex-col gap-0.5 items-center">
+<div class="w-full max-w-[28px] bg-tertiary rounded-t-sm" style="height: 32px;"></div>
+<div class="w-full max-w-[28px] bg-secondary" style="height: 42px;"></div>
+<div class="w-full max-w-[28px] bg-primary rounded-b-sm" style="height: 94px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Oct 15</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-full flex flex-col gap-0.5 items-center">
+<div class="w-full max-w-[28px] bg-tertiary rounded-t-sm" style="height: 26px;"></div>
+<div class="w-full max-w-[28px] bg-secondary" style="height: 38px;"></div>
+<div class="w-full max-w-[28px] bg-primary rounded-b-sm" style="height: 76px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Oct 20</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-full flex flex-col gap-0.5 items-center">
+<div class="w-full max-w-[28px] bg-tertiary rounded-t-sm" style="height: 40px;"></div>
+<div class="w-full max-w-[28px] bg-secondary" style="height: 48px;"></div>
+<div class="w-full max-w-[28px] bg-primary rounded-b-sm" style="height: 104px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Oct 25</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-full flex flex-col gap-0.5 items-center">
+<div class="w-full max-w-[28px] bg-tertiary rounded-t-sm" style="height: 46px;"></div>
+<div class="w-full max-w-[28px] bg-secondary" style="height: 52px;"></div>
+<div class="w-full max-w-[28px] bg-primary rounded-b-sm" style="height: 112px;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Today</span>
+</div>
+</div>
+</div>
+<!-- Bottom Micro Metrics Strip -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-md mt-space-md border-t border-surface-container">
+<div>
+<p class="font-label-sm text-label-sm text-outline">Books Catalog GMV</p>
+<p class="font-title-md text-title-md text-on-surface">₹771,108</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-outline">Graphic Comics GMV</p>
+<p class="font-title-md text-title-md text-on-surface">₹385,554</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-outline">Podcasts &amp; Masterclasses</p>
+<p class="font-title-md text-title-md text-on-surface">₹326,238</p>
+</div>
+</div>
+</div>
+<!-- Live Preview Conversion Funnel (4 Columns) -->
+<div class="lg:col-span-4 p-space-lg bg-surface-container-lowest rounded-2xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface">10-Page Reader Funnel</h2>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live Stream
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Reader drops and conversion across sample reading gates.</p>
+</div>
+<!-- Visual Funnel Stages -->
+<div class="flex flex-col gap-space-md my-space-md">
+<!-- Stage 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-title-md text-title-md text-on-surface flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center">1</span>
+                  Preview Started
+                </span>
+<span class="font-bold text-on-surface">24,620</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 100%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 inline-block">100% of organic reader sample impressions</span>
+</div>
+<!-- Stage 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-title-md text-title-md text-on-surface flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center">2</span>
+                  10th Page Reached
+                </span>
+<span class="font-bold text-on-surface">11,818</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 48%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 inline-block">48.0% retention through opening teaser chapter</span>
+</div>
+<!-- Stage 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-title-md text-title-md text-on-surface flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center">3</span>
+                  Paywall Click / Intent
+                </span>
+<span class="font-bold text-on-surface">5,416</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 22%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 inline-block">45.8% CTR on embedded unlocking trigger</span>
+</div>
+<!-- Stage 4 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-title-md text-title-md text-on-surface flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center justify-center">4</span>
+                  Razorpay Settled
+                </span>
+<span class="font-bold text-secondary">3,240</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 18.6%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold mt-1 inline-block">18.6% overall conversion (Preview → Cash)</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Optimal Sample Length</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">10 Pages (Rule Enabled)</span>
+</div>
+</div>
+</section>
+<!-- Content Management Catalog Table Section -->
+<section class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-sm">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Editorial Catalog Master</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage editions, adjust pricing, inspect preview status, and deploy unpublishing commands.</p>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center px-space-md py-1.5 rounded-full bg-surface-container-low shadow-inner focus-within:bg-surface-container-lowest transition-all">
+<span class="material-symbols-outlined text-outline text-[18px] mr-space-xs">search</span>
+<input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-48" placeholder="Filter title, author, SKU..." type="text"/>
+</div>
+<div class="flex items-center p-1 bg-surface-container-low rounded-full">
+<button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-sm font-medium">All (482)</button>
+<button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">Books</button>
+<button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">Comics</button>
+<button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">Podcasts</button>
+</div>
+</div>
+</div>
+<!-- Catalog Data Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-md text-label-md uppercase tracking-wider rounded-lg">
+<th class="py-3 px-space-md rounded-l-lg">Item &amp; Cover</th>
+<th class="py-3 px-space-md">Type</th>
+<th class="py-3 px-space-md">Price</th>
+<th class="py-3 px-space-md">Lifecycle</th>
+<th class="py-3 px-space-md">10-Page Preview</th>
+<th class="py-3 px-space-md">Conversion</th>
+<th class="py-3 px-space-md text-right rounded-r-lg">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<img class="w-10 h-14 object-cover rounded-lg shadow-sm flex-shrink-0" data-alt="Refined vertical book cover art with minimalist abstract geometric architecture in soft earth and lavender tones, premium foil stamped aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrOILhAm2OUrEohV_rI-oMue14_ojfP_Ih4LF6FBNbwVTi-6pN7uW8UQhoQa2ZloM66CJfD90WmC1NlJW9UInIF2A1bgZdviYa8N47918qt6rr1-Jz-hmscXagDIq5pmP2gT0WH-70yKGEbvPdy4oP9J7Bb3iWueFzJVllq8GOzGnBr8mXaAl4jUqJnj7d4uYhBB5VQ0nQht8xMW4uq7SE1RXCY1Ge1IR22fZQTD3Khid6iD6JLVH7"/>
+<div>
+<p class="font-title-md text-title-md text-on-surface">The Geometry of Silence</p>
+<p class="font-label-sm text-label-sm text-outline">Eleni Vance • Monograph #041</p>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">
+                    Book
+                  </span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+                  ₹549
+                </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Published
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Active (Pages 1-10)
+                  </span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+                  21.4%
+                </td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Edit Content">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Analytics">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-error hover:bg-surface-container transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<img class="w-10 h-14 object-cover rounded-lg shadow-sm flex-shrink-0" data-alt="Graphic novel artwork cover featuring an indigo and teal retro-futuristic metropolis with clean ink linework, subtle grain texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBezDkSkIp_9c5tki_7sKEqOl6QeE4eO5xxrkuh8vE9QrqgBkOcIPfHY3JAgXqZlEyX9jYVplAvLjal2QA8D6wC8GgrB7CfnTT4t2csP5OzDp2bQQxkhJ5sw_QiREh4L5I70G4IgOyKLOd7eVpTAsacFoQ-_RhYSeqtvm6CL2iIGns7Tjg0Cc80PvvjmXFtwdyl7x3-oBYwsHj7dsikc9PbLaIPOQBUitVbHDYkQRlOOODDA9XU2sFa"/>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Neon Biosphere: Act II</p>
+<p class="font-label-sm text-label-sm text-outline">Kaelen Mercer • Graphic Essay</p>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                    Comic
+                  </span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+                  ₹399
+                </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Published
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Active (Pages 1-10)
+                  </span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+                  19.8%
+                </td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Edit Content">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Analytics">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-error hover:bg-surface-container transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<img class="w-10 h-14 object-cover rounded-lg shadow-sm flex-shrink-0" data-alt="Album cover for cultural video broadcast featuring a studio microphone in warm amber ambient light with elegant typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAGgleW7xqGLLLBvlLXdscG6-rHgtYQ1mLl3SFweP9K0wFaKixlNZ_ZJXguw0nS4qVZRRXq-XCVhcTq6AwhVYK4GWbZD8-XKi83HJsAYQG1cZkMhWfLz6sPxoRIEHWhJznPsTWaCSMm6vA6BKNDFhlHLLooAAFZ6a7mCbqbd_Z17AzSLbDq9_YMpulLVBSZw1qi0DnMOzPMmbpfwydNEpocMk2WB71yIXYucmJiRpEZRxD6xMVNALa"/>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Echoes from the Atelier #09</p>
+<p class="font-label-sm text-label-sm text-outline">Lumina Studio • Video Podcast</p>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+                    Podcast
+                  </span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+                  ₹249
+                </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> In Review
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 5-Min Teaser
+                  </span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-outline">
+                  --
+                </td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Edit Content">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Approve">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-error hover:bg-surface-container transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<img class="w-10 h-14 object-cover rounded-lg shadow-sm flex-shrink-0" data-alt="Cover of an architectural anthology book with tactile stone texture, embossed ivory serif lettering, museum curation styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOOqAeAm8srGOILyWGicOvVut_GpfLRFkZ396PwYSbpNcrdHVfTjrSa0YpIxgP2UjHjRcnJckBiEtFv2RiFGySlSQeeemNmW6eGB-ZqwNdY_s3UxMr2XJRMKATNqcFbPg4INj8TSf5MUtiT3uXrmgcY2icHWKTAveuQwZ0QReroMLOUBNbz0e4xQCC-jPNcg7dtfWHNunumn3kTnFuVU1W1FOsfs9LVHW2hrY8rBldGBi5h06544eC"/>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Nordic Sanctuaries &amp; Forms</p>
+<p class="font-label-sm text-label-sm text-outline">Soren Lindqvist • Hardcover Anthology</p>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">
+                    Book
+                  </span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+                  ₹890
+                </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Draft
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error">
+<span class="material-symbols-outlined text-[16px]">cancel</span> Missing Pages
+                  </span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-outline">
+                  --
+                </td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Edit Content">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-error hover:bg-surface-container transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-sm text-body-sm text-outline">
+<p>Displaying 1 – 4 of 482 archival units</p>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md hover:bg-surface-container-high">Previous</button>
+<button class="px-3 py-1 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md">1</button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md hover:bg-surface-container-high">2</button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md hover:bg-surface-container-high">3</button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md hover:bg-surface-container-high">Next</button>
+</div>
+</div>
+</section>
+<!-- Recent Razorpay Transactions & Settlements Feed -->
+<section class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>RAZORPAY DIRECT CAPTURE &amp; SETTLEMENT PIPELINE</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mt-0.5">Recent Reader Transactions</h2>
+</div>
+<button class="flex items-center gap-1 font-label-md text-label-md text-primary hover:underline">
+<span>Export CSV Audit Ledger</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+<!-- Transaction Cards Grid / Micro Row List -->
+<div class="flex flex-col gap-space-xs">
+<!-- TX Item 1 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<p class="font-title-md text-title-md text-on-surface truncate">pay_O9rK18zQ0mE7aB</p>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Captured</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline truncate">arjun.v@atelier-press.in • "The Geometry of Silence" Full Edition</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0">
+<div class="text-right">
+<p class="font-title-md text-title-md text-on-surface font-semibold">₹549.00</p>
+<p class="font-label-sm text-label-sm text-outline">Fee: ₹12.96 • Net ₹536.04</p>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm hover:bg-error-container hover:text-on-error-container transition-colors">
+                Refund
+              </button>
+</div>
+</div>
+<!-- TX Item 2 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<p class="font-title-md text-title-md text-on-surface truncate">pay_O9rJn45yA81kLx</p>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Captured</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline truncate">meera.sen@designcollective.io • "Neon Biosphere: Act II"</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0">
+<div class="text-right">
+<p class="font-title-md text-title-md text-on-surface font-semibold">₹399.00</p>
+<p class="font-label-sm text-label-sm text-outline">Fee: ₹9.42 • Net ₹389.58</p>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm hover:bg-error-container hover:text-on-error-container transition-colors">
+                Refund
+              </button>
+</div>
+</div>
+<!-- TX Item 3 -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">replay</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<p class="font-title-md text-title-md text-on-surface truncate">pay_O9rFd87uW2p4Nq</p>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Refunded</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline truncate">rohan.k@studioflux.org • Duplicate unlock initiated</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0">
+<div class="text-right">
+<p class="font-title-md text-title-md text-error line-through font-semibold">₹549.00</p>
+<p class="font-label-sm text-label-sm text-error">Reversed to Card</p>
+</div>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-outline font-label-sm text-label-sm">
+                Settled
+              </span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface-variant shadow-[0_-4px_20px_rgba(37,39,43,0.02)] mt-space-xl"><div class="w-full px-margin-mobile lg:px-margin max-w-[1380px] mx-auto py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Lumina Editorial Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U6vvp9khcfgp67_SrlVyHKv0ugKpRa3pQYrn33kCG0d6Y6FgBqYo6KM2cpTcDz2Mab_8io24TcNFlu0hkGFWG0RhuQWeE1TabirPblzsNOVUhmfcT6oZaUWSc7dMxrZHzmH93FoXieLYj3NS3GWSkAS8me-DVYiGwrqz8Us3dU7eZb3cy8QkWetv3IIiTFF3NGqQvYZCDbLag4pHuNFrIHkFV7665YhZdKevEvtsJSs-PIv_w0aJfFP9E"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Lumina</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">A serene digital sanctuary engineered for high-caliber literature, graphic essays, and curated cultural broadcast editions.</p><div class="flex items-center gap-space-xs mt-space-sm"><div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">verified</span><span>Razorpay Verified Merchant</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Collections</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="books" href="#">Curated Books</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="comics" href="#">Graphic Novels</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="podcasts" href="#">Video Podcasts</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Archival Editions</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Platform</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="my-library" href="#">Personal Reader</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="wishlist" href="#">Saved Collection</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Audio Player Dock</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Gift Passes</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Editorial</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Monographs</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Licensing Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Privacy Charter</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Support Desk</a></nav></div></div><div class="mt-space-xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md border-t border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm"><p>© 2024 Lumina Publishing &amp; Broadcast Atelier. All rights reserved.</p><div class="flex items-center gap-space-lg"><span>Protected by Razorpay AES-256</span><span>Curated Typography Edition</span></div></div></div></footer></body></html>

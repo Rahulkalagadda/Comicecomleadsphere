@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#c7bfff", "error": "#ba1a1a", "inverse-surface": "#2e3035", "on-secondary-fixed-variant": "#194f48", "on-primary": "#ffffff", "outline": "#787584", "on-surface-variant": "#474553", "secondary": "#34675f", "tertiary-container": "#956d34", "secondary-fixed-dim": "#9cd1c7", "surface-container-low": "#f3f3f8", "on-tertiary-fixed-variant": "#614009", "background": "#f9f9fe", "on-primary-container": "#fffbff", "secondary-container": "#b5eae0", "on-error": "#ffffff", "inverse-on-surface": "#f0f0f6", "tertiary": "#79551e", "primary-fixed-dim": "#c7bfff", "surface-container-high": "#e8e8ed", "on-tertiary-fixed": "#291800", "surface": "#f9f9fe", "on-secondary-container": "#396b63", "surface-bright": "#f9f9fe", "on-secondary-fixed": "#00201c", "primary-container": "#7164d8", "surface-container-highest": "#e2e2e7", "on-background": "#1a1c1f", "on-surface": "#1a1c1f", "error-container": "#ffdad6", "on-primary-fixed-variant": "#4232a7", "surface-container": "#ededf3", "on-primary-fixed": "#170065", "tertiary-fixed-dim": "#efbe7d", "surface-dim": "#d9dadf", "tertiary-fixed": "#ffddb3", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "primary": "#584abd", "outline-variant": "#c8c4d5", "primary-fixed": "#e4dfff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "on-tertiary-container": "#fffbff", "surface-tint": "#5a4dc0", "secondary-fixed": "#b8ede3", "surface-variant": "#e2e2e7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "title-md": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Newsreader" ], "label-md": [ "Plus Jakarta Sans" ], "display-hero": [ "Newsreader" ], "body-lg": [ "Inter" ], "headline-lg": [ "Newsreader" ], "body-sm": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Newsreader" ] }, "fontSize": { "title-md": [ "17px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "display-hero-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.015em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_16px_rgba(37,39,43,0.03)]"><div class="h-20 w-full px-margin-mobile lg:px-margin max-w-[1380px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm group" data-path="discover" href="#"><img alt="Lumina Editorial Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U6vvp9khcfgp67_SrlVyHKv0ugKpRa3pQYrn33kCG0d6Y6FgBqYo6KM2cpTcDz2Mab_8io24TcNFlu0hkGFWG0RhuQWeE1TabirPblzsNOVUhmfcT6oZaUWSc7dMxrZHzmH93FoXieLYj3NS3GWSkAS8me-DVYiGwrqz8Us3dU7eZb3cy8QkWetv3IIiTFF3NGqQvYZCDbLag4pHuNFrIHkFV7665YhZdKevEvtsJSs-PIv_w0aJfFP9E"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Lumina</span></a><nav class="hidden lg:flex items-center gap-space-xs p-space-xs bg-surface-container-low rounded-full" data-active-classes="bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(113,100,216,0.25)]"><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-md transition-all bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(113,100,216,0.25)]" data-path="discover" href="#">Discover</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="books" href="#">Books</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="comics" href="#">Comics</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="podcasts" href="#">Podcasts</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-library" href="#">My Library</a></nav></div><div class="hidden md:flex flex-1 max-w-md mx-space-md"><div class="w-full flex items-center px-space-md py-space-xs rounded-full bg-surface-container-high/60 shadow-[inset_1px_1px_3px_rgba(37,39,43,0.06)] focus-within:ring-2 focus-within:ring-primary/40 focus-within:bg-surface-container-lowest transition-all"><span class="material-symbols-outlined text-outline text-[20px] mr-space-sm">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Search titles, authors, creators..." type="text"/></div></div><div class="flex items-center gap-space-sm"><button aria-label="Theme toggle" class="flex items-center p-space-xs px-space-sm rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant transition-all shadow-[inset_0_1px_1px_rgba(255,255,255,0.85)]" title="Theme: Professional / Jungle"><span class="material-symbols-outlined text-[18px] text-secondary">eco</span><span class="hidden xl:inline font-label-sm text-label-sm ml-space-xs">Jungle / Pro</span></button><a aria-label="Wishlist" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">bookmark_heart</span></a><div class="flex items-center pl-space-xs ml-space-xs border-l border-outline-variant/30"><a class="p-0.5 rounded-full ring-2 ring-transparent hover:ring-primary/30 transition-all flex items-center justify-center" data-path="my-library" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj-LXzG4XhRrzg8AUqt28WXvrZI1szfX_bmC-Ir4au3NopDZC3842QHETfMsgeynFYDbrcx1iPrKOQ8sBzuirftJc4L5bA8IrugVGIJ8uJSnDb6COu1gugXrSp6FrGda9ADEZ_m96-OhnfD-vDUtDQDCJyVRh6E6BC4BU27c8Sj3WoLeyBpUUq_y0ZWHIYOMJgRYOoJKvoIr-rrwpkceLEP6LyqpnH0g8-B5qKcws4rm4vZ2jYVqwt"/></a></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden pb-space-xl">
+<!-- Ambient Tactile Diffuse Backdrops -->
+<div class="absolute top-10 left-1/4 w-96 h-96 rounded-full bg-primary/10 blur-[90px] pointer-events-none -z-10"></div>
+<div class="absolute top-32 right-12 w-80 h-80 rounded-full bg-secondary-container/40 blur-[80px] pointer-events-none -z-10"></div>
+<div class="absolute -bottom-10 left-1/3 w-[32rem] h-64 rounded-full bg-tertiary-fixed-dim/20 blur-[100px] pointer-events-none -z-10"></div>
+<div class="w-full max-w-[1380px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center pt-space-lg lg:pt-space-xl">
+<!-- Left Editorial Typography Stream -->
+<div class="lg:col-span-7 flex flex-col gap-space-md z-10">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-space-xs rounded-full bg-surface-container-high/70 shadow-sm text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">auto_stories</span>
+<span>CURATED LITERARY EDITORIAL • VOL. IX</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight">
+            Stories Worth <br class="hidden sm:inline"/>
+<span class="italic font-normal text-primary">Getting Lost In.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Discover unforgettable books, immersive comics, and podcasts that stay with you. Thoughtfully edited, physical tactility brought to digital life.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-xl py-space-md rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.985]" href="#handpicked">
+<span>Explore Library</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-md rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-md hover:bg-surface-container-low transition-all duration-300 transform hover:-translate-y-0.5" href="#trending">
+<span class="material-symbols-outlined text-secondary text-[18px]">bolt</span>
+<span>Discover What's New</span>
+</a>
+</div>
+<!-- Quick Metrics Bar -->
+<div class="grid grid-cols-3 gap-space-md pt-space-lg max-w-lg">
+<div class="flex flex-col p-space-sm bg-surface-container-low rounded-xl shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">14,800+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Archival Volumes</span>
+</div>
+<div class="flex flex-col p-space-sm bg-surface-container-low rounded-xl shadow-sm">
+<span class="font-headline-sm text-headline-sm text-secondary">10 Pages</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Complimentary Preview</span>
+</div>
+<div class="flex flex-col p-space-sm bg-surface-container-low rounded-xl shadow-sm">
+<span class="font-headline-sm text-headline-sm text-tertiary">4.92 / 5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Critical Praise</span>
+</div>
+</div>
+</div>
+<!-- Right Tactile Dimensional Stage -->
+<div class="lg:col-span-5 relative flex items-center justify-center min-h-[460px]">
+<!-- Claymorphic Base Disk -->
+<div class="absolute w-[360px] h-[360px] rounded-full bg-gradient-to-tr from-surface-container-high via-surface-container to-surface-container-lowest shadow-2xl opacity-80 transform -rotate-6"></div>
+<!-- Floating 3D Hardcover Book Showcase -->
+<div class="relative z-20 w-64 h-96 rounded-xl bg-surface-container-lowest shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 overflow-hidden flex flex-col group">
+<div class="relative w-full h-[72%] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist architectural book cover titled The Glass Archipelago. Pale limestone tones, textured paper feel, rich indigo and amber typographic elements, fine art photography, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj9mj-SXKh1sy39SVaKDpa7MzXL3Fc3eHJHC4HR46Xxg6gTyx1lp0buAidIp3pnXL6JPfE_jEcf0IIPPzla4EPoV2LRKnuM_LAj2dnjQXwY_lpfEObrljqUZiGZmtp_onagAZuI_3avCuRzUwuyTN0myfuDBLx9LdciaQ25vBWsIXNnR8eVe4TIZbWnuvAgmo74eM8AKskjTSI-mHpMcYrNBoRJ4QvOn4_dWoo4YSNn7hobxX-iV-Y"/>
+<!-- Spine Simulation -->
+<div class="absolute top-0 left-0 bottom-0 w-3 bg-gradient-to-r from-on-surface/30 via-on-surface/10 to-transparent"></div>
+<!-- Specular Foil Badge -->
+<div class="absolute top-3 right-3 px-space-xs py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm shadow-md">
+                Hardcover Ed.
+              </div>
+</div>
+<div class="flex-1 p-space-md flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase">Staff Pick • Monograph</p>
+<h3 class="font-title-md text-title-md text-on-surface truncate">The Glass Archipelago</h3>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹849</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Free 10p Read</span>
+</div>
+</div>
+</div>
+<!-- Floating Comic Card (Offset Upper Right) -->
+<div class="absolute -top-4 -right-2 z-30 w-44 rounded-xl bg-surface-container-lowest p-space-xs shadow-xl transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+<div class="w-full h-28 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="High contrast graphic novel panel art featuring neo-noir silhouettes under violet atmospheric rain, subtle paper grain, hand-inked line aesthetic with emerald accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVbqMnqP8StcNHz0D3QtelBWx08GpoB9fs1Du7ZQi9CVQt0fq3zTAVeKJlJtn3yvAzalHcgct1eFzI44ZV6UtCkfzBYLsHfIJt-ZBfpSo4L-s2556CzL576liBli6yhAYMlha3nOaMmomDYBySVLcQm0peVJMcFJRnqBxg4LaDM0fpPChv8Rivpoa0V-Q8_5GZxMa2XiAlHnY1Zgnb7310BNT2eoDZ2yA9ReN6hrf3DZIwiUyHQIKw"/>
+<div class="absolute bottom-1.5 left-1.5 px-space-xs py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm">
+                Graphic Vol. 1
+              </div>
+</div>
+<div class="p-space-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Neon Chronology</p>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm mt-0.5">
+<span>Free Prologue</span>
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+</div>
+</div>
+</div>
+<!-- Cinematic Podcast Floating Badge (Offset Lower Left) -->
+<div class="absolute -bottom-6 -left-4 z-30 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md p-space-md shadow-2xl flex items-center gap-space-md max-w-[280px] transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+<div class="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Macro microphone in dark warm soundproof broadcast studio with ambient teal and amber backlighting, intimate audio documentary feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW2YvKyjrYjXJeA1lE-kz6JdSVyN_IgrDtQ5jiz0M6HmxtJM3RbgAnv3X5ooO2pEGBaJzSi0SCNKTizpuRRPvcLw8RmRymXClScXWcJXD_nd2d8lhwxVbkGOPHWBELcDy6MqslIQ3CLkToD2oqogIbzV0xBxleQOMN-EjMgui2YQ1U8Yi9mWnnmGk_rrIrI8oIKR2OPcMYSg-QBPCGcJc9f4gz7Nt_lCjmbdIt9-EUFGKD-nwZ1HWG"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">mic</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Season Final</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface text-[14px] truncate">Conversations at Dusk</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Ep. 42 • 48 min stream</p>
+</div>
+</div>
+<!-- Decorative Ambient Clay Blob Behind -->
+<div class="absolute -bottom-10 right-4 w-28 h-28 rounded-full bg-tertiary-fixed/30 shadow-inner blur-xs -z-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 1. HANDPICKED FOR YOU (Large Editorial Cards) -->
+<section class="w-full py-space-xl bg-surface-container-low/50" id="handpicked">
+<div class="w-full max-w-[1380px] mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span>CRITICS’ COMPENDIUM</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Handpicked For You</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Exquisite narratives paired with unhurried audio essays and fine art graphic serials.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-space-md py-space-xs rounded-full bg-surface-container-high">Instant 10-Page Preview Enabled</span>
+</div>
+</div>
+<!-- Bento-style Editorial Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Large Primary Feature (8 Cols) -->
+<div class="lg:col-span-8 rounded-2xl bg-surface-container-lowest p-space-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-space-lg">
+<div class="md:w-5/12 h-80 md:h-auto rounded-xl overflow-hidden relative shadow-inner flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Intricate book cover showing an abstract geometric botanical labyrinth in muted jade, sepia and gold leaf, tactile letterpress texture, cinematic light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW2NrvxcUDtPuzC8aY85fq8_vxc3B33pxhPXgk72Y-BPsHfVq01QaXRXWRNrLnLIeFyXwnywOcchHh2Oibi2Jt6Qvny6XSRpjLWFq36BsDXieNJWgHNUZNXUbxw5TTXVbjedafQs5HuNrLXTd2yTD2tLP-nxg31xwy6dsnCiVJfh5jRG1yHHxUq2seUJg14XYbbvQ4lcu34lwO6QoDHopDsa34ebS20hdv-sg4Tfq3cr02Qf6rywH2"/>
+<span class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm shadow-md">
+              Editor of the Month
+            </span>
+<div class="absolute bottom-3 left-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md rounded-lg p-space-xs flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm font-semibold">10-Page Free Excerpt</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+</div>
+<div class="md:w-7/12 flex flex-col justify-between py-space-xs">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Curated Monograph</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1" style="font-variation-settings: 'FILL' 1;">star</span> 4.96 (1,420 Reviews)
+                </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">The Labyrinth of Solitary Hours</h3>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase">By Elena Rostova • 412 Pages</p>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                A sweeping meditative meditation on silence, coastal lighthouses, and the forgotten cartographers of the Northern Baltic archipelagos. Crafted for deep winter reading.
+              </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex flex-wrap items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Digital Collector Edition</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">₹699</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Read Free 10p</span>
+</button>
+<button class="px-space-lg py-space-sm rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-primary-container transition-all flex items-center gap-1">
+<span>Get Edition</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Card: Graphic Serial (4 Cols) -->
+<div class="lg:col-span-4 rounded-2xl bg-surface-container-lowest p-space-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="h-56 rounded-xl overflow-hidden relative shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Cover of a graphic comic album depicting an astronaut wandering an emerald overgrown sunken ruin, lush vegetation, retro sci-fi watercolor aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZI-uxVt7ESJyFDkFdepLx76x2p5Voq7yM2l-hbzs6BxfJRPE2Z2uJIPxqTPjmuGhUyf0aYUgcSSujlH26Bl2t5daXa889Kp84X3hf1q_vRZsmMWppikOTzkOwX9fTa319FAAq4BHkaJ0naz_Ip06ET8sIj6mxvbdZ8iW3u2pltvV6klOwHgow3TDEibgwP9stOiqcQxEBM9mMAot1CU6-XwLgxuWEPsin8ruQHIWV-WTqrN_dEXHY"/>
+<div class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+                Graphic Album • Free Preview
+              </div>
+<div class="absolute bottom-3 right-3 px-space-xs py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">
+                Issue #01
+              </div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">COMIC MASTERWORK</span>
+<h3 class="font-title-md text-title-md text-on-surface">Submerged Horizons</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Marcus Thorne • 88 Full-Color Plates</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                A speculative graphic excursion into sunken architectures and ancient undersea radio frequencies.
+              </p>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Single Volume</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">₹349</p>
+</div>
+<button class="px-space-md py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>10 Free Pages</span>
+</button>
+</div>
+</div>
+<!-- Tertiary Card: Broadcast Series (6 Cols) -->
+<div class="lg:col-span-6 rounded-2xl bg-surface-container-lowest p-space-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-space-md">
+<div class="sm:w-1/2 h-52 sm:h-auto rounded-xl overflow-hidden relative shadow-inner flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Dramatic high-contrast photograph of an open reel-to-reel tape machine in vintage sound studio with soft warm halogen lighting, moody cinematic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdH0S_iAPxIVGmsTg11b0ywvWnwRA3d0Z0_QqjZBYGVB6QFr2HQ0lK8JgbExLteTTYcf8I9D2vi40aVLtNYrbUtwQzie3ndHXPGKODs5sBCY8GDzXXbghfoBuLNU6eKQvNGPydPfEXpTsX8qqQrSp3A2Iisf0TK6iTppbbulCXDIeVZSN1OLC46-R5Jw-0jmSBK7d2mg8s6ej6N8hzk_GnxZAeSknxIsvyBvBBuvxlM-ljQUpqSUFI"/>
+<div class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm">
+              Video • Audio Documentary
+            </div>
+</div>
+<div class="sm:w-1/2 flex flex-col justify-between py-1">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-semibold">PODCAST SPECIAL</span>
+<h4 class="font-title-md text-title-md text-on-surface">The Acoustics of Memory</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Archival Sound Laboratory</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Documenting vanishing world dialects and acoustic archeology across six continents.
+              </p>
+</div>
+<div class="pt-space-sm mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Full 8 Episodes</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">₹499</p>
+</div>
+<button class="px-space-md py-space-sm rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:shadow-md transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Watch Ep 1 Free</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quaternary Card: Essay Anthology (6 Cols) -->
+<div class="lg:col-span-6 rounded-2xl bg-surface-container-lowest p-space-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-space-md">
+<div class="sm:w-1/2 h-52 sm:h-auto rounded-xl overflow-hidden relative shadow-inner flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cover of contemporary typography monograph with abstract paper relief shadows in warm bone and muted ochre tones, refined editorial design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0CxDI31HqujNjaEwu-_clPzPRT9W8yS8oX1-gMYlEEIssTarUol0oyuhTyXPAcsIbGJEplNQBxJZyb0lItYWnLxFRlsdo9iHCGIFNEUqbNAtHfi0Db4tWJujzEdDedIpdUjii7FOijca6OlJlcGA1OrxGgrwn0gWuAjDJuFPH-v3J3_2me9FvfxTcozXqPmuieHug2N7YXIlgtO8gmKb4w7z_cM9xySEse8raAs2ZhYDNP0SZjGYu"/>
+<span class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+              Anthology Edition
+            </span>
+</div>
+<div class="sm:w-1/2 flex flex-col justify-between py-1">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">ESSAYS &amp; CRITICISM</span>
+<h4 class="font-title-md text-title-md text-on-surface">The Printed Senses</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Edited by Julian Vane</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Twelve master designers dissect the tactile power of ink, cellulose, and modern digital typographies.
+              </p>
+</div>
+<div class="pt-space-sm mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Interactive Digital Book</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">₹599</p>
+</div>
+<button class="px-space-md py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Read Free 10p</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. EXPLORE BY CATEGORY (Tactile Neumorphic Dual-Shadow Cards) -->
+<section class="w-full py-space-xl">
+<div class="w-full max-w-[1380px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-xl mx-auto mb-space-xl">
+<span class="px-space-md py-space-xs rounded-full bg-surface-container-high text-secondary font-label-md text-label-md">THREE DISCIPLINARY STREAMS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-space-xs">Explore by Category</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          Engineered for leisurely absorption. Choose your medium and settle into pure focus.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Books Card -->
+<div class="relative group rounded-3xl bg-surface-container-lowest p-space-lg shadow-[4px_6px_20px_rgba(37,39,43,0.04),inset_1px_1px_1px_rgba(255,255,255,0.9)] hover:shadow-[6px_12px_28px_rgba(37,39,43,0.08),inset_1px_1px_1px_rgba(255,255,255,1)] transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low shadow-[inset_1px_1px_3px_rgba(37,39,43,0.08),1px_2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center text-primary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[32px]">auto_stories</span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Curated Books</h3>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">7,200 Titles</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Literary fiction, philosophy, architecture monographs, and essays typeset with uncompromising typographic discipline.
+            </p>
+<div class="space-y-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Includes 10-page preview on every book</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Custom serif typography &amp; night mode</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Offline DRM-free downloads</span>
+</div>
+</div>
+</div>
+<!-- Raised Tactile Button -->
+<a class="w-full py-space-sm px-space-md rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md text-center shadow-[2px_3px_8px_rgba(37,39,43,0.06),inset_0_1px_1px_rgba(255,255,255,0.9)] hover:bg-surface-container hover:shadow-inner active:scale-[0.985] transition-all flex items-center justify-center gap-space-xs" href="#">
+<span>Browse Library Books</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Comics Card -->
+<div class="relative group rounded-3xl bg-surface-container-lowest p-space-lg shadow-[4px_6px_20px_rgba(37,39,43,0.04),inset_1px_1px_1px_rgba(255,255,255,0.9)] hover:shadow-[6px_12px_28px_rgba(37,39,43,0.08),inset_1px_1px_1px_rgba(255,255,255,1)] transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low shadow-[inset_1px_1px_3px_rgba(37,39,43,0.08),1px_2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center text-secondary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[32px]">menu_book</span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Graphic Comics</h3>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container">3,400 Editions</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              High-resolution graphic memoirs, indie science fiction, and sequential fine art with smooth guided panel transitions.
+            </p>
+<div class="space-y-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>High-DPI Retina plate rendering</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Cinematic tap-to-focus panel zoom</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>First chapter always complimentary</span>
+</div>
+</div>
+</div>
+<!-- Raised Tactile Button -->
+<a class="w-full py-space-sm px-space-md rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md text-center shadow-[2px_3px_8px_rgba(37,39,43,0.06),inset_0_1px_1px_rgba(255,255,255,0.9)] hover:bg-surface-container hover:shadow-inner active:scale-[0.985] transition-all flex items-center justify-center gap-space-xs" href="#">
+<span>Explore Graphic Serials</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Podcasts Card -->
+<div class="relative group rounded-3xl bg-surface-container-lowest p-space-lg shadow-[4px_6px_20px_rgba(37,39,43,0.04),inset_1px_1px_1px_rgba(255,255,255,0.9)] hover:shadow-[6px_12px_28px_rgba(37,39,43,0.08),inset_1px_1px_1px_rgba(255,255,255,1)] transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low shadow-[inset_1px_1px_3px_rgba(37,39,43,0.08),1px_2px_4px_rgba(255,255,255,0.9)] flex items-center justify-center text-tertiary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[32px]">podcasts</span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Video Podcasts</h3>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">1,100 Hours</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Cinematic studio broadcasts, longform creator dialogs, and masterclass audio series filmed in 4K studio clarity.
+            </p>
+<div class="space-y-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Background audio dock playback</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Interactive synced transcriptions</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Stream Episode 1 free of charge</span>
+</div>
+</div>
+</div>
+<!-- Raised Tactile Button -->
+<a class="w-full py-space-sm px-space-md rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md text-center shadow-[2px_3px_8px_rgba(37,39,43,0.06),inset_0_1px_1px_rgba(255,255,255,0.9)] hover:bg-surface-container hover:shadow-inner active:scale-[0.985] transition-all flex items-center justify-center gap-space-xs" href="#">
+<span>Listen &amp; Stream</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. TRENDING & NEW RELEASES (Interactive Carousel Cards) -->
+<section class="w-full py-space-xl bg-surface-container-low/40" id="trending">
+<div class="w-full max-w-[1380px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider">THIS WEEK IN REVIEW</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Trending &amp; New Releases</h2>
+</div>
+<!-- Interactive Carousel Filters & Arrows -->
+<div class="flex items-center gap-space-sm">
+<div class="hidden md:flex items-center p-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<button class="px-space-md py-1 rounded-full bg-surface-container-lowest text-on-surface shadow-sm font-semibold">All Works</button>
+<button class="px-space-md py-1 rounded-full hover:text-on-surface transition-colors">Books Only</button>
+<button class="px-space-md py-1 rounded-full hover:text-on-surface transition-colors">Comics</button>
+<button class="px-space-md py-1 rounded-full hover:text-on-surface transition-colors">Audio</button>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Previous" class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-sm hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors" id="scroll-prev">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button aria-label="Next" class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-sm hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors" id="scroll-next">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Scrolling Carousel Container -->
+<div class="flex gap-space-lg overflow-x-auto pb-space-md scroll-smooth snap-x snap-mandatory" id="carousel-track">
+<!-- Card 1 -->
+<div class="w-72 sm:w-80 flex-shrink-0 snap-start rounded-2xl bg-surface-container-lowest p-space-md shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative h-72 rounded-xl overflow-hidden shadow-inner mb-space-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cover of contemporary architectural monograph featuring brutalist concrete sanctuary in misty alpine forest, golden morning backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs_5vcfvt_-4fUvJ0aatHlq8ERdUUlHIl36rolsYr99vhcDsMSC-NieKUh1-fcAH5EsQnasFsytJSYjTFo9NohiD3JzhcNnNbslIq30ukyzPH0sFEEsHrWdjTPGZBMsi_YtyXDJ0GP9H5E57ul2XWWq_NTAuVWBDGaPZ3CBKKJ6QnbtmbpNrr7YUTCKS-8SnOvux5XK7sBODyG8Rk20zetOrme4zKx1xxtLe5KikiJe7OZkmvnSrzv"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+                New Release
+              </div>
+<div class="absolute top-2 right-2 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                10-Page Free
+              </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center px-space-sm py-1 bg-on-surface/80 backdrop-blur-sm rounded-lg text-inverse-on-surface text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9 (830)</span>
+</span>
+<span>Architectural Theory</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-primary font-medium">Hiroshi Takahashi</p>
+<h4 class="font-title-md text-title-md text-on-surface truncate">Forms of Stillness</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              An exploration of quiet spaces, brutalist sanctuaries, and natural acoustics.
+            </p>
+</div>
+<div class="pt-space-sm mt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹749</span>
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow hover:bg-primary-container transition-colors">
+              Instant Access
+            </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="w-72 sm:w-80 flex-shrink-0 snap-start rounded-2xl bg-surface-container-lowest p-space-md shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative h-72 rounded-xl overflow-hidden shadow-inner mb-space-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cover of high octane cyber fantasy graphic novel, vibrant violet, obsidian ink lines, neon calligraphy typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTUqdwN3hE5RVUnOjffuhZjsZPsKbEEMbfrRajF1FUU4sl9zOM0P0lxFrTDyqx6qcyVJIFrCL9M36cKdGAHluKHA8PKa3skEdEJQdsgvf2psYM9IOHHaxQccSGZhcDl53LLl_MxFwefDZ7V7utxBzDu3ajfUwZg5q3IXAw9MiBo057x3i4cwy9MT4heUrZLLQ985SaG7e71nZlx52u5xj2N0vNjpnfpiJxGI3WeOOUCAOl0XVapPtT"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+                Comic #04
+              </div>
+<div class="absolute top-2 right-2 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                Free Preview
+              </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center px-space-sm py-1 bg-on-surface/80 backdrop-blur-sm rounded-lg text-inverse-on-surface text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8 (1,920)</span>
+</span>
+<span>Graphic Novel</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary font-medium">Clara Oswald &amp; Ren</p>
+<h4 class="font-title-md text-title-md text-on-surface truncate">Vortex Protocol</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              The neural underworld awakens beneath subterranean Neo-Geneva.
+            </p>
+</div>
+<div class="pt-space-sm mt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹299</span>
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow hover:bg-primary-container transition-colors">
+              Instant Access
+            </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="w-72 sm:w-80 flex-shrink-0 snap-start rounded-2xl bg-surface-container-lowest p-space-md shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative h-72 rounded-xl overflow-hidden shadow-inner mb-space-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cover of broadcast documentary series showing high mountain astronomical observatory beneath a luminous spiral galaxy, cinematic deep blues and purples" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzVp7Vft60uSNd0mhQnBczHR9ErPG5DBxA1Znphz-JbI0AaxIj-w7RKdTkG6aPeJ1QgBiC0nBWlSibDj1RP0UKfn5-pYGh_YIFpHH5t1S40Rp5FIYTWxt_4TbJ8BCSS85mAOrYxYkKWgK0XuzIYsCWzLHKQhae86AQC0GPtV4L1yfdOEXiIUM1svJSScwQCcH8y7bYL7n0brdyTqIenbxIL-gpgJDbOrmxQcNkSqklSwOWwRlOlHml"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">
+                Video Series
+              </div>
+<div class="absolute top-2 right-2 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                Watch Ep 1
+              </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center px-space-sm py-1 bg-on-surface/80 backdrop-blur-sm rounded-lg text-inverse-on-surface text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0 (420)</span>
+</span>
+<span>Documentary</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-tertiary font-medium">Dr. Samira Khan</p>
+<h4 class="font-title-md text-title-md text-on-surface truncate">The Deep Sky Chronicles</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              Astrophysicists recount revelations from the outermost edge of the visible cosmos.
+            </p>
+</div>
+<div class="pt-space-sm mt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹549</span>
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow hover:bg-primary-container transition-colors">
+              Instant Access
+            </button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="w-72 sm:w-80 flex-shrink-0 snap-start rounded-2xl bg-surface-container-lowest p-space-md shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative h-72 rounded-xl overflow-hidden shadow-inner mb-space-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vintage paper collage book cover with botanical sketches of tea blossoms and hand-written script in warm terracotta and cream tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4K-ysSgawlsTxrUzaS-1cnmsMChStmI_4Sm4sW3VkiSQjiT9SmUrfV1hSO9lGwRhwCePRolTKbRYVG5M0S2UGdfYxdJzy8alUn1zuVPSX9408RkjoqS1FJnj7H2kHO9lLEmjY8cESooH4qDXG-r_yg1qEaCnauiwcIF1VNr_ohGkHbwoYW04WBwnUKacXEvi9lhqMPxzgFJzgF6UdexRfl7VXxgPEXscplXxzRQ2uV_rKWo9OYGpH"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+                Staff Pick
+              </div>
+<div class="absolute top-2 right-2 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                10-Page Free
+              </div>
+<div class="absolute bottom-2 left-2 right-2 flex justify-between items-center px-space-sm py-1 bg-on-surface/80 backdrop-blur-sm rounded-lg text-inverse-on-surface text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.94 (2,100)</span>
+</span>
+<span>Culinary History</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-primary font-medium">Anand Sen</p>
+<h4 class="font-title-md text-title-md text-on-surface truncate">The Darjeeling Ledger</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              Two centuries of mountain fog, copper kettles, and high-elevation terroir storytelling.
+            </p>
+</div>
+<div class="pt-space-sm mt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹429</span>
+<button class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow hover:bg-primary-container transition-colors">
+              Instant Access
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. HOW IT WORKS (3-Step Tactile Elevated Cards) -->
+<section class="w-full py-space-xl">
+<div class="w-full max-w-[1380px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-xl mx-auto mb-space-xl">
+<span class="px-space-md py-space-xs rounded-full bg-secondary-container/60 text-on-secondary-container font-label-md text-label-md">EFFORTLESS JOURNEY</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-space-xs">How Lumina Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          A frictionless reading environment engineered without DRM lockouts or intrusive friction.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="rounded-3xl bg-surface-container-lowest p-space-lg shadow-[4px_6px_20px_rgba(37,39,43,0.04),inset_1px_1px_1px_rgba(255,255,255,0.9)] flex flex-col justify-between relative overflow-hidden">
+<span class="absolute -right-4 -top-6 font-display-hero text-8xl text-surface-container-high/40 select-none font-bold">01</span>
+<div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low shadow-[inset_1px_1px_2px_rgba(37,39,43,0.08),1px_2px_3px_rgba(255,255,255,0.9)] flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">explore</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Discover</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Browse hand-curated monographs, independent comics, and broadcast podcasts reviewed by senior editors and critics.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center gap-space-xs text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Zero sponsored clutter</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="rounded-3xl bg-surface-container-lowest p-space-lg shadow-[4px_6px_20px_rgba(37,39,43,0.04),inset_1px_1px_1px_rgba(255,255,255,0.9)] flex flex-col justify-between relative overflow-hidden">
+<span class="absolute -right-4 -top-6 font-display-hero text-8xl text-surface-container-high/40 select-none font-bold">02</span>
+<div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low shadow-[inset_1px_1px_2px_rgba(37,39,43,0.08),1px_2px_3px_rgba(255,255,255,0.9)] flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">menu_book</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Preview 10 Pages Free</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every single volume grants 10 uncompromised high-fidelity preview pages. Evaluate tone, typography, and depth before committing.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>No sign-up mandatory for previews</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="rounded-3xl bg-surface-container-lowest p-space-lg shadow-[4px_6px_20px_rgba(37,39,43,0.04),inset_1px_1px_1px_rgba(255,255,255,0.9)] flex flex-col justify-between relative overflow-hidden">
+<span class="absolute -right-4 -top-6 font-display-hero text-8xl text-surface-container-high/40 select-none font-bold">03</span>
+<div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low shadow-[inset_1px_1px_2px_rgba(37,39,43,0.08),1px_2px_3px_rgba(255,255,255,0.9)] flex items-center justify-center text-tertiary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Razorpay Instant Read</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Seamless one-click checkout via UPI, Cards, or NetBanking backed by Razorpay. Read instantly in-browser or download offline.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-container flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>256-Bit Razorpay Direct Protocol</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. TACTILE THEME & READING EXPERIENCE DEMONSTRATOR -->
+<section class="w-full py-space-xl bg-surface-container-low/60">
+<div class="w-full max-w-[1380px] mx-auto px-margin-mobile lg:px-margin">
+<div class="rounded-3xl bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md self-start">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>TACTILE READING ENGINE DEMO</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Designed for Sensory Pleasure</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Experience reading that respects your circadian rhythm. Toggle tactile color profiles, adjust line leading, and inspect our gentle neumorphic reader deck.
+            </p>
+<!-- Interactive Neumorphic Controls Demo -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<label class="font-label-md text-label-md text-on-surface">SELECT CANVAS PALETTE</label>
+<div class="flex flex-wrap items-center gap-space-sm" id="theme-pills">
+<button class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface font-label-md text-label-md shadow-inner ring-2 ring-primary flex items-center gap-1.5" data-theme-name="warm-ivory">
+<span class="w-3.5 h-3.5 rounded-full bg-[#f9f9fe] shadow-sm"></span>
+<span>Warm Ivory (Current)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" data-theme-name="jungle-moss">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary shadow-sm"></span>
+<span>Jungle Moss</span>
+</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" data-theme-name="obsidian-nocturne">
+<span class="w-3.5 h-3.5 rounded-full bg-inverse-surface shadow-sm"></span>
+<span>Obsidian Nocturne</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">TYPEFACE ENGINE</span>
+<div class="p-space-sm bg-surface-container-low rounded-xl shadow-[inset_1px_1px_3px_rgba(37,39,43,0.06)] flex items-center justify-between text-on-surface font-title-md text-title-md">
+<span>Newsreader Antiqua</span>
+<span class="material-symbols-outlined text-[18px]">font_download</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">TEXT SCALE PREVIEW</span>
+<div class="p-space-sm bg-surface-container-low rounded-xl shadow-[inset_1px_1px_3px_rgba(37,39,43,0.06)] flex items-center justify-between text-on-surface">
+<span class="text-sm">A</span>
+<div class="w-24 h-1.5 bg-surface-container-high rounded-full relative">
+<div class="absolute left-1/2 -top-1 w-3.5 h-3.5 rounded-full bg-primary shadow-sm -translate-x-1/2"></div>
+</div>
+<span class="text-lg font-bold">A</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Reader Simulation Deck -->
+<div class="lg:col-span-6 rounded-2xl bg-surface-container-low p-space-lg shadow-inner">
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-md transition-all duration-300" id="demo-reader-card">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span>CHAPTER III • THE COASTAL TOWER</span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">bookmark</span> Page 48 of 412
+                </span>
+</div>
+<div class="py-space-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">A Geometry of Rising Salt</h3>
+<p class="font-body-lg text-body-lg text-on-surface/90 leading-relaxed italic mb-space-sm">
+                  “We arrived when the low tide had carved shallow silver trenches into the shale. Nothing moved save for three gray petrels tracing cold parabolas above the fog horns.”
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  The light through the western gallery was thick as unspooled linen. One could hear the clockwork generator pulsing in the cellar, a steady subterranean heartbeat that had survived four changes of dynasty.
+                </p>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">headphones</span>
+<span>Audio sync ready (11 min remaining)</span>
+</span>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>100% Calibrated</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PERSISTENT FLOATING TACTILE AUDIO DOCK -->
+<div class="fixed bottom-6 left-0 right-0 z-40 px-margin-mobile pointer-events-none">
+<div class="max-w-[760px] mx-auto pointer-events-auto">
+<div class="rounded-full bg-surface-container-lowest/95 backdrop-blur-xl p-space-xs px-space-md shadow-[0_12px_28px_rgba(37,39,43,0.1),inset_0_1px_1px_rgba(255,255,255,0.95)] flex items-center justify-between gap-space-md border border-outline-variant/20">
+<!-- Track Thumbnail and Info -->
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-full overflow-hidden flex-shrink-0 shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="Cover of audio essay episode with soundwave waveform overlaid on deep indigo moody sea photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1IYltpOFSrqGK3-vDZcGAdQWfr-5Mdl5WK1oFnyDoNDgfhbyKccezz_7a6wqHI9EulJ02l9jso23ea_lU7uWpQrRiahV1EM8u2Tx6B_Dy391q0PUbIOm7U2FozGkc9DFjyva5ECLAF_WKtpL7MujoUWcPRxPESKyWGO82f1MAdVkgcXzz6tnY8W5kB21c31VF2by7bSIdALotW9IFP3l-N_ZBNPfEEsQd2tZTxahVcZoJAjg-d6Yv"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[18px]">volume_up</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-[13px] text-on-surface truncate">The Archipelago Diaries</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">EP 03</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Reading by Julian Vane • 14:28 / 38:00</span>
+</div>
+</div>
+<!-- Scrub Channel Simulation (Hidden on small mobile) -->
+<div class="hidden sm:flex flex-1 items-center gap-space-sm max-w-xs mx-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">14:28</span>
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden relative cursor-pointer shadow-inner">
+<div class="h-full bg-primary rounded-full w-[38%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">38:00</span>
+</div>
+<!-- Physical Tactile Playback Buttons -->
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button aria-label="Skip back 15 seconds" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface shadow-[inset_1px_1px_2px_rgba(37,39,43,0.06),1px_1px_2px_rgba(255,255,255,0.9)] transition-all active:scale-95" id="dock-rewind">
+<span class="material-symbols-outlined text-[18px]">replay_10</span>
+</button>
+<button aria-label="Play or pause audio" class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_4px_12px_rgba(113,100,216,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)] hover:bg-primary-container transition-all active:scale-95" id="dock-play-pause">
+<span class="material-symbols-outlined text-[24px]" id="dock-play-icon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<button aria-label="Skip forward 30 seconds" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface shadow-[inset_1px_1px_2px_rgba(37,39,43,0.06),1px_1px_2px_rgba(255,255,255,0.9)] transition-all active:scale-95" id="dock-forward">
+<span class="material-symbols-outlined text-[18px]">forward_30</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Script for Carousel & Dock Interactions -->
+<script>
+    (function() {
+      // 1. Trending Carousel scroll
+      const track = document.getElementById('carousel-track');
+      const prevBtn = document.getElementById('scroll-prev');
+      const nextBtn = document.getElementById('scroll-next');
+
+      if (track && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          track.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+          track.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+      }
+
+      // 2. Audio Dock Play / Pause toggle
+      const playBtn = document.getElementById('dock-play-pause');
+      const playIcon = document.getElementById('dock-play-icon');
+      let isPlaying = false;
+
+      if (playBtn && playIcon) {
+        playBtn.addEventListener('click', () => {
+          isPlaying = !isPlaying;
+          playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+        });
+      }
+
+      // 3. Theme switch demonstrator
+      const themeButtons = document.querySelectorAll('#theme-pills button');
+      const demoCard = document.getElementById('demo-reader-card');
+
+      if (themeButtons && demoCard) {
+        themeButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            themeButtons.forEach(b => {
+              b.classList.remove('ring-2', 'ring-primary', 'bg-surface-container');
+              b.classList.add('bg-surface-container-low');
+            });
+            btn.classList.add('ring-2', 'ring-primary', 'bg-surface-container');
+            btn.classList.remove('bg-surface-container-low');
+
+            const theme = btn.getAttribute('data-theme-name');
+            if (theme === 'jungle-moss') {
+              demoCard.style.backgroundColor = '#194f48';
+              demoCard.style.color = '#ffffff';
+              demoCard.querySelectorAll('h3, p, span').forEach(el => el.style.color = '#e8f5f1');
+            } else if (theme === 'obsidian-nocturne') {
+              demoCard.style.backgroundColor = '#1a1c1f';
+              demoCard.style.color = '#f0f0f6';
+              demoCard.querySelectorAll('h3, p, span').forEach(el => el.style.color = '#d9dadf');
+            } else {
+              demoCard.style.backgroundColor = '#ffffff';
+              demoCard.style.color = '';
+              demoCard.querySelectorAll('h3, p, span').forEach(el => el.style.color = '');
+            }
+          });
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface-variant shadow-[0_-4px_20px_rgba(37,39,43,0.02)] mt-space-xl"><div class="w-full px-margin-mobile lg:px-margin max-w-[1380px] mx-auto py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Lumina Editorial Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U6vvp9khcfgp67_SrlVyHKv0ugKpRa3pQYrn33kCG0d6Y6FgBqYo6KM2cpTcDz2Mab_8io24TcNFlu0hkGFWG0RhuQWeE1TabirPblzsNOVUhmfcT6oZaUWSc7dMxrZHzmH93FoXieLYj3NS3GWSkAS8me-DVYiGwrqz8Us3dU7eZb3cy8QkWetv3IIiTFF3NGqQvYZCDbLag4pHuNFrIHkFV7665YhZdKevEvtsJSs-PIv_w0aJfFP9E"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Lumina</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">A serene digital sanctuary engineered for high-caliber literature, graphic essays, and curated cultural broadcast editions.</p><div class="flex items-center gap-space-xs mt-space-sm"><div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">verified</span><span>Razorpay Verified Merchant</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Collections</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="books" href="#">Curated Books</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="comics" href="#">Graphic Novels</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="podcasts" href="#">Video Podcasts</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Archival Editions</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Platform</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="my-library" href="#">Personal Reader</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="wishlist" href="#">Saved Collection</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Audio Player Dock</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Gift Passes</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Editorial</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Monographs</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Licensing Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Privacy Charter</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discover" href="#">Support Desk</a></nav></div></div><div class="mt-space-xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md border-t border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm"><p>© 2024 Lumina Publishing &amp; Broadcast Atelier. All rights reserved.</p><div class="flex items-center gap-space-lg"><span>Protected by Razorpay AES-256</span><span>Curated Typography Edition</span></div></div></div></footer></body></html>

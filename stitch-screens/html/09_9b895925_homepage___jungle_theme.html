@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html data-theme="professional" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>StorySphere Publishing Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}html[data-theme="jungle"]{--color-surface:#F4F8EE;--color-on-surface:#1C3026;--color-surface-container:#E5EED9;--color-surface-container-high:#D9E6C9;--color-primary:#2D6A4F;--color-on-primary:#FFFFFF;--color-primary-container:#D8F3DC;--color-on-primary-container:#081C15;--color-secondary:#52796F;--color-tertiary:#DDA15E;--color-outline-variant:#CAD2C5;--card-radius:1.5rem;--shadow-tactile:0 8px 0px #C7DCB4, 0 14px 20px rgba(36, 84, 59, 0.08);}html[data-theme="professional"]{--color-surface:#F9F9FE;--color-on-surface:#1A1C1F;--color-surface-container:#EDEDF3;--color-surface-container-high:#E8E8ED;--color-primary:#584ABD;--color-on-primary:#FFFFFF;--color-primary-container:#7164D8;--color-on-primary-container:#FFFBFF;--color-secondary:#34675F;--color-tertiary:#755700;--color-outline-variant:#C8C4D5;--card-radius:0.75rem;--shadow-tactile:4px 6px 16px rgba(37, 39, 43, 0.05), -3px -3px 10px rgba(255, 255, 255, 0.8);}.theme-morph{transition:background-color 240ms cubic-bezier(0.4,0,0.2,1),color 240ms cubic-bezier(0.4,0,0.2,1),border-color 240ms cubic-bezier(0.4,0,0.2,1),box-shadow 240ms cubic-bezier(0.4,0,0.2,1);}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#5b4300", "on-background": "#1a1c1f", "inverse-surface": "#2e3035", "surface-variant": "#e2e2e7", "secondary": "#34675f", "inverse-primary": "#c7bfff", "primary": "#584abd", "secondary-container": "#b5eae0", "primary-fixed": "#e4dfff", "on-secondary-fixed": "#00201c", "inverse-on-surface": "#f0f0f6", "surface-container-low": "#f3f3f8", "surface-bright": "#f9f9fe", "surface-container-high": "#e8e8ed", "secondary-fixed-dim": "#9cd1c7", "on-primary-fixed-variant": "#4232a7", "surface-dim": "#d9dadf", "on-error": "#ffffff", "on-secondary-container": "#396b63", "surface": "#f9f9fe", "tertiary-fixed-dim": "#ebc164", "primary-fixed-dim": "#c7bfff", "on-surface-variant": "#474553", "on-secondary": "#ffffff", "surface-tint": "#5a4dc0", "tertiary-fixed": "#ffdf9e", "on-surface": "#1a1c1f", "error-container": "#ffdad6", "on-primary": "#ffffff", "surface-container-highest": "#e2e2e7", "on-tertiary-container": "#fffbff", "error": "#ba1a1a", "primary-container": "#7164d8", "surface-container-lowest": "#ffffff", "tertiary": "#755700", "on-secondary-fixed-variant": "#194f48", "on-primary-fixed": "#170065", "on-tertiary": "#ffffff", "surface-container": "#ededf3", "background": "#f9f9fe", "on-primary-container": "#fffbff", "on-error-container": "#93000a", "outline": "#787584", "outline-variant": "#c8c4d5", "secondary-fixed": "#b8ede3", "on-tertiary-fixed": "#261a00", "tertiary-container": "#916f19" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "space-2xs": "0.25rem", "gutter-desktop": "2rem", "space-2xl": "3rem", "gutter-mobile": "1rem", "space-3xl": "4.5rem", "space-xs": "0.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-sm": "0.75rem", "margin-mobile": "1rem", "margin-desktop": "3rem", "space-xl": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "label-caps": [ "Plus Jakarta Sans" ], "headline-xl": [ "Newsreader" ], "headline-md": [ "Newsreader" ], "display-hero": [ "Newsreader" ], "display-hero-mobile": [ "Newsreader" ], "body-xl": [ "\"Source Serif 4\"" ], "body-lg": [ "\"Source Serif 4\"" ], "headline-xl-mobile": [ "Newsreader" ], "body-md": [ "\"Source Serif 4\"" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Newsreader" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-caps": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-xl": [ "20px", { "lineHeight": "32px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "fontWeight": "400" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "body-md": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface theme-morph min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] theme-morph"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm group focus:outline-none" data-path="explore" href="#"><img alt="StorySphere Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCAjBma5Mu1gmLHuc_1MAwq-Vzix5_kwiqZkLGzxDHz4z4-ONvOrJ1l9nKoX2xnxhzbTl7e60iDlYM-o-mLgEN60fRSps3LUCua9rUVt1wKMBf-7YyXOHsBw3sz-wStHDfgDuFj9WOktC5bcIy_U_RRIg94Ou_xRqC5V5LIAGHunNVXEE9aaRyajVsRHWkm2HGdLw_x__txgBpngVnlAbtIpvlWaj0hUQW7cVihUVviejF3DphS3Id"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">StorySphere</span></a><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors py-space-xs text-primary font-bold" data-path="explore" href="#">Explore</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="books-and-comics" href="#">Books &amp; Comics</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="podcasts" href="#">Podcasts</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="my-library" href="#">My Library</a></nav></div><div class="hidden md:flex flex-1 max-w-xs lg:max-w-md items-center"><div class="w-full flex items-center bg-surface-container-low rounded-full px-space-md py-space-2xs shadow-[inset_2px_2px_5px_rgba(37,39,43,0.04)] focus-within:ring-2 focus-within:ring-primary/40 transition-all"><span class="material-symbols-outlined text-on-surface-variant mr-space-xs text-[20px]">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline py-space-xs" placeholder="Search essays, stories, authors..." type="text"/></div></div><div class="flex items-center gap-space-sm sm:gap-space-md"><div aria-label="Platform Reading Experience Mode" class="relative flex items-center bg-surface-container p-1 rounded-full" role="radiogroup"><button aria-checked="true" class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full font-label-caps text-label-caps bg-surface-container-lowest text-on-surface shadow-sm transition-all" id="theme-prof-btn" onclick="document.documentElement.setAttribute('data-theme','professional'); document.getElementById('theme-jungle-btn').classList.remove('bg-surface-container-lowest','shadow-sm','text-on-surface'); document.getElementById('theme-jungle-btn').classList.add('text-on-surface-variant'); this.classList.add('bg-surface-container-lowest','shadow-sm','text-on-surface'); this.classList.remove('text-on-surface-variant');" type="button"><span class="material-symbols-outlined text-[16px]">auto_awesome</span><span class="hidden sm:inline">Pro</span></button><button aria-checked="false" class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-all" id="theme-jungle-btn" onclick="document.documentElement.setAttribute('data-theme','jungle'); document.getElementById('theme-prof-btn').classList.remove('bg-surface-container-lowest','shadow-sm','text-on-surface'); document.getElementById('theme-prof-btn').classList.add('text-on-surface-variant'); this.classList.add('bg-surface-container-lowest','shadow-sm','text-on-surface'); this.classList.remove('text-on-surface-variant');" type="button"><span class="material-symbols-outlined text-[16px]">cruelty_free</span><span class="hidden sm:inline">Jungle</span></button></div><a aria-label="Notifications" class="relative p-space-xs rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors focus:outline-none" data-path="notifications" href="#"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-tertiary"></span></a><a aria-label="Cart" class="relative p-space-xs rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors focus:outline-none" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">local_mall</span><span class="absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full bg-primary text-on-primary font-label-caps text-[10px] leading-tight">2</span></a><div class="flex items-center pl-space-2xs"><a class="rounded-full focus:ring-2 focus:ring-primary focus:outline-none" data-path="account-settings" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHpKW167jfAOXJXUYyTmO-JfQnPTSW4sp7WUN-HxdPF8xrwqOnuO1KIHCW9MHWBknkK0LAgmabRTjcL1oCrp4egjWgsSthpu4Q2LG0ud3ERhrKLNzpAysD2mdhUru3vafTgevE9c4OYbjNFf2rOSTb9sOt9Gq8RGdoMFx_6DuAjKCKQ92CqZrxI_EY72AAUZJ9oAlvbE_4vfc_WETMrzxjT0w1RLb6zJv_0J93dNxwji9jCOtA8QTf"/></a></div><button aria-label="Toggle Mobile Menu" class="xl:hidden p-space-xs text-on-surface-variant hover:text-on-surface focus:outline-none" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button"><span class="material-symbols-outlined text-[26px]">menu</span></button></div></div><div class="hidden xl:hidden bg-surface-container-low px-margin-mobile py-space-md border-t-0 shadow-lg" id="mobile-drawer"><nav class="flex flex-col gap-space-sm mb-space-md" data-active-classes="text-primary font-bold"><a aria-current="page" class="py-space-xs text-primary font-bold" data-path="explore" href="#">Explore</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-space-xs" data-path="books-and-comics" href="#">Books &amp; Comics</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-space-xs" data-path="podcasts" href="#">Podcasts</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-space-xs" data-path="my-library" href="#">My Library</a></nav><div class="flex md:hidden w-full items-center bg-surface-container-lowest rounded-full px-space-md py-space-2xs"><span class="material-symbols-outlined text-on-surface-variant mr-space-xs text-[20px]">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline py-space-xs" placeholder="Search essays, stories..." type="text"/></div></div></header><main class="w-full pt-20 bg-surface theme-morph flex-1"><div class="flex flex-col w-full">
+<!-- Interactive Jungle Setup Script -->
+<script>
+    (function() {
+      // Auto-ensure jungle theme state on load to match the specific Jungle theme request
+      document.documentElement.setAttribute('data-theme', 'jungle');
+      const jungleBtn = document.getElementById('theme-jungle-btn');
+      const profBtn = document.getElementById('theme-prof-btn');
+      if (jungleBtn && profBtn) {
+        jungleBtn.classList.add('bg-surface-container-lowest', 'shadow-sm', 'text-on-surface');
+        jungleBtn.classList.remove('text-on-surface-variant');
+        profBtn.classList.remove('bg-surface-container-lowest', 'shadow-sm', 'text-on-surface');
+        profBtn.classList.add('text-on-surface-variant');
+      }
+    })();
+  </script>
+<!-- Ambient Organic Jungle Background Foliage -->
+<div class="relative w-full overflow-hidden bg-surface transition-colors duration-500 pb-space-3xl">
+<!-- Soft Decorative Jungle Blurs -->
+<div class="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-secondary-container/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 -right-24 w-[30rem] h-[30rem] rounded-full bg-tertiary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-2/3 left-10 w-80 h-80 rounded-full bg-primary-fixed/20 blur-3xl pointer-events-none"></div>
+<!-- HERO SECTION -->
+<section class="relative max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop pt-space-xl lg:pt-space-2xl">
+<!-- Mascot Floating Dialog & Quest Banner -->
+<div class="flex items-center justify-between gap-space-md mb-space-lg flex-wrap">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-[0_6px_0px_#CAD2C5,0_10px_16px_rgba(45,106,79,0.06)]">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]">eco</span>
+</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Jungle Expedition Live</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse ml-space-2xs"></span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md bg-secondary-container/60 px-space-md py-space-xs rounded-full">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Earned Today: <strong>240 Safari XP</strong></span>
+</div>
+</div>
+<!-- Hero Main Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center bg-surface-container-low rounded-3xl p-space-lg lg:p-space-2xl shadow-[0_12px_0px_#CAD2C5,0_20px_28px_rgba(28,48,38,0.07)] relative">
+<!-- Text & Action Area (Columns 1-7) -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-md z-10">
+<div class="inline-flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-full text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">auto_stories</span>
+<span>Family Co-Reading &amp; Mascot Quests</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl lg:font-display-hero lg:text-display-hero text-on-surface tracking-tight font-bold">
+            Enter a World <br class="hidden sm:inline"/>of <span class="text-secondary italic">Stories.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Explore magical reads, incredible comics, and podcasts filled with adventure. Dive deep into playful realms alongside curious jungle guides!
+          </p>
+<!-- Interactive CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs w-full sm:w-auto">
+<a class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-space-xs bg-tertiary-fixed hover:bg-tertiary text-on-tertiary-fixed font-label-lg text-label-lg px-space-xl py-space-sm rounded-full shadow-[0_5px_0px_#C8A246,0_10px_16px_rgba(117,87,0,0.2)] hover:translate-y-0.5 transition-all text-center" href="#story-clearing">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Explore the Jungle</span>
+</a>
+<a class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest text-on-surface hover:text-secondary font-label-lg text-label-lg px-space-lg py-space-sm rounded-full shadow-[0_4px_0px_#CAD2C5] hover:translate-y-0.5 transition-all text-center" href="#treasure-chest">
+<span class="material-symbols-outlined text-[20px]">shelves</span>
+<span>Visit My Library</span>
+</a>
+</div>
+<!-- Quick Interactive Mascot Speech Bubble -->
+<div class="mt-space-md p-space-md bg-surface-container-lowest rounded-2xl flex items-start gap-space-sm shadow-[0_4px_0px_#CAD2C5] max-w-lg">
+<span class="material-symbols-outlined text-secondary text-[24px] flex-shrink-0">cruelty_free</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Mascot Leo Whisper</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">"Roar! Today's story quest rewards your courage with the Golden Banana Bookmark!"</p>
+</div>
+</div>
+</div>
+<!-- Hero Mascot Visual Mosaic (Columns 8-12) -->
+<div class="lg:col-span-5 relative flex items-center justify-center min-h-[360px] lg:min-h-[440px]">
+<!-- Illustrated Background Sun / Halo -->
+<div class="absolute w-72 h-72 sm:w-84 sm:h-84 rounded-full bg-gradient-to-tr from-tertiary-fixed/40 via-secondary-container/40 to-surface-container-lowest shadow-inner"></div>
+<!-- Peeking Lion Mascot -->
+<div class="absolute -right-4 -top-6 sm:-right-8 sm:-top-8 w-44 sm:w-56 z-10 transition-transform duration-300 hover:scale-105">
+<img alt="Friendly cartoon clay lion mascot waving with warm smile" class="w-full h-auto drop-shadow-[0_12px_16px_rgba(36,84,59,0.18)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ0kJ_f5IN0xeiLTQKUr0AUrfUJPNMojJGoj5We-taJbCTAkMfeyagvqO5wpsWOkUxlu5Fjrlu4V6_8X0_-sWWtGeZk72gX39K4w21MTrjalC6GJyqD7stk0BymcJIz26LwLMPO1AnT4YkUeQwMASp3X40dseOkO6Uz8FhADnG7zlW1wO9zUeyvsEWqTRlZIMCcYX7uhfVX4UIInT85pzfd1_5I9tGTsm4DXXE-xm9I-yfReLU6Iu0"/>
+</div>
+<!-- Reading Monkey Mascot on Wooden Pedestal -->
+<div class="relative z-20 w-56 sm:w-72 mt-16 transition-transform duration-300 hover:-translate-y-1">
+<img alt="Charming cartoon clay monkey mascot sitting on stool reading an open storybook" class="w-full h-auto drop-shadow-[0_18px_24px_rgba(28,48,38,0.22)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHpKW167jfAOXJXUYyTmO-JfQnPTSW4sp7WUN-HxdPF8xrwqOnuO1KIHCW9MHWBknkK0LAgmabRTjcL1oCrp4egjWgsSthpu4Q2LG0ud3ERhrKLNzpAysD2mdhUru3vafTgevE9c4OYbjNFf2rOSTb9sOt9Gq8RGdoMFx_6DuAjKCKQ92CqZrxI_EY72AAUZJ9oAlvbE_4vfc_WETMrzxjT0w1RLb6zJv_0J93dNxwji9jCOtA8QTf"/>
+</div>
+<!-- Floating Badges / Jungle Artifacts -->
+<div class="absolute -bottom-3 -left-4 z-30 bg-surface-container-lowest px-space-md py-space-2xs rounded-full shadow-[0_4px_0px_#CAD2C5,0_8px_12px_rgba(0,0,0,0.06)] flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">menu_book</span>
+<span class="font-label-md text-label-md text-on-surface">Clay Curiosities Vol. 1</span>
+</div>
+<div class="absolute top-12 left-0 z-30 bg-secondary text-on-secondary px-space-sm py-1 rounded-full shadow-[0_4px_0px_#194F48] flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span class="font-label-caps text-label-caps uppercase">10 Pages Free</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: THE STORY CLEARING (Featured Books) -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop mt-space-3xl" id="story-clearing">
+<!-- Section Header with Playful Vine Motif -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-2xs text-secondary mb-space-2xs">
+<span class="material-symbols-outlined text-[20px]">nature</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Chapter Selection</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">The Story Clearing</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Top-rated illustrated stories, tactile pop-ups, and audio-synced adventures.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 text-secondary font-label-caps text-label-caps bg-secondary-container/40 px-space-md py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px]">local_activity</span> First 10 Pages Free
+          </span>
+<a class="font-label-md text-label-md text-secondary hover:underline flex items-center gap-0.5" href="#">
+            View All Clearing Books <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Book Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Book Card 1 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-space-md flex flex-col justify-between shadow-[0_8px_0px_#CAD2C5,0_12px_16px_rgba(28,48,38,0.06)] hover:-translate-y-1 transition-all">
+<div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-surface-container mb-space-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Charming children's claymation style storybook cover depicting a cozy treetop village with warm glowing lanterns, playful wooden bridges, and leafy vines under a starry twilight sky in soft forest greens and warm ochre tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOUIyYLlhBpMy3Aryd7kzQMKZ83FAXtlyT1J197GFyovzMhVL3AFYDBcIwK4rD8KjKf9h0cLCWhLqyuI0eus9A_M9Flrs_kL6zNUUpd39poAC9ZxO62YycfDXqA9mqwWaOV_EytkCBDynSjHxgSP9I3Ojk_DoCz_axeRbnN_ES6LjEZYVBJiBdhYqeTCz7uQdRv64V2xy5pnMU7XPhl5UZKVwAgNl3R9Qh5IYoYULYHP7eJ3VgUfK4"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-caps text-label-caps px-space-sm py-0.5 rounded-full shadow-sm">Preview Free</span>
+<span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps px-space-sm py-0.5 rounded-full">$18.00</span>
+</div>
+<div>
+<div class="flex items-center gap-space-2xs text-secondary font-label-caps text-label-caps mb-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span> AGES 6-9 • NATURE LORE
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface line-clamp-1 mb-1">The Great Canopy Secret</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">Join Maya the Red Panda as she uncovers why the ancient banyan tree stopped blooming.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$18.00</span>
+<button class="bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-md text-label-md px-space-md py-space-xs rounded-full transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Bag
+            </button>
+</div>
+</div>
+<!-- Book Card 2 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-space-md flex flex-col justify-between shadow-[0_8px_0px_#CAD2C5,0_12px_16px_rgba(28,48,38,0.06)] hover:-translate-y-1 transition-all">
+<div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-surface-container mb-space-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Playful storybook cover featuring a gentle clay elephant wearing a blue detective cap inspecting oversized footprint fossils inside a vibrant rainforest glade, rendered with warm tactile textures and rich earthen pigments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkeCsouWKibeWoT1-SYNPfNsHsquDJFNr8Xo5eMerA74TKMkkOjt5SXFWs9nBeaUN0-37jpgSs4e-E5zgNmn2-ftLQ5LWZ9NoyFnKEJKYsIYeJCu3qmSOqNltjf0LPGaVd0HeNu4P7o5q9hoWd3n_xAH0Eod9JI-qu5y3tGE0LBIPRYSj3azQuLbFMwjKAmCRjeP_2l_xA8cGBQZXOCD-5agGusaVapOMJGXgrld09ePxZVSfLjd7X"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-caps text-label-caps px-space-sm py-0.5 rounded-full shadow-sm">Mascot Choice</span>
+<span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps px-space-sm py-0.5 rounded-full">$18.00</span>
+</div>
+<div>
+<div class="flex items-center gap-space-2xs text-secondary font-label-caps text-label-caps mb-1">
+<span class="material-symbols-outlined text-[14px]">search</span> MYSTERY • ILLUSTRATED
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface line-clamp-1 mb-1">Barnaby's Missing Peanut</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">A delightful detective journey packed with hidden object flaps and rhyming clues.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$18.00</span>
+<button class="bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-md text-label-md px-space-md py-space-xs rounded-full transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Bag
+            </button>
+</div>
+</div>
+<!-- Book Card 3 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-space-md flex flex-col justify-between shadow-[0_8px_0px_#CAD2C5,0_12px_16px_rgba(28,48,38,0.06)] hover:-translate-y-1 transition-all">
+<div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-surface-container mb-space-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vibrant clay animation book illustration showing a cheerful owl astronomer charting glowing constellational star maps using telescope atop an emerald green mossy hill, whimsical and gentle bedtime mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfU6hnQ21bis6jf3KALb7m3LLE1Amx_kk2IZPSOa5dsP3CqTN3skLySWg1uph2cJXXOo1y6iigxe5qeDgm6cK4u2gmMdQjeoEn0ZkVtXzoL2gozvHJ5E4ewayloPIWeGaH_dnqTUf5xKMvGqmNzB2eLvGUU7fQ77pJD2z39qA39E5EBhv58w5sTYf-lSE2CsQJbLGBnt0o5uPm_bEvoq8g91aETG2z4RF5pHRNFnQBm5FN7gDMuFrq"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-caps text-label-caps px-space-sm py-0.5 rounded-full shadow-sm">Read Aloud</span>
+<span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps px-space-sm py-0.5 rounded-full">$18.00</span>
+</div>
+<div>
+<div class="flex items-center gap-space-2xs text-secondary font-label-caps text-label-caps mb-1">
+<span class="material-symbols-outlined text-[14px]">bedtime</span> BEDTIME • AUDIO SYNC
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface line-clamp-1 mb-1">Orion the Night Watcher</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">Soft lullaby narration paired with glowing celestial illustrations for calming bedtime routines.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$18.00</span>
+<button class="bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-md text-label-md px-space-md py-space-xs rounded-full transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Bag
+            </button>
+</div>
+</div>
+<!-- Book Card 4 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-space-md flex flex-col justify-between shadow-[0_8px_0px_#CAD2C5,0_12px_16px_rgba(28,48,38,0.06)] hover:-translate-y-1 transition-all">
+<div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-surface-container mb-space-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Playful 3D clay animation style artwork of a miniature mechanical dragonfly carrying letters across a jungle river, vibrant water reflections and cute insect passengers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbBOibXAqkjtc4Z30usnEs0PEYxVoqY885ej5oBiksW0d7937Y6JxOznLvJCcOqgWuMrvjC3jjYk6PR1HbQVhggcCa_VVcPvP1A8w2ePFH80FYLXQU4ARNqytUydKWFcDU22ac9kFiYV1cQ1ED7VA5nPh0nRkRJXPnXPc80lLMUPGGcV6bAey-TnUDfSRm8kfDZqzVVT0ITWlFNs3DjE3sEvkkX-FyWq7ZtQEKggtdMY2rs1k_3eMa"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-caps text-label-caps px-space-sm py-0.5 rounded-full shadow-sm">New Release</span>
+<span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-caps text-label-caps px-space-sm py-0.5 rounded-full">$18.00</span>
+</div>
+<div>
+<div class="flex items-center gap-space-2xs text-secondary font-label-caps text-label-caps mb-1">
+<span class="material-symbols-outlined text-[14px]">flight</span> STEAM • ADVENTURE
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface line-clamp-1 mb-1">The Winged Postman</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-md">How Pip the Dragonfly engineered the fastest postal route through the rainforest storm.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$18.00</span>
+<button class="bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-label-md text-label-md px-space-md py-space-xs rounded-full transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Bag
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: COMIC CANOPY -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop mt-space-3xl">
+<div class="bg-surface-container-low rounded-3xl p-space-lg lg:p-space-2xl shadow-[0_10px_0px_#CAD2C5]">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-xl">
+<div>
+<div class="inline-flex items-center gap-space-xs bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps px-space-sm py-0.5 rounded-full mb-space-2xs">
+<span class="material-symbols-outlined text-[14px]">palette</span> Illustrated Serial Feeds
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Comic Canopy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Kinetic graphic stories and panels drawn by master indie cartoonists.</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-sm">
+<button class="px-space-sm py-1 bg-secondary text-on-secondary rounded-full font-label-md text-label-md">All Panels</button>
+<button class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface rounded-full font-label-md text-label-md">Action</button>
+<button class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface rounded-full font-label-md text-label-md">Whimsical</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Comic Strip 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_6px_0px_#CAD2C5] flex flex-col justify-between">
+<div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Playful comic book panel featuring a clever cartoon monkey swing from lianas in an energetic jungle canopy chased playfully by friendly birds, vibrant pop-art clay aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_WooFexW-TkKzbaLR95mU8yK9l7Q1-5lyaFcnR4fVP7SWNjmz27yJpVSckmM7bMaOD7JYpfoGfPtZf5iIyLKzJsjC3ZAESizEMkVQmKs0mM0ENeQMcVR2POIoyIRnLrn-_0TPsCBgamcyM2u_aKQsXopARVHfiMJDGYu_jW5VBCXJBTp5psUrXCAyrvJGhDTBCIfJSKuBBXb8IdnmZFv_ZJ5TBkJ1wfhBCDkPBsMAxoUHBo1QQJYx"/>
+<span class="absolute top-2 left-2 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-space-xs py-0.5 rounded">Issue #12</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Milo's Midnight Liana Race</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">A fast-paced chase across the highest tree crowns with bonus animated audio pops.</p>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps pt-space-xs">
+<span>Read in 8 min</span>
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+</div>
+</div>
+<!-- Comic Strip 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_6px_0px_#CAD2C5] flex flex-col justify-between">
+<div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Comic book panel illustrating a mini clay tiger cub and a chameleon solving a stone puzzle in ancient jungle ruins with vibrant gemstone colors and tactile lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBGDS5ttiGMX0AcnDkbd3bc81Q6yj8AkBzfMkvE2aCV3ltE3WT44hnzTiD_OqUuTp4u16ifAuQ-l48nWZQ3JRTcrx7uc5ca9gecfJyDf2dWnvKm6RAssBbzJhqJY_f7J21zrx-0xfji1-fEaVY3H3KSk5tqS74qQa0a6PPzG2-sZKY7_l-rufjLZ2MqeeRBvuQ2RRa6QANg0qqe9oAnOyjbe_PZ_4V7fJU_St0E40s_N-qcqzzvBwN"/>
+<span class="absolute top-2 left-2 bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps px-space-xs py-0.5 rounded">Issue #04</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Riddle of the Emerald Totem</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Test your pattern-matching skills on interactive panel traps alongside Roary!</p>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps pt-space-xs">
+<span>Read in 12 min</span>
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+</div>
+</div>
+<!-- Comic Strip 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_6px_0px_#CAD2C5] flex flex-col justify-between">
+<div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Charming comic strip art showing a family of bears baking honeycomb muffins inside a hollow tree kitchen, cozy fairy-tale vibe with warm amber sunlight and clay texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmJtKs_6pj-_f9rvR_JgygvI-v7IEgqAFtDYITqXw-QSvQie3dXqT6i3Kssh8Rux3ZYMjhjmBSBXp1X5G1jSSc3LlPOyxO33DGTqU-xBfDMt0KK6V2YOi68mtTX34P-Tpxed8kAsQl7GBQ1Upn5m5T5IWvH89OZZTK2rAo2IlwTjyA57H9xV9sjqiU2sGq3F5QsN_rWxVlmrJE9qsdnfw9O1WnJETVV5B-CRNpePqhGYbjXKgGjYOg"/>
+<span class="absolute top-2 left-2 bg-primary-fixed text-on-primary-fixed-variant font-label-caps text-label-caps px-space-xs py-0.5 rounded">Special Chapter</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">The Great Honeycomb Bakery</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Delicious humor and heartfelt recipes you can make with parents at home.</p>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps pt-space-xs">
+<span>Read in 6 min</span>
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: VOICES FROM THE WILD (Podcasts featuring Wolf badge) -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop mt-space-3xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-2xs text-secondary mb-space-2xs">
+<span class="material-symbols-outlined text-[20px]">graphic_eq</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Audio Theater</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Voices from the Wild</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Narrated adventures, nature sounds, and bedtime audio theater led by Wolf Storytellers.</p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-full">
+<span class="material-symbols-outlined text-secondary text-[20px]">hearing</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Wolf Read-Aloud Engine: Ready</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Podcast Card 1 -->
+<div class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-[0_8px_0px_#CAD2C5] flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-[30px]">nature_people</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-secondary text-on-secondary font-label-caps text-label-caps px-space-sm py-0.5 rounded-full mb-1">Wolf Audio Pick</span>
+<span class="font-label-caps text-label-caps text-tertiary font-bold">Episode 1 Free</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">How the River Learns to Sing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Acoustic field recordings paired with gentle spoken narrative on freshwater ecosystems.</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Play podcast episode" class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_3px_0px_#194F48] hover:translate-y-0.5 transition-transform">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Episode 1 (22m)</span>
+<span class="font-label-caps text-label-caps text-outline">Narrated by Wolf Timber</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">volume_up</span>
+</div>
+</div>
+<!-- Podcast Card 2 -->
+<div class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-[0_8px_0px_#CAD2C5] flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[30px]">forest</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-secondary text-on-secondary font-label-caps text-label-caps px-space-sm py-0.5 rounded-full mb-1">Wolf Audio Pick</span>
+<span class="font-label-caps text-label-caps text-tertiary font-bold">Episode 1 Free</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Night Howls &amp; Pine Whispers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Deep forest acoustic folklore, nocturnal creature calls, and campfire riddles.</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Play podcast episode" class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_3px_0px_#194F48] hover:translate-y-0.5 transition-transform">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Episode 1 (18m)</span>
+<span class="font-label-caps text-label-caps text-outline">Wolf Pack Narration</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">volume_up</span>
+</div>
+</div>
+<!-- Podcast Card 3 -->
+<div class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-[0_8px_0px_#CAD2C5] flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[30px]">water_drop</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-secondary text-on-secondary font-label-caps text-label-caps px-space-sm py-0.5 rounded-full mb-1">Wolf Audio Pick</span>
+<span class="font-label-caps text-label-caps text-tertiary font-bold">Episode 1 Free</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">The Cloud Maker's Flute</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">A musical audio journey exploring monsoon cycles, wind patterns, and birdsong.</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Play podcast episode" class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_3px_0px_#194F48] hover:translate-y-0.5 transition-transform">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Episode 1 (25m)</span>
+<span class="font-label-caps text-label-caps text-outline">With Symphony Forest</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">volume_up</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: FRESH TRACKS (New Releases with Paw Prints) -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop mt-space-3xl">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">pets</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Fresh Tracks Through The Forest</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-lg">New Releases</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Fresh Track 1 -->
+<div class="bg-surface-container-low rounded-3xl p-space-md flex items-center gap-space-md shadow-[0_6px_0px_#CAD2C5] hover:-translate-y-0.5 transition-transform">
+<div class="w-20 h-24 rounded-2xl overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Clay model style children book cover showing a tiny glowing frog sitting on a giant dewdrop leaf in vivid rainforest colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYBUgm8QT9gOpQnqcYt4UluBcCulb2WCGUWljoE5yJjcVd4V32fEF_8lBG7eNqyOc7HQD5C-fwmRkCmaIse1lPeNvvj5opuDO9QBh8Ra7erp1O4Cc1r0KaGmn24aPETkvc-9WrzmJ_IgAlIW4QyWJcXfOjzOVCXUwuQTEV07o2qe-ZiGT9C8b9w59N4VPjuVPmNd3tKR5E8Qtq5PmlXFUWX8wKU9vVSfugxt6YCcYJmUYOTRhTDY87"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-secondary uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">eco</span> Just Added
+            </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">The Dewdrop Kingdom</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mb-1">A macro adventure in the moss.</p>
+<span class="font-label-md text-label-md text-on-surface font-bold">$18.00</span>
+</div>
+</div>
+<!-- Fresh Track 2 -->
+<div class="bg-surface-container-low rounded-3xl p-space-md flex items-center gap-space-md shadow-[0_6px_0px_#CAD2C5] hover:-translate-y-0.5 transition-transform">
+<div class="w-20 h-24 rounded-2xl overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Tactile claymation book cover depicting a cheerful hedgehog crafting tiny wooden spectacles with acorns under warm sunny rays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUajY4ahtUSSE530oI2faRLgDDoHA2wBv8c6zS6tl-InxaadxR0GI6qX2820M3YswhKMuu0usEAOn9-DvSamLe9ByTmc0_D51Pz6PP28G-fOje4fUQ4NpW0gWuBNfud7pZofmOjLImp9UNth9TJyAdTXImDUypZ1T6Q7Q4hSTvyhv6dZrD048Vad64xcgm7Rk9s9Fr5_wPKMe7KwQP0q2lAIZQ0icJjoCJLY2y89Zsx7CQeDcdqb8m"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-secondary uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">eco</span> Hot Quest
+            </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Hector's Spectacles</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mb-1">Building inventions for forest friends.</p>
+<span class="font-label-md text-label-md text-on-surface font-bold">$18.00</span>
+</div>
+</div>
+<!-- Fresh Track 3 -->
+<div class="bg-surface-container-low rounded-3xl p-space-md flex items-center gap-space-md shadow-[0_6px_0px_#CAD2C5] hover:-translate-y-0.5 transition-transform">
+<div class="w-20 h-24 rounded-2xl overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Storybook cover featuring a whimsical submarine shaped like a walnut shell floating down a bubbling river with baby otter navigators." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH0vNxdJQGjwdCZKq47WybhLVwmgCsNOxZ2E0jcTTFc0KpAXBfqqE4htwFoENivKJHWUcxvE9Z8i6Nc6hjy5WGzej7PlOxr-tWT0_s0kyGhmSH1IpiuwU1TH7nuoLBKuzQbVnTJqM-9P0vlR21xpgy7O-M0W9QTfbzcuP3crAjiVfCSFENdJFJHV-JfNIWPWZEJ4YvIqaANCud0vaMDTxsCGEwW_OI1cch2ZFkxmJO7i5WCKF9RZaS"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-secondary uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">eco</span> Fan Favorite
+            </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">The Walnut Submarine</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mb-1">Deep dives into the beaver pond.</p>
+<span class="font-label-md text-label-md text-on-surface font-bold">$18.00</span>
+</div>
+</div>
+<!-- Fresh Track 4 -->
+<div class="bg-surface-container-low rounded-3xl p-space-md flex items-center gap-space-md shadow-[0_6px_0px_#CAD2C5] hover:-translate-y-0.5 transition-transform">
+<div class="w-20 h-24 rounded-2xl overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Playful storybook illustration of a group of fireflies conducting a twilight concert with tiny pinecone instruments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwrJszAMThzgxsMh9dsLM5Cx4CzAJn9hrgaSsqmvIyqQpB5cJ1v0LIame9yjWzlvYa-hJMqzvNfvWRGOP4HkTll48ESX3t_kJz6jtYvMerkiZpsfSOD8Az3wTSStMu15P2_WnKuz9pE2SnJpsPV4LCV3mehBeYsq4ykVzAq74b8VuI-3kp2KVBjT3mwEmdl7wdHs7JfZ6rrA5TrM6H3jtkRlMV5WvNYDHAodpRwe4DyjJAtM0FGdXt"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-secondary uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">eco</span> Musical
+            </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Firefly Symphony</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mb-1">Luminescent bedtime notes.</p>
+<span class="font-label-md text-label-md text-on-surface font-bold">$18.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: READER'S TREASURE CHEST (User Library & Elephant Mascot) -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop mt-space-3xl" id="treasure-chest">
+<div class="bg-gradient-to-br from-surface-container-lowest to-surface-container-low rounded-3xl p-space-lg lg:p-space-2xl shadow-[0_12px_0px_#CAD2C5]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Elephant Mascot Prompt -->
+<div class="lg:col-span-5 flex flex-col items-start gap-space-md">
+<div class="inline-flex items-center gap-space-xs bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps px-space-md py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px]">military_tech</span>
+<span>Level 4 Trail Explorer</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-3xl bg-secondary-container flex items-center justify-center text-on-secondary-container shadow-md flex-shrink-0">
+<span class="material-symbols-outlined text-[36px]">cruelty_free</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Reader's Treasure Chest</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Archived scrolls, badges, and read-together logs.</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              Elephant Ellie keeps your bookmarks safe and remembers your favorite definitions! You have completed <strong>3 quests</strong> this week.
+            </p>
+<!-- Reading Streak Gauge -->
+<div class="w-full bg-surface-container rounded-2xl p-space-md shadow-inner">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="font-label-md text-label-md text-on-surface">Weekly Reading Goal</span>
+<span class="font-label-md text-label-md text-secondary font-bold">4 of 5 Days</span>
+</div>
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 80%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="inline-flex items-center gap-space-2xs bg-secondary text-on-secondary font-label-md text-label-md px-space-lg py-space-xs rounded-full shadow-[0_4px_0px_#194F48] hover:translate-y-0.5 transition-transform" href="#">
+<span class="material-symbols-outlined text-[18px]">lock_open</span> Open Chest
+              </a>
+<a class="inline-flex items-center gap-space-2xs bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-full hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span> Family Passcode
+              </a>
+</div>
+</div>
+<!-- Right Shelf Visualization -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-space-lg shadow-[0_6px_0px_#CAD2C5] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Current Reading Logs</span>
+<span class="font-label-md text-label-md text-outline">3 In-Progress</span>
+</div>
+<!-- Active Book 1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px]">bookmark_heart</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Clay Curiosities Vol. 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chapter 4 • Page 42 of 64</span>
+</div>
+</div>
+<button class="bg-secondary text-on-secondary font-label-caps text-label-caps px-space-md py-1 rounded-full shadow-[0_3px_0px_#194F48]">
+                Resume
+              </button>
+</div>
+<!-- Active Book 2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[26px]">headphones</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">How the River Learns to Sing</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Wolf Narration • 14 min remaining</span>
+</div>
+</div>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps px-space-md py-1 rounded-full shadow-[0_3px_0px_#C8A246]">
+                Listen
+              </button>
+</div>
+<!-- Badges Row -->
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-2xs bg-secondary-container/50 px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-secondary text-[16px]">emoji_events</span>
+<span class="font-label-caps text-label-caps text-on-secondary-container">Canopy Climber Badge</span>
+</div>
+<div class="flex items-center gap-space-2xs bg-tertiary-fixed/50 px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-tertiary text-[16px]">star</span>
+<span class="font-label-caps text-label-caps text-on-tertiary-fixed">Wolf Ear Medal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: FIND YOUR NEXT ADVENTURE (Personalized Recommendations) -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop mt-space-3xl">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Tailored Safari Feeds</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">Find Your Next Adventure</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Answer one question or let our jungle mascots spin the adventure compass for you!</p>
+</div>
+<!-- Adventure Selector Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<a class="group bg-surface-container-lowest p-space-lg rounded-3xl shadow-[0_8px_0px_#CAD2C5] hover:-translate-y-1 transition-all flex flex-col items-center text-center" href="#story-clearing">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">forest</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Deep Wilds &amp; Biology</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Real creature behaviors rendered in tactile illustrated field journals.</p>
+<span class="font-label-md text-label-md text-secondary font-bold flex items-center gap-1">
+            Explore 18 Stories <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</a>
+<a class="group bg-surface-container-lowest p-space-lg rounded-3xl shadow-[0_8px_0px_#CAD2C5] hover:-translate-y-1 transition-all flex flex-col items-center text-center" href="#story-clearing">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">castle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Fables &amp; Mascot Myths</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Humorous moral stories with Monkey Milo and Brave Lion Leo.</p>
+<span class="font-label-md text-label-md text-secondary font-bold flex items-center gap-1">
+            Explore 24 Stories <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</a>
+<a class="group bg-surface-container-lowest p-space-lg rounded-3xl shadow-[0_8px_0px_#CAD2C5] hover:-translate-y-1 transition-all flex flex-col items-center text-center" href="#story-clearing">
+<div class="w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">flight_takeoff</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Cosmic Cloud Quests</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Bedtime fantasy voyages beyond the tree canopies and starry skies.</p>
+<span class="font-label-md text-label-md text-secondary font-bold flex items-center gap-1">
+            Explore 14 Stories <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</a>
+</div>
+<!-- Quick Interactive Compass Callout -->
+<div class="mt-space-2xl bg-surface-container-low rounded-3xl p-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md shadow-[0_6px_0px_#CAD2C5]">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[36px]">explore</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Surprise Reading Trail</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Spin the jungle wheel to let the algorithm pick your evening bedtime story.</p>
+</div>
+</div>
+<button class="bg-tertiary-fixed hover:bg-tertiary text-on-tertiary-fixed hover:text-on-tertiary font-label-md text-label-md px-space-xl py-space-sm rounded-full shadow-[0_4px_0px_#C8A246] transition-all" onclick="this.innerHTML = '&lt;span class=\'material-symbols-outlined text-[18px]\'&gt;check&lt;/span&gt; Quest Discovered: Orion the Night Watcher!'; this.classList.add('bg-secondary', 'text-on-secondary');">
+          Spin Adventure Wheel
+        </button>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-container-low theme-morph mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-space-xl mb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="StorySphere Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCAjBma5Mu1gmLHuc_1MAwq-Vzix5_kwiqZkLGzxDHz4z4-ONvOrJ1l9nKoX2xnxhzbTl7e60iDlYM-o-mLgEN60fRSps3LUCua9rUVt1wKMBf-7YyXOHsBw3sz-wStHDfgDuFj9WOktC5bcIy_U_RRIg94Ou_xRqC5V5LIAGHunNVXEE9aaRyajVsRHWkm2HGdLw_x__txgBpngVnlAbtIpvlWaj0hUQW7cVihUVviejF3DphS3Id"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">StorySphere</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">A dual-state publishing medium balancing deep editorial contemplation with playful, kinetic storybook discoveries.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container font-label-caps text-label-caps text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary"></span> Dual-Engine Active</span></div></div><div><h4 class="font-label-caps text-label-caps text-on-surface mb-space-md uppercase tracking-wider">Editorial Core</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore" href="#">Essays &amp; Longform</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="books-and-comics" href="#">Illustrated Volumes</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="podcasts" href="#">Audio Commentary</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="creator-fellowship" href="#">Author Submissions</a></li></ul></div><div><h4 class="font-label-caps text-label-caps text-on-surface mb-space-md uppercase tracking-wider">Jungle Realm</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="books-and-comics" href="#">Mascot Quests</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="books-and-comics" href="#">Read Aloud Wolf</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-library" href="#">Family Co-Reading</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-library" href="#">Achievement Badges</a></li></ul></div><div><h4 class="font-label-caps text-label-caps text-on-surface mb-space-md uppercase tracking-wider">Transparency</h4><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-and-privacy" href="#">Archival Standards</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-and-privacy" href="#">Parental Gates</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-and-privacy" href="#">Privacy Manifesto</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-and-privacy" href="#">Colophon</a></li></ul></div></div><div class="pt-space-lg border-t-0 flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-outline">© 2025 StorySphere Platform Inc. Handcrafted typography and tactile narrative engines.</p><div class="flex items-center gap-space-lg"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" data-path="terms-and-privacy" href="#">System Status</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" data-path="terms-and-privacy" href="#">Open Typespecs</a></div></div></div></footer></body></html>
