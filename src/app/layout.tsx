@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Inter, Newsreader, Plus_Jakarta_Sans, JetBrains_Mono, Fredoka, Sniglet, Anton } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/theme/ThemeContext";
 import { DemoModeBanner } from "@/components/layout/DemoModeBanner";
+import { PwaManager } from "@/components/pwa/PwaManager";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -57,13 +58,37 @@ const shineBubble = localFont({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#07100D",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
   title: "THE AI JUNGLE | Data, Digital & AI Transformation Studio",
   description:
     "Dr. Amit Khandelwal's Season 1 AI Transformation Blueprint, interactive Jungle Audit comics, and AI Jungle Studio video podcast.",
+  applicationName: "LeadSphere",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "LeadSphere",
+  },
+  formatDetection: {
+    telephone: false,
+  },
   icons: {
-    icon: "/images/leadsphere-logo.jpg",
-    apple: "/images/leadsphere-logo.jpg",
+    icon: [
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/leadsphere-logo.jpg" },
+    ],
+    apple: [
+      { url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/images/leadsphere-logo.jpg" },
+    ],
   },
 };
 
@@ -86,6 +111,7 @@ export default function RootLayout({
       >
         <ThemeProvider initialTheme="jungle">
           <DemoModeBanner />
+          <PwaManager />
           {children}
         </ThemeProvider>
       </body>
