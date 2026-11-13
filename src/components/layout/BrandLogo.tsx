@@ -13,16 +13,16 @@ export function BrandLogo({ className = "", size = "md" }: BrandLogoProps) {
   const { theme } = useTheme();
 
   const badgeSize =
-    size === "lg" ? "w-14 h-14 rounded-2xl p-1" : size === "sm" ? "w-8 h-8 rounded-lg p-0.5" : "w-10 h-10 rounded-xl p-0.5";
+    size === "lg" ? "w-12 h-12 rounded-full p-1" : size === "sm" ? "w-8 h-8 rounded-full p-0.5" : "w-10 h-10 rounded-full p-1";
 
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-2.5 group select-none text-left focus:outline-none ${className}`}
+      className={`inline-flex items-center gap-3 group select-none text-left focus:outline-none ${className}`}
       aria-label="LeadSphere Solutions - Return to Homepage"
     >
       <div
-        className={`flex items-center justify-center bg-white border border-[#F5C451]/45 shadow-sm overflow-hidden shrink-0 transition-transform duration-200 group-hover:scale-105 ${badgeSize}`}
+        className={`flex items-center justify-center bg-white ring-1 ring-white/15 shadow-sm overflow-hidden shrink-0 transition-transform duration-200 group-hover:scale-105 ${badgeSize}`}
       >
         <img
           src="/images/leadsphere-logo.jpg"
@@ -32,10 +32,12 @@ export function BrandLogo({ className = "", size = "md" }: BrandLogoProps) {
       </div>
 
       <div className="flex flex-col">
-        <span className="font-heading font-bold tracking-[0.06em] text-primary-token leading-none text-base sm:text-lg">
+        <span
+          className="font-anton tracking-[0.05em] text-white leading-none text-2xl sm:text-[28px] uppercase drop-shadow-sm group-hover:scale-[1.02] transition-transform"
+        >
           LEADSPHERE
         </span>
-        <span className="text-[10px] sm:text-[11px] tracking-[0.09em] uppercase text-[#2CE0C9] font-semibold leading-none mt-1">
+        <span className="font-sniglet text-[10px] sm:text-[11px] tracking-[0.09em] uppercase text-[#2CE0C9] font-semibold leading-none mt-1">
           {theme === "executive" ? "Solutions • Boardroom" : "Solutions • AI Jungle"}
         </span>
       </div>

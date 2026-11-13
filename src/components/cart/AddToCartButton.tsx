@@ -48,7 +48,7 @@ export function AddToCartButton({
         href="/checkout"
         aria-label={`View ${item.title} in Cart`}
         className={cn(
-          "inline-flex items-center justify-center gap-1.5 font-heading font-semibold bg-[#2CE0C9]/15 text-[#2CE0C9] border border-[#2CE0C9]/45 hover:bg-[#2CE0C9] hover:text-[#07100D] transition-all whitespace-nowrap",
+          "clay-btn-emerald inline-flex items-center justify-center gap-1.5 font-sniglet font-semibold whitespace-nowrap",
           sizeClasses,
           className
         )}
@@ -72,7 +72,7 @@ export function AddToCartButton({
       onClick={handleAdd}
       aria-label={`Add ${item.title} to cart`}
       className={cn(
-        "inline-flex items-center justify-center gap-1.5 font-heading font-semibold bg-surface-secondary hover:bg-[#F5C451]/15 text-[#F5C451] border border-[#F5C451]/35 hover:border-[#F5C451] transition-all cursor-pointer whitespace-nowrap",
+        "clay-btn-secondary inline-flex items-center justify-center gap-1.5 font-sniglet font-semibold whitespace-nowrap hover:text-[#DFB260]",
         sizeClasses,
         className
       )}

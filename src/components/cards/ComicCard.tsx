@@ -61,7 +61,7 @@ export function ComicCard({ comic, isOwned = false }: ComicCardProps) {
               className="w-full h-[360px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.015]"
               loading="lazy"
             />
-            <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-[#07100D]/90 border border-amber-400/30 text-[10px] font-heading font-semibold uppercase tracking-[0.05em] text-[#F5C451] pointer-events-none">
+            <div className="absolute bottom-2 right-2 px-2.5 py-1 rounded bg-black/85 border border-[#DFB260]/40 text-xs font-shine-bubble tracking-wide text-[#DFB260] pointer-events-none">
               Full Comic Sheet
             </div>
           </div>
@@ -71,11 +71,11 @@ export function ComicCard({ comic, isOwned = false }: ComicCardProps) {
         <div className="px-4 sm:px-5 pt-3.5 flex items-center justify-between gap-2">
           <div className="flex flex-wrap gap-1.5 items-center">
             {comic.featured && (
-              <Badge variant="gold" className="shadow-sm">
+              <Badge variant="gold" className="shadow-sm font-sniglet">
                 <Sparkles className="w-3 h-3 mr-1" /> Featured
               </Badge>
             )}
-            <Badge variant="green" className="shadow-sm">
+            <Badge variant="green" className="shadow-sm font-sniglet">
               10 Pages Free
             </Badge>
           </div>
@@ -98,14 +98,14 @@ export function ComicCard({ comic, isOwned = false }: ComicCardProps) {
         <div className="flex-1 p-4 sm:p-5 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between text-xs text-muted-token mb-2">
-              <span className="font-heading font-semibold text-brand-token uppercase tracking-[0.08em] text-[11px]">
+              <span className="font-sniglet font-semibold text-[#DFB260] uppercase tracking-wider text-xs">
                 {comic.genre}
               </span>
-              <span className="text-[11px] font-medium tabular-nums">{comic.pageCount} Pages</span>
+              <span className="text-[11px] font-mono tabular-nums text-slate-400">{comic.pageCount} Plates</span>
             </div>
 
             <Link href={`/comics/${comic.slug}`} className="focus:outline-none block">
-              <h3 className="font-heading font-semibold text-base sm:text-[17px] text-primary-token line-clamp-2 leading-[1.32] tracking-[-0.015em] group-hover:text-brand-token transition-colors">
+              <h3 className="font-fredoka font-semibold text-base sm:text-lg text-primary-token line-clamp-2 leading-[1.3] group-hover:text-[#DFB260] transition-colors">
                 {comic.title}
               </h3>
             </Link>

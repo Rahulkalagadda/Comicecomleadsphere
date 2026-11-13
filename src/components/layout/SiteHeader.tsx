@@ -84,13 +84,19 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "px-3 py-1.5 rounded-lg font-heading text-sm font-medium tracking-[-0.005em] transition-colors duration-150 flex items-center gap-1.5",
+                  "px-3.5 py-1.5 rounded-xl font-fredoka text-[15px] font-semibold tracking-wide transition-all duration-150 flex items-center gap-1.5",
                   isActive
-                    ? "bg-surface-secondary text-brand-token font-semibold"
-                    : "text-secondary-token hover:text-primary-token hover:bg-surface-secondary/60"
+                    ? "bg-white/[0.08] text-[#DFB260] border border-white/[0.1] shadow-sm"
+                    : "text-slate-300 hover:text-white hover:bg-white/[0.04]"
                 )}
               >
-                {link.label}
+                {link.label === "Comics" ? (
+                  <span className="font-shine-bubble text-base text-[#DFB260] drop-shadow-sm">
+                    Comics
+                  </span>
+                ) : (
+                  link.label
+                )}
               </Link>
             );
           })}
@@ -102,7 +108,7 @@ export function SiteHeader() {
           <Link
             href="/search"
             aria-label="Search Catalog"
-            className="p-2 rounded-full nm-button bg-surface-primary text-secondary-token hover:text-primary-token transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token"
+            className="p-2 rounded-full clay-btn-secondary text-slate-300 hover:text-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token"
           >
             <Search className="w-4 h-4" />
           </Link>
@@ -111,7 +117,7 @@ export function SiteHeader() {
           <Link
             href="/bookmarks"
             aria-label="Saved Bookmarks"
-            className="p-2 rounded-full nm-button bg-surface-primary text-secondary-token hover:text-primary-token transition-all relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token"
+            className="p-2 rounded-full clay-btn-secondary text-slate-300 hover:text-white transition-all relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token"
           >
             <Bookmark className="w-4 h-4" />
             {bookmarkCount > 0 && (
@@ -123,11 +129,11 @@ export function SiteHeader() {
           <Link
             href="/checkout"
             aria-label="Shopping Cart Folio"
-            className="p-2 rounded-full nm-button bg-surface-primary text-secondary-token hover:text-primary-token transition-all relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token"
+            className="p-2 rounded-full clay-btn-secondary text-slate-300 hover:text-white transition-all relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token"
           >
             <ShoppingBag className="w-4 h-4" />
             {cartCount > 0 && (
-              <span className="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full bg-brand text-[#07100D] font-heading text-[10px] font-bold leading-none tabular-nums shadow-sm">
+              <span className="absolute -top-1 -right-1 px-1.5 py-0.5 rounded-full bg-[#DFB260] text-[#07100D] font-sniglet text-[11px] font-bold leading-none tabular-nums shadow-sm">
                 {cartCount}
               </span>
             )}
@@ -144,7 +150,7 @@ export function SiteHeader() {
               type="button"
               id="user-account-menu-btn"
               onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-              className="flex items-center gap-2 p-1 rounded-full nm-button bg-surface-primary transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token"
+              className="flex items-center gap-2 p-1 rounded-full clay-btn-secondary transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token"
               aria-expanded={userDropdownOpen}
               aria-label="User Account Menu"
             >
@@ -257,14 +263,20 @@ export function SiteHeader() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium",
+                    "flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-fredoka text-base font-medium transition-colors",
                     isActive
-                      ? "bg-surface-secondary text-brand-token font-semibold"
-                      : "text-secondary-token hover:bg-surface-secondary/70"
+                      ? "bg-white/[0.08] text-[#DFB260] font-semibold"
+                      : "text-slate-300 hover:bg-white/[0.04]"
                   )}
                 >
                   <Icon className="w-4 h-4" />
-                  {link.label}
+                  {link.label === "Comics" ? (
+                    <span className="font-shine-bubble text-lg text-[#DFB260]">
+                      Comics
+                    </span>
+                  ) : (
+                    link.label
+                  )}
                 </Link>
               );
             })}

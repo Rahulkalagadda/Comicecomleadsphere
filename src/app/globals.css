@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./shine-bubble.css";
 
 @theme {
   --color-brand: var(--brand-primary);
@@ -30,6 +31,45 @@
   --font-heading: var(--font-heading);
   --font-jakarta: var(--font-heading);
   --font-mono: var(--font-mono-loaded), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Bubble & Rounded Display Typography */
+  --font-shine-bubble: 'Shine Bubble Deco', 'Shine Bubble', 'shineBubble', var(--font-shine-bubble-loaded), cursive, sans-serif;
+  --font-bubble: 'Shine Bubble Deco', 'Shine Bubble', 'shineBubble', var(--font-shine-bubble-loaded), cursive, sans-serif;
+  --font-sniglet: var(--font-sniglet-loaded), 'Sniglet', cursive, sans-serif;
+  --font-fredoka: var(--font-fredoka-loaded), 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-anton: var(--font-anton-loaded), 'Anton', Impact, 'Arial Black', sans-serif;
+}
+
+@utility font-shine-bubble {
+  font-family: 'Shine Bubble Deco', 'Shine Bubble', 'shineBubble', cursive, sans-serif;
+}
+@utility font-bubble {
+  font-family: 'Shine Bubble Deco', 'Shine Bubble', 'shineBubble', cursive, sans-serif;
+}
+@utility font-sniglet {
+  font-family: var(--font-sniglet);
+}
+@utility font-fredoka {
+  font-family: var(--font-fredoka);
+}
+@utility font-anton {
+  font-family: var(--font-anton);
+}
+
+.font-shine-bubble {
+  font-family: 'Shine Bubble Deco', 'Shine Bubble', 'shineBubble', cursive, sans-serif;
+}
+.font-bubble {
+  font-family: 'Shine Bubble Deco', 'Shine Bubble', 'shineBubble', cursive, sans-serif;
+}
+.font-sniglet {
+  font-family: var(--font-sniglet);
+}
+.font-fredoka {
+  font-family: var(--font-fredoka);
+}
+.font-anton {
+  font-family: var(--font-anton);
 }
 
 @layer base {
@@ -259,18 +299,138 @@ html {
   cursor: pointer;
 }
 
-.nm-button:hover {
+/* =========================================================
+   STYLE C: CLAYMORPHISM BUTTONS & FOCAL SYSTEM
+   Tactile 3D inflated clay buttons with dual inner shadows:
+   - Top-left specular highlight (gives volume and shine)
+   - Bottom-right indentation shadow (gives 3D physical thickness)
+   - Soft outer elevation drop-shadow
+   ========================================================= */
+
+.clay-btn, .nm-button {
+  border-radius: 1rem;
   box-shadow:
-    4px 4px 12px var(--nm-shadow-dark-strong),
-    -4px -4px 12px var(--nm-shadow-light);
-  transform: translateY(-1px);
+    0 8px 18px -4px rgba(0, 0, 0, 0.55),
+    0 2px 4px -1px rgba(0, 0, 0, 0.35),
+    inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.22),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.45);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
-.nm-button:active,
+.clay-btn:hover, .nm-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 24px -4px rgba(0, 0, 0, 0.65),
+    0 4px 8px -2px rgba(0, 0, 0, 0.45),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.32),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.45);
+}
+
+.clay-btn:active, .nm-button:active,
 .nm-button[aria-pressed="true"],
 .nm-button-active {
-  box-shadow: var(--nm-inset-shadow);
-  transform: translateY(1px);
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 3px 8px -2px rgba(0, 0, 0, 0.5),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.15),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* Primary Champagne Gold Clay Button */
+.clay-btn-primary {
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #F3D38E 0%, #DFB260 100%) !important;
+  color: #070B0A !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow:
+    0 8px 20px -3px rgba(223, 178, 96, 0.38),
+    0 3px 6px -1px rgba(0, 0, 0, 0.45),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.75),
+    inset -2px -2px 4px rgba(150, 100, 15, 0.45);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.clay-btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #F8DE9F 0%, #E8C178 100%) !important;
+  box-shadow:
+    0 14px 28px -3px rgba(223, 178, 96, 0.5),
+    0 6px 12px -2px rgba(0, 0, 0, 0.5),
+    inset 2.5px 2.5px 3.5px rgba(255, 255, 255, 0.9),
+    inset -2px -2px 4px rgba(150, 100, 15, 0.45);
+}
+
+.clay-btn-primary:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 4px 10px -2px rgba(223, 178, 96, 0.3),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.3),
+    inset 2px 2px 5px rgba(120, 80, 10, 0.6);
+}
+
+/* Secondary Obsidian Clay Button */
+.clay-btn-secondary {
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #1A2520 0%, #0F1714 100%) !important;
+  color: #F8FAFC !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow:
+    0 8px 18px -4px rgba(0, 0, 0, 0.6),
+    0 2px 5px -1px rgba(0, 0, 0, 0.4),
+    inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.16),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.65);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.clay-btn-secondary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #22302A 0%, #15201B 100%) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow:
+    0 12px 24px -4px rgba(0, 0, 0, 0.7),
+    0 4px 8px -2px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 2.5px rgba(255, 255, 255, 0.24),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.65);
+}
+
+.clay-btn-secondary:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 3px 8px -2px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+/* Emerald Clay Button */
+.clay-btn-emerald {
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #34D399 0%, #059669 100%) !important;
+  color: #07100D !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow:
+    0 8px 18px -3px rgba(16, 185, 129, 0.35),
+    0 2px 5px -1px rgba(0, 0, 0, 0.4),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.65),
+    inset -2px -2px 4px rgba(4, 80, 50, 0.45);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.clay-btn-emerald:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 24px -3px rgba(16, 185, 129, 0.5),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 4px rgba(4, 80, 50, 0.45);
+}
+
+.clay-btn-emerald:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 3px 8px -2px rgba(16, 185, 129, 0.25),
+    inset 2px 2px 4px rgba(4, 60, 40, 0.65);
 }
 
 .nm-inset-control {
@@ -278,11 +438,6 @@ html {
   border: 1px solid var(--border-subtle);
   box-shadow: var(--nm-inset-shadow);
 }
-
-/* =========================================================
-   STYLE C: CLAYMORPHISM (EXPRESSIVE FOCAL POINTS)
-   Sculpted rounded forms, multi-layer ambient depth, inner specular highlight
-   ========================================================= */
 
 .clay-focal {
   background: var(--clay-bg);

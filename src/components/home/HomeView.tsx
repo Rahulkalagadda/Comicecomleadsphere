@@ -220,21 +220,22 @@ export function HomeView() {
   };
 
   return (
-    <div className="space-y-16 sm:space-y-24 pb-20">
+    <div className="w-full flex flex-col">
       {/* =========================================================================
           THEME DECIDER: EXECUTIVE BOARDROOM OBSIDIAN VS JUNGLE CANOPY STUDIO
           Both views strictly feature Dr. Amit Khandelwal's AI Jungle Safari catalog
           ========================================================================= */}
 
       {theme === "executive" ? (
-        <div className="relative w-full overflow-hidden">
-          {/* Nocturnal Obsidian & Cyber Teal Ambient Glows */}
-          <div className="absolute -top-32 left-1/4 w-96 h-96 rounded-full bg-[#E0A62E]/10 blur-3xl pointer-events-none" />
-          <div className="absolute top-96 right-10 w-[30rem] h-[30rem] rounded-full bg-[#2CE0C9]/10 blur-3xl pointer-events-none" />
-
+        <div className="w-full flex flex-col">
           {/* 1. HERO SECTION (BOARDROOM EDITION) */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 lg:pt-12 lg:pb-24 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <section className="w-full pt-10 pb-16 sm:pt-14 sm:pb-24 relative overflow-hidden bg-gradient-to-b from-[#050912] via-[#0c162b] to-[#070e1c] border-b border-[#F5C451]/20">
+            {/* Nocturnal Obsidian & Cyber Teal Ambient Glows */}
+            <div className="absolute -top-32 left-1/4 w-[32rem] h-[32rem] rounded-full bg-[#E0A62E]/10 blur-3xl pointer-events-none" />
+            <div className="absolute top-48 right-10 w-[30rem] h-[30rem] rounded-full bg-[#38BDF8]/10 blur-3xl pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               {/* Hero Text Column */}
               <div className="lg:col-span-7 flex flex-col gap-6">
                 <div className="inline-flex items-center gap-2 self-start px-3.5 py-1 rounded-full bg-surface-secondary border border-theme text-[#F5C451] font-heading text-[11px] font-semibold tracking-[0.08em] uppercase">
@@ -433,13 +434,19 @@ export function HomeView() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <ContinueReadingBanner />
+          {/* Continue Reading Ribbon */}
+          <div className="w-full py-8 bg-gradient-to-r from-[#040710] via-[#091122] to-[#040710] border-b border-[#38BDF8]/15">
+            <ContinueReadingBanner />
+          </div>
 
           {/* 2. EXECUTIVE TRANSFORMATION VOLUMES (ONLY AI JUNGLE BOOKS) */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+          <section className="w-full py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#070d18] via-[#101b34] to-[#070d19] border-b border-[#F5C451]/15">
+            <div className="absolute top-1/2 left-0 w-96 h-96 rounded-full bg-[#E0A62E]/06 blur-3xl pointer-events-none" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
               <div>
                 <div className="flex items-center gap-1.5 text-brand-token font-heading text-[11px] font-semibold uppercase tracking-[0.1em] mb-1.5">
                   <BookOpen className="w-4 h-4" />
@@ -571,17 +578,20 @@ export function HomeView() {
                 </article>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* 3. FULL-SHEET COMICS GALLERY (UNCROPPED VERTICAL STRIPS — NOT THUMBNAILS) */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        {/* 3. FULL-SHEET COMICS GALLERY (UNCROPPED VERTICAL STRIPS — NOT THUMBNAILS) */}
+        <section className="w-full py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#050811] via-[#0a1224] to-[#050811] border-b border-[#38BDF8]/15">
+          <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#38BDF8]/06 to-transparent pointer-events-none" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
               <div>
-                <div className="flex items-center gap-1.5 text-[#2CE0C9] font-heading text-[11px] font-semibold uppercase tracking-[0.1em] mb-1.5">
+                <div className="flex items-center gap-1.5 text-emerald-400 font-sniglet text-xs font-semibold uppercase tracking-wider mb-1.5">
                   <Palette className="w-4 h-4" />
-                  <span>Full Uncropped Sequential Comics • Zero Cropping</span>
+                  <span>Visual Case Studies • Full Uncropped Plates</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-serif-editorial font-semibold text-primary-token tracking-[-0.025em]">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-shine-bubble text-[#DFB260] tracking-wide">
                   The Jungle Audit Comic Sheets
                 </h2>
               </div>
@@ -619,24 +629,24 @@ export function HomeView() {
                   <div>
                     <Link
                       href={`/read/${comic.id}`}
-                      className="relative block w-full rounded-xl overflow-hidden bg-[#07100D] p-2.5 mb-4 border border-amber-400/25"
+                      className="relative block w-full rounded-xl overflow-hidden bg-black p-2.5 mb-4 border border-white/[0.08]"
                     >
                       <img
                         src={comic.coverUrl}
                         alt={comic.title}
                         className="w-full h-[380px] object-contain mx-auto"
                       />
-                      <span className="mt-2 inline-block px-2.5 py-1 rounded bg-[#07100D]/90 border border-[#2CE0C9]/40 text-[#2CE0C9] font-heading text-[10px] leading-none font-semibold uppercase tracking-[0.05em]">
-                        Full Uncropped Sheet • 10p Free
+                      <span className="mt-2 inline-block px-2.5 py-1 rounded bg-black/85 border border-[#DFB260]/40 text-xs font-shine-bubble tracking-wide text-[#DFB260]">
+                        Full Sheet • 10p Free
                       </span>
                     </Link>
 
-                    <div className="flex items-center justify-between text-secondary-token text-[11px] font-mono mb-1">
-                      <span>{comic.genre}</span>
-                      <span>{comic.pageCount} Plates</span>
+                    <div className="flex items-center justify-between text-slate-400 text-xs mb-1">
+                      <span className="font-sniglet text-[#DFB260]">{comic.genre}</span>
+                      <span className="font-mono text-[11px] tabular-nums">{comic.pageCount} Plates</span>
                     </div>
                     <Link href={`/comics/${comic.slug}`}>
-                      <h3 className="font-serif-editorial font-semibold tracking-[-0.015em] text-xl text-primary-token hover:text-brand-token transition-colors">
+                      <h3 className="font-fredoka font-semibold text-xl text-white hover:text-[#DFB260] transition-colors">
                         {comic.title}
                       </h3>
                     </Link>
@@ -682,10 +692,13 @@ export function HomeView() {
                 </div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* 4. VOICES & DISPATCHES (REAL AI JUNGLE STUDIO MP4 CLIPS) */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        {/* 4. VOICES & DISPATCHES (REAL AI JUNGLE STUDIO MP4 CLIPS) */}
+        <section className="w-full py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#070c17] via-[#111e3b] to-[#070c18] border-b border-[#F5C451]/15">
+          <div className="absolute top-10 right-1/4 w-[28rem] h-[28rem] rounded-full bg-[#38BDF8]/08 blur-3xl pointer-events-none" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
               <div>
                 <div className="flex items-center gap-1.5 text-brand-token font-heading text-[11px] font-semibold uppercase tracking-[0.1em] mb-1.5">
@@ -822,10 +835,13 @@ export function HomeView() {
                 </div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* 5. CURATED AI JUNGLE COLLECTIONS */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full" id="curations">
+        {/* 5. CURATED AI JUNGLE COLLECTIONS */}
+        <section className="w-full py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#080d1a] via-[#142345] to-[#080e1c] border-b border-[#F5C451]/20" id="curations">
+          <div className="absolute top-1/3 left-1/3 w-[36rem] h-[36rem] rounded-full bg-[#E0A62E]/07 blur-3xl pointer-events-none" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="mb-8">
               <span className="font-heading text-accent-gold text-[11px] font-semibold uppercase tracking-[0.1em] block mb-1.5">
                 Season 1 Collectors Editions
@@ -936,11 +952,13 @@ export function HomeView() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* 6. SWITCH TO JUNGLE CANOPY STUDIO BANNER */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-            <div className="rounded-2xl bg-gradient-to-r from-[#2CE0C9]/10 via-surface-secondary to-[#F5C451]/10 p-8 sm:p-10 border border-theme shadow-md relative overflow-hidden">
+        {/* 6. SWITCH TO JUNGLE CANOPY STUDIO BANNER */}
+        <section className="w-full py-14 sm:py-20 relative overflow-hidden bg-gradient-to-r from-[#071324] via-[#0b1f24] to-[#061814] border-b border-[#2CE0C9]/25">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div className="rounded-2xl bg-surface-secondary/80 border border-theme shadow-md relative overflow-hidden p-8 sm:p-10">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center relative z-10">
                 <div className="md:col-span-8">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-primary/90 text-[#2CE0C9] font-heading text-[11px] font-semibold uppercase tracking-[0.06em] mb-2 border border-theme/60">
@@ -967,17 +985,22 @@ export function HomeView() {
                 </div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+      </div>
       ) : (
         /* =======================================================================
            JUNGLE CANOPY STUDIO (DEFAULT NOCTURNAL OBSIDIAN + GOLD + CYBER TEAL)
            ======================================================================= */
-        <div className="space-y-16 sm:space-y-24">
-          {/* Jungle Hero Section */}
-          <section className="relative overflow-hidden pt-6 pb-16 sm:pt-10 sm:pb-24 border-b border-theme/80 transition-colors duration-300">
-            <div className="absolute -top-24 right-1/4 w-96 h-96 rounded-full bg-[#2CE0C9]/10 blur-3xl pointer-events-none" />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full flex flex-col">
+          {/* 1. JUNGLE HERO SECTION */}
+          <section className="w-full pt-8 pb-16 sm:pt-12 sm:pb-24 relative overflow-hidden bg-gradient-to-b from-[#040d0a] via-[#091a13] to-[#050e0b] border-b border-[#2CE0C9]/20 transition-colors duration-300">
+            {/* Ambient Atmospheric Lighting */}
+            <div className="absolute -top-24 left-1/4 w-[32rem] h-[32rem] rounded-full bg-[#E0A62E]/10 blur-3xl pointer-events-none" />
+            <div className="absolute top-20 right-10 w-[34rem] h-[34rem] rounded-full bg-[#2CE0C9]/12 blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#2CE0C9]/35 to-transparent pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="space-y-12">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                   <div className="lg:col-span-6 space-y-5 text-center lg:text-left">
@@ -1073,14 +1096,22 @@ export function HomeView() {
             </div>
           </section>
 
-          <ContinueReadingBanner />
+          {/* Continue Reading Ribbon */}
+          <div className="w-full py-8 bg-gradient-to-r from-[#030907] via-[#07140e] to-[#030907] border-b border-[#2CE0C9]/15">
+            <ContinueReadingBanner />
+          </div>
 
-          {/* Jungle Season 1 Spotlight: The AI Jungle Safari & Screening Studio */}
+          {/* 2. JUNGLE SEASON 1 SPOTLIGHT: SCREENING STUDIO */}
           <section
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8"
+            className="w-full py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#06120e] via-[#0d1e17] to-[#07130f] border-b border-[#F5C451]/20"
             id="ai-jungle-safari-studio"
           >
-            <div className="rounded-3xl bg-surface-primary border border-theme shadow-xl p-6 sm:p-8 lg:p-10 soft-surface space-y-8">
+            {/* Ambient Lighting */}
+            <div className="absolute top-10 left-10 w-[30rem] h-[30rem] rounded-full bg-[#F5C451]/08 blur-3xl pointer-events-none" />
+            <div className="absolute bottom-10 right-10 w-[32rem] h-[32rem] rounded-full bg-[#2CE0C9]/08 blur-3xl pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
+              <div className="rounded-3xl bg-[#081712]/95 border border-[#F5C451]/25 shadow-2xl p-6 sm:p-8 lg:p-10 soft-surface space-y-8">
               <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-theme/80 pb-5">
                 <div className="space-y-1.5">
                   <div className="flex flex-wrap items-center gap-2">
@@ -1251,10 +1282,18 @@ export function HomeView() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Jungle Section 2: Transformation Playbooks (Books) */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8" id="story-clearing">
+        {/* 3. TRANSFORMATION PLAYBOOKS (BOOKS) */}
+        <section
+          className="w-full py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#09110d] via-[#141d16] to-[#08100c] border-b border-[#E0A62E]/20"
+          id="story-clearing"
+        >
+          {/* Warm Parchment / Mahogany Executive Study Glow */}
+          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[45rem] h-[25rem] rounded-full bg-[#E0A62E]/08 blur-3xl pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-theme/80 pb-4">
               <div>
                 <div className="flex items-center gap-2">
@@ -1286,22 +1325,30 @@ export function HomeView() {
                   <BookCard key={book.id} book={book} />
                 ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Jungle Section 3: Comic Canopy (Full Uncropped Vertical Comics) */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8" id="comic-canopy">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-theme/80 pb-4">
+        {/* 4. COMIC CANOPY (UNCROPPED VERTICAL COMICS) */}
+        <section
+          className="w-full py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#070A09] via-[#0C120F] to-[#070A09] border-b border-white/[0.08]"
+          id="comic-canopy"
+        >
+          {/* Subtle Gallery Floor Wash */}
+          <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-emerald-500/[0.03] to-transparent pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/[0.08] pb-4">
               <div>
                 <div className="flex items-center gap-2">
-                  <Layers className="w-5 h-5 text-accent-gold" />
-                  <span className="font-heading text-xs font-semibold uppercase tracking-[0.08em] text-accent-gold">
-                    Comic Canopy • Uncropped Full Comic Sheets
+                  <Layers className="w-5 h-5 text-emerald-400" />
+                  <span className="font-sniglet text-xs font-semibold uppercase tracking-wider text-emerald-400">
+                    Visual Case Studies • Sequential Narratives
                   </span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-serif-editorial font-semibold tracking-[-0.02em] text-primary-token mt-1">
-                  The AI Jungle Comic Editions
+                <h2 className="text-2xl sm:text-3xl font-fredoka font-semibold tracking-[-0.01em] text-white mt-1">
+                  The Illustrated Boardroom: Comic Folios
                 </h2>
-                <p className="text-[13px] sm:text-sm text-secondary-token mt-0.5 leading-relaxed">
+                <p className="text-[13px] sm:text-sm text-slate-400 mt-0.5 leading-relaxed">
                   Sequential AI boardroom comics displayed in full uncropped vertical format—click any sheet to read with interactive zoom.
                 </p>
               </div>
@@ -1321,10 +1368,18 @@ export function HomeView() {
                   <ComicCard key={comic.id} comic={comic} />
                 ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Jungle Section 4: Voices from the Studio */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8" id="voices-from-the-wild">
+        {/* 5. VOICES FROM THE STUDIO */}
+        <section
+          className="w-full py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#07110c] via-[#111c16] to-[#07100b] border-b border-theme/40"
+          id="voices-from-the-wild"
+        >
+          {/* Acoustic Studio Warm Amber Glow */}
+          <div className="absolute top-1/3 left-10 w-96 h-96 rounded-full bg-[#F5C451]/07 blur-3xl pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-theme/80 pb-4">
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl overflow-hidden soft-surface border border-theme/80 bg-surface-secondary/40 p-1 hidden sm:flex items-center justify-center">
@@ -1365,11 +1420,13 @@ export function HomeView() {
                   <PodcastCard key={series.id} series={series} />
                 ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Jungle Section 5: Switch to Boardroom Obsidian */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl bg-surface-primary border border-theme p-8 sm:p-10 soft-surface relative overflow-hidden">
+        {/* 6. SWITCH TO BOARDROOM OBSIDIAN BANNER */}
+        <section className="w-full py-14 sm:py-18 relative overflow-hidden bg-gradient-to-r from-[#06140f] via-[#0c1a27] to-[#07131e] border-b border-[#F5C451]/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="rounded-3xl bg-[#09171e]/80 border border-theme p-8 sm:p-10 soft-surface relative overflow-hidden shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center relative z-10">
                 <div className="md:col-span-8 space-y-2">
                   <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-secondary text-[#2CE0C9] font-heading text-[11px] font-semibold uppercase tracking-[0.08em] border border-[#2CE0C9]/30">
@@ -1397,11 +1454,13 @@ export function HomeView() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Jungle Section 6: AI Transformation Topics */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="p-8 sm:p-10 rounded-3xl bg-surface-secondary/70 border border-theme/80 space-y-6 soft-surface">
+        {/* 7. AI TRANSFORMATION TOPICS */}
+        <section className="w-full py-16 sm:py-20 relative overflow-hidden bg-gradient-to-b from-[#050c09] via-[#0a1611] to-[#050c09] border-b border-[#2CE0C9]/15" id="jungle-topics">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="p-8 sm:p-10 rounded-3xl bg-[#081510]/90 border border-theme/80 space-y-6 soft-surface shadow-md">
               <div className="text-center max-w-xl mx-auto space-y-1.5">
                 <span className="font-heading text-[11px] font-semibold uppercase tracking-[0.1em] text-accent-gold">
                   5 Pillars &amp; 13 Chapters
@@ -1433,21 +1492,26 @@ export function HomeView() {
                 ))}
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+      </div>
       )}
 
-      {/* Global The AI Jungle Dispatch Newsletter */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl bg-surface-primary border border-theme shadow-xl overflow-hidden soft-surface">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-brand-token/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-[#2CE0C9]/5 rounded-full blur-3xl pointer-events-none" />
+      {/* 8. GLOBAL THE AI JUNGLE DISPATCH NEWSLETTER */}
+      <section className="w-full py-20 sm:py-28 relative overflow-hidden bg-gradient-to-b from-[#050e0b] via-[#0e2118] to-[#07120d]">
+        <div className="absolute top-1/4 right-10 w-[35rem] h-[35rem] rounded-full bg-[#F5C451]/08 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-[35rem] h-[35rem] rounded-full bg-[#2CE0C9]/08 blur-3xl pointer-events-none" />
 
-          <div className="relative z-10 p-8 sm:p-12 lg:p-14">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-              <div className="lg:col-span-7 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-secondary border border-theme text-[#2CE0C9] font-heading text-[11px] font-semibold uppercase tracking-[0.08em]">
-                  <span className="w-2 h-2 rounded-full bg-[#2CE0C9] animate-pulse" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="relative rounded-3xl bg-[#081712]/95 border border-[#F5C451]/25 shadow-2xl overflow-hidden soft-surface">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-token/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-[#2CE0C9]/5 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 p-8 sm:p-12 lg:p-14">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                <div className="lg:col-span-7 space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-secondary border border-theme text-[#2CE0C9] font-heading text-[11px] font-semibold uppercase tracking-[0.08em]">
+                    <span className="w-2 h-2 rounded-full bg-[#2CE0C9] animate-pulse" />
                   <span>The AI Jungle Dispatch • CXO Transformation Brief</span>
                 </div>
 
@@ -1612,7 +1676,8 @@ export function HomeView() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     </div>
   );
 }

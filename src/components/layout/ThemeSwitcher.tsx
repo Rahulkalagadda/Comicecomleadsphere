@@ -19,26 +19,21 @@ export function ThemeSwitcher({ className = "", variant = "pill" }: ThemeSwitche
         type="button"
         onClick={() => setTheme(theme === "executive" ? "jungle" : "executive")}
         className={cn(
-          "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full font-heading text-xs font-semibold nm-button transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token",
-          theme === "jungle"
-            ? "bg-surface-primary text-[#2CE0C9]"
-            : "bg-surface-primary text-accent-gold",
+          "inline-flex items-center gap-2 px-3 py-1.5 rounded-full font-heading text-xs font-medium transition-all duration-200 cursor-pointer border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.08] text-white",
           className
         )}
         aria-label={`Current theme is ${theme}. Click to switch theme.`}
-        title={`Switch to ${theme === "executive" ? "Canopy Studio" : "Obsidian Boardroom"} Theme`}
+        title={`Switch to ${theme === "executive" ? "Canopy Studio" : "Boardroom"} Theme`}
       >
-        {theme === "executive" ? (
-          <>
-            <BookOpen className="w-3.5 h-3.5 text-brand-token" />
-            <span className="tracking-wide">Boardroom</span>
-          </>
-        ) : (
-          <>
-            <Trees className="w-3.5 h-3.5 text-[#2CE0C9]" />
-            <span className="tracking-wide">Canopy</span>
-          </>
-        )}
+        <span
+          className={cn(
+            "w-2 h-2 rounded-full",
+            theme === "jungle" ? "bg-emerald-400" : "bg-sky-400"
+          )}
+        />
+        <span className="font-sniglet tracking-wide text-xs">
+          {theme === "executive" ? "Boardroom" : "Canopy"}
+        </span>
       </button>
     );
   }
@@ -48,7 +43,7 @@ export function ThemeSwitcher({ className = "", variant = "pill" }: ThemeSwitche
       role="group"
       aria-label="Theme selector"
       className={cn(
-        "inline-flex items-center p-1 rounded-full nm-inset-control bg-surface-secondary/90 select-none",
+        "inline-flex items-center p-0.5 rounded-full bg-white/[0.03] border border-white/[0.08] select-none",
         className
       )}
     >
@@ -57,18 +52,20 @@ export function ThemeSwitcher({ className = "", variant = "pill" }: ThemeSwitche
         id="theme-btn-jungle"
         onClick={() => setTheme("jungle")}
         className={cn(
-          "flex items-center gap-1.5 px-3 py-1.5 rounded-full font-heading text-xs transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token",
+          "flex items-center gap-1.5 px-3 py-1 rounded-full font-heading text-xs transition-all duration-200 cursor-pointer focus-visible:outline-none",
           theme === "jungle"
-            ? "nm-button bg-[#13251F] text-[#F5C451] font-semibold shadow-sm border border-[#F5C451]/35"
-            : "text-secondary-token hover:text-primary-token font-medium opacity-85 hover:opacity-100"
+            ? "bg-white/[0.08] text-white font-medium border border-white/[0.1] shadow-sm"
+            : "text-white/60 hover:text-white font-normal"
         )}
         aria-pressed={theme === "jungle"}
       >
-        <Trees className={cn("w-3.5 h-3.5", theme === "jungle" ? "text-[#2CE0C9]" : "text-secondary-token")} />
-        <span className="flex items-center gap-1 tracking-wide">
-          Jungle Canopy
-          <Sparkles className={cn("w-2.5 h-2.5", theme === "jungle" ? "text-[#F5C451]" : "text-accent-gold")} />
-        </span>
+        <span
+          className={cn(
+            "w-1.5 h-1.5 rounded-full",
+            theme === "jungle" ? "bg-emerald-400" : "bg-emerald-400/40"
+          )}
+        />
+        <span className="font-sniglet tracking-wide text-xs">Canopy</span>
       </button>
 
       <button
@@ -76,15 +73,20 @@ export function ThemeSwitcher({ className = "", variant = "pill" }: ThemeSwitche
         id="theme-btn-executive"
         onClick={() => setTheme("executive")}
         className={cn(
-          "flex items-center gap-1.5 px-3 py-1.5 rounded-full font-heading text-xs transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-token",
+          "flex items-center gap-1.5 px-3 py-1 rounded-full font-heading text-xs transition-all duration-200 cursor-pointer focus-visible:outline-none",
           theme === "executive"
-            ? "nm-button bg-surface-primary text-primary-token font-semibold shadow-sm border border-[#F5C451]/35"
-            : "text-secondary-token hover:text-primary-token font-medium opacity-85 hover:opacity-100"
+            ? "bg-white/[0.08] text-white font-medium border border-white/[0.1] shadow-sm"
+            : "text-white/60 hover:text-white font-normal"
         )}
         aria-pressed={theme === "executive"}
       >
-        <BookOpen className={cn("w-3.5 h-3.5", theme === "executive" ? "text-brand-token" : "text-secondary-token")} />
-        <span className="tracking-wide">Boardroom</span>
+        <span
+          className={cn(
+            "w-1.5 h-1.5 rounded-full",
+            theme === "executive" ? "bg-sky-400" : "bg-sky-400/40"
+          )}
+        />
+        <span className="font-sniglet tracking-wide text-xs">Boardroom</span>
       </button>
     </div>
   );

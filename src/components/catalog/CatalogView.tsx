@@ -64,15 +64,31 @@ export function CatalogView({ title, subtitle, contentType, items }: CatalogView
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       {/* Catalog Header */}
       <div className="border-b border-theme pb-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <div className="space-y-2">
-          <span className="text-xs font-heading font-semibold text-accent-gold uppercase tracking-[0.1em]">
-            Curated Catalog
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-serif-editorial font-semibold text-primary-token tracking-[-0.025em] leading-[1.12]">
-            {title}
-          </h1>
-          <p className="text-sm sm:text-base text-secondary-token max-w-2xl leading-relaxed">{subtitle}</p>
-        </div>
+        {contentType === "comic" ? (
+          <div className="space-y-2.5">
+            <div className="flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-sniglet text-[#DFB260]">
+                ⭐ Glossy Bubble &amp; Rounded Typography
+              </span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-shine-bubble text-[#DFB260] tracking-wide leading-tight drop-shadow-sm">
+              {title}
+            </h1>
+            <p className="text-sm sm:text-base text-slate-300 font-fredoka max-w-2xl leading-relaxed">
+              {subtitle}
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-2">
+            <span className="text-xs font-heading font-semibold text-accent-gold uppercase tracking-[0.1em]">
+              Curated Catalog
+            </span>
+            <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-serif-editorial font-semibold text-primary-token tracking-[-0.025em] leading-[1.12]">
+              {title}
+            </h1>
+            <p className="text-sm sm:text-base text-secondary-token max-w-2xl leading-relaxed">{subtitle}</p>
+          </div>
+        )}
 
         {/* 3D Mascot Companion Emblem */}
         <div className="hidden sm:flex items-center gap-3.5 p-3 px-4 rounded-2xl bg-surface-secondary/70 border border-theme/80 soft-surface shrink-0">
@@ -107,6 +123,33 @@ export function CatalogView({ title, subtitle, contentType, items }: CatalogView
           </div>
         </div>
       </div>
+
+      {/* Typography Demonstration Showcase for Comics */}
+      {contentType === "comic" && (
+        <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.02] border border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="space-y-1.5">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block">
+              Active Font Suite Showcase
+            </span>
+            <div className="flex flex-wrap items-center gap-3 sm:gap-5 text-sm">
+              <span className="font-shine-bubble text-[#DFB260] text-lg sm:text-xl">
+                Shine Bubble (HansCo)
+              </span>
+              <span className="text-slate-600 hidden sm:inline">•</span>
+              <span className="font-sniglet text-emerald-400 text-sm sm:text-base font-semibold">
+                Sniglet (Google Fonts)
+              </span>
+              <span className="text-slate-600 hidden sm:inline">•</span>
+              <span className="font-fredoka text-sky-300 text-sm sm:text-base font-medium">
+                Fredoka (Google Fonts)
+              </span>
+            </div>
+          </div>
+          <span className="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] text-slate-300 font-mono self-start sm:self-auto">
+            Live in Comics
+          </span>
+        </div>
+      )}
 
       {/* SEARCH AND CONTROLS */}
       <div className="p-4 rounded-2xl bg-surface-primary border border-theme shadow-sm flex flex-col md:flex-row gap-4 items-center justify-between">

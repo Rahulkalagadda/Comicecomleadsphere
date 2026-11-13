@@ -22,46 +22,36 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-heading font-semibold rounded-xl transition-all duration-180 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2CE0C9] focus-visible:ring-offset-2 focus-visible:ring-offset-[#07100D] disabled:opacity-50 disabled:cursor-not-allowed select-none cursor-pointer tracking-[0.005em]";
+      "inline-flex items-center justify-center font-heading font-semibold rounded-2xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFB260] focus-visible:ring-offset-2 focus-visible:ring-offset-[#070B0A] disabled:opacity-50 disabled:cursor-not-allowed select-none cursor-pointer tracking-wide";
 
     const variantStyles = {
       primary:
-        "bg-brand text-[#07100D] shadow-sm border-t border-white/25 hover:brightness-105 active:translate-y-[1px] active:shadow-inner",
+        "clay-btn-primary",
       secondary:
-        "bg-surface-secondary text-primary-token hover:bg-surface-tertiary border border-theme shadow-xs active:translate-y-[1px]",
+        "clay-btn-secondary",
       accent:
-        "bg-accent-gold text-[#07100D] shadow-sm border-t border-white/25 hover:brightness-105 active:translate-y-[1px]",
+        "clay-btn-primary",
       neumorphic:
-        "nm-button text-primary-token font-semibold",
+        "clay-btn bg-surface-secondary text-primary-token",
       outline:
-        "border border-theme text-primary-token bg-transparent hover:bg-surface-secondary active:translate-y-[1px]",
+        "rounded-2xl border border-white/[0.12] text-white bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/25 active:translate-y-[1px]",
       ghost:
-        "text-secondary-token hover:text-primary-token hover:bg-surface-secondary/70",
+        "rounded-2xl text-slate-300 hover:text-white hover:bg-white/[0.06] active:translate-y-[1px]",
       danger:
-        "bg-red-600 text-white shadow-sm hover:bg-red-700 active:translate-y-[1px]",
+        "clay-btn bg-gradient-to-b from-red-500 to-red-600 text-white",
     };
 
     const sizeStyles = {
       sm: "text-xs px-3.5 py-1.5 gap-1.5",
       md: "text-[13px] sm:text-sm px-4 py-2 gap-2",
       lg: "text-sm sm:text-[15px] px-6 py-2.5 gap-2.5",
-      icon: "p-2 aspect-square",
-    };
-
-    const computedStyle: React.CSSProperties = {
-      ...(variant === "primary"
-        ? { backgroundColor: "var(--brand-primary)", color: "var(--brand-primary-foreground)" }
-        : variant === "accent"
-        ? { backgroundColor: "var(--accent-premium)", color: "var(--accent-premium-foreground)" }
-        : {}),
-      ...props.style,
+      icon: "p-2 aspect-square rounded-full",
     };
 
     return (
       <button
         ref={ref}
         disabled={disabled || isLoading}
-        style={computedStyle}
         className={cn(baseStyles, variantStyles[variant], sizeStyles[size], className)}
         {...props}
       >
