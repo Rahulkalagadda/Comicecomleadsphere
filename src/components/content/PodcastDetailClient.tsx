@@ -60,6 +60,7 @@ export function PodcastDetailClient({ series }: PodcastDetailClientProps) {
                 {series.episodes[0]?.videoStreamUrl ? (
                   <video
                     src={`${series.episodes[0].videoStreamUrl}#t=0.5`}
+                    poster={series.coverUrl}
                     preload="metadata"
                     muted
                     playsInline
@@ -125,6 +126,7 @@ export function PodcastDetailClient({ series }: PodcastDetailClientProps) {
                         {ep.videoStreamUrl ? (
                           <video
                             src={`${ep.videoStreamUrl}#t=0.5`}
+                            poster={ep.thumbnailUrl}
                             preload="metadata"
                             muted
                             playsInline

@@ -80,6 +80,7 @@ export function HomeView() {
       duration: "02:52",
       badge: "Free Episode 1",
       src: "/media/videos/jungle-audit-ep1-full.mp4",
+      poster: "/media/images/ai-jungle-safari-blueprint.jpg",
       caption:
         "Complete pilot episode: Lion, Elephant, Wolf & Monkey examine enterprise AI readiness vs. unchecked tool hype.",
       href: "/episodes/ep-jungle-01",
@@ -90,6 +91,7 @@ export function HomeView() {
       duration: "00:10",
       badge: "Keynote Cut",
       src: "/media/videos/clip-01-jungle-is-changing.mp4",
+      poster: "/media/images/ai-jungle-safari-blueprint.jpg",
       caption:
         '"Every beast knows how to run. But do you know where you\'re running?" Why AI velocity without strategy fails.',
       href: "/episodes/ep-jungle-02",
@@ -100,6 +102,7 @@ export function HomeView() {
       duration: "00:10",
       badge: "Boardroom Reality",
       src: "/media/videos/clip-02-ai-investment-readiness.mp4",
+      poster: "/media/images/jungle-audit-part-1.jpg",
       caption:
         "AI Investment ≠ AI Readiness. Buying subscriptions without clean data pipelines creates expensive shelfware.",
       href: "/episodes/ep-jungle-03",
@@ -110,6 +113,7 @@ export function HomeView() {
       duration: "00:10",
       badge: "COO Playbook",
       src: "/media/videos/clip-03-process-maturity.mp4",
+      poster: "/media/images/jungle-audit-part-2.jpg",
       caption:
         "Wolf (COO) & Lion explain why broken workflows must be mapped and simplified before automation.",
       href: "/episodes/ep-jungle-04",
@@ -320,10 +324,11 @@ export function HomeView() {
                     </div>
 
                     {/* Real Video Player Showcase */}
-                    <div className="relative w-full aspect-video rounded-xl overflow-hidden my-2 bg-[#07100D] shadow-inner border border-theme">
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden my-2 bg-[#07100D] shadow-inner border border-theme group/hero-player">
                       <video
                         ref={heroVideoRef}
-                        src="/media/videos/clip-01-jungle-is-changing.mp4#t=0.5"
+                        src="/media/videos/clip-01-jungle-is-changing.mp4"
+                        poster="/media/images/ai-jungle-safari-blueprint.jpg"
                         playsInline
                         preload="metadata"
                         controlsList="nodownload"
@@ -342,13 +347,23 @@ export function HomeView() {
                         className="w-full h-full object-contain bg-[#07100D] cursor-pointer"
                       />
                       {!isHeroPlaying && (
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#07100D]/80 via-transparent to-transparent flex items-end justify-between p-3 pointer-events-none">
-                          <span className="px-2.5 py-1 rounded-md bg-[#07100D]/90 border border-[#2CE0C9]/40 text-[#2CE0C9] font-heading text-[11px] leading-none font-semibold uppercase tracking-[0.05em]">
-                            Real Studio Feed
-                          </span>
-                          <span className="px-2.5 py-1 rounded-md bg-[#07100D]/90 border border-[#F5C451]/40 text-[#F5C451] font-mono text-[11px] leading-none font-medium">
-                            00:10 Preview
-                          </span>
+                        <div
+                          onClick={toggleHeroPlay}
+                          className="absolute inset-0 bg-gradient-to-t from-[#07100D]/85 via-black/20 to-transparent flex flex-col justify-between p-3.5 cursor-pointer transition-colors hover:bg-black/30"
+                        >
+                          <div className="flex items-center justify-center flex-1">
+                            <div className="w-14 h-14 rounded-full bg-[#DFB058]/95 hover:bg-[#F5C451] text-[#0A110E] flex items-center justify-center shadow-2xl border-2 border-white/60 transition-transform duration-200 hover:scale-110 active:scale-95">
+                              <Play className="w-7 h-7 fill-current ml-1" />
+                            </div>
+                          </div>
+                          <div className="flex items-end justify-between pointer-events-none">
+                            <span className="px-2.5 py-1 rounded-md bg-[#07100D]/90 border border-[#2CE0C9]/40 text-[#2CE0C9] font-heading text-[11px] leading-none font-semibold uppercase tracking-[0.05em]">
+                              Real Studio Feed
+                            </span>
+                            <span className="px-2.5 py-1 rounded-md bg-[#07100D]/90 border border-[#F5C451]/40 text-[#F5C451] font-mono text-[11px] leading-none font-medium">
+                              00:10 Preview
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -732,7 +747,8 @@ export function HomeView() {
                   title: "The Jungle Is Changing",
                   description:
                     '"Every beast knows how to run. But do you know where you\'re running?" Lion opens the C-Suite council on strategic AI direction.',
-                  videoSrc: "/media/videos/clip-01-jungle-is-changing.mp4#t=0.5",
+                  videoSrc: "/media/videos/clip-01-jungle-is-changing.mp4",
+                  poster: "/media/images/ai-jungle-safari-blueprint.jpg",
                   href: "/episodes/ep-jungle-02",
                   tag: "Host Lion",
                 },
@@ -744,7 +760,8 @@ export function HomeView() {
                   title: "Don't Buy the Engine First",
                   description:
                     "AI Investment ≠ AI Readiness. Why buying AI tools before fixing business problems creates expensive enterprise shelfware.",
-                  videoSrc: "/media/videos/clip-02-ai-investment-readiness.mp4#t=0.5",
+                  videoSrc: "/media/videos/clip-02-ai-investment-readiness.mp4",
+                  poster: "/media/images/jungle-audit-part-1.jpg",
                   href: "/episodes/ep-jungle-03",
                   tag: "Lion & Elephant",
                 },
@@ -756,7 +773,8 @@ export function HomeView() {
                   title: "Map It Before You Automate It",
                   description:
                     "Wolf (COO) joins Lion to show why automating disconnected manual habits multiplies chaos across legacy enterprise workflows.",
-                  videoSrc: "/media/videos/clip-03-process-maturity.mp4#t=0.5",
+                  videoSrc: "/media/videos/clip-03-process-maturity.mp4",
+                  poster: "/media/images/jungle-audit-part-2.jpg",
                   href: "/episodes/ep-jungle-04",
                   tag: "Wolf & Lion",
                 },
@@ -781,12 +799,13 @@ export function HomeView() {
                       </span>
                     </div>
 
-                    <div className="relative aspect-video rounded-xl overflow-hidden bg-[#07100D] border border-theme">
+                    <div className="relative aspect-video rounded-xl overflow-hidden bg-[#07100D] border border-theme group/clip">
                       <video
                         ref={(el) => {
                           dispatchVideoRefs.current[clip.key] = el;
                         }}
                         src={clip.videoSrc}
+                        poster={clip.poster}
                         playsInline
                         preload="metadata"
                         controlsList="nodownload"
@@ -795,6 +814,16 @@ export function HomeView() {
                         onClick={() => toggleSnippet(clip.key)}
                         className="w-full h-full object-contain bg-[#07100D] cursor-pointer"
                       />
+                      {playingSnippet !== clip.key && (
+                        <div
+                          onClick={() => toggleSnippet(clip.key)}
+                          className="absolute inset-0 bg-black/20 hover:bg-black/35 flex items-center justify-center cursor-pointer transition-colors"
+                        >
+                          <div className="w-11 h-11 rounded-full bg-[#DFB058]/95 hover:bg-[#F5C451] text-[#0A110E] flex items-center justify-center shadow-lg border border-white/60 transition-transform duration-150 hover:scale-110 active:scale-95">
+                            <Play className="w-5 h-5 fill-current ml-0.5" />
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     <div>
@@ -1225,12 +1254,22 @@ export function HomeView() {
                   <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-[#07100D] border border-theme shadow-xl">
                     <video
                       ref={jungleScreeningVideoRef}
-                      src={`${jungleScreeningClips[activeJungleClipIdx].src}#t=0.5`}
+                      src={`${jungleScreeningClips[activeJungleClipIdx].src}`}
+                      poster={jungleScreeningClips[activeJungleClipIdx].poster}
                       controls
                       playsInline
                       preload="metadata"
                       controlsList="nodownload"
                       onContextMenu={(e) => e.preventDefault()}
+                      onError={(e) => {
+                        // If pilot full video cannot be streamed (e.g. LFS bandwidth limit on production), seamlessly fallback to clip-01
+                        const video = e.currentTarget;
+                        if (!video.dataset.fallbackApplied) {
+                          video.dataset.fallbackApplied = "true";
+                          video.src = "/media/videos/clip-01-jungle-is-changing.mp4";
+                          video.load();
+                        }
+                      }}
                       className="w-full h-full object-contain"
                     />
                   </div>

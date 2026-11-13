@@ -368,7 +368,8 @@ export function DiscoverView() {
               >
                 <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm flex-shrink-0 bg-[#07100D] border border-[#2CE0C9]/30">
                   <video
-                    src="/media/videos/jungle-audit-ep1-full.mp4#t=1.0"
+                    src="/media/videos/clip-01-jungle-is-changing.mp4"
+                    poster="/media/images/ai-jungle-safari-blueprint.jpg"
                     preload="metadata"
                     muted
                     playsInline
@@ -423,7 +424,8 @@ export function DiscoverView() {
               <div className="md:w-5/12 h-72 md:h-auto rounded-2xl overflow-hidden relative shadow-inner flex-shrink-0 bg-[#07100D] border border-theme flex items-center justify-center">
                 <video
                   ref={bentoVideoRef}
-                  src="/media/videos/clip-01-jungle-is-changing.mp4#t=0.5"
+                  src="/media/videos/clip-01-jungle-is-changing.mp4"
+                  poster="/media/images/ai-jungle-safari-blueprint.jpg"
                   playsInline
                   preload="metadata"
                   controlsList="nodownload"
@@ -617,7 +619,8 @@ export function DiscoverView() {
             <div className="lg:col-span-6 rounded-3xl bg-surface-primary p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row gap-5 border border-theme">
               <div className="sm:w-1/2 aspect-video sm:aspect-auto sm:min-h-[190px] rounded-2xl overflow-hidden relative shadow-inner flex-shrink-0 bg-[#07100D] border border-theme">
                 <video
-                  src="/media/videos/jungle-audit-ep1-full.mp4#t=1.2"
+                  src="/media/videos/clip-01-jungle-is-changing.mp4"
+                  poster="/media/images/ai-jungle-podcast-comic.jpg"
                   preload="metadata"
                   muted
                   playsInline
@@ -931,6 +934,7 @@ export function DiscoverView() {
                     {item.videoUrl ? (
                       <video
                         src={item.videoUrl}
+                        poster={item.coverUrl}
                         preload="metadata"
                         muted
                         playsInline

@@ -1,1 +1,2 @@
-public/media/videos/*.mp4 filter=lfs diff=lfs merge=lfs -text
+# Only large media files exceeding GitHub's 100MB threshold use Git LFS
+public/media/videos/jungle-audit-ep1-full.mp4 filter=lfs diff=lfs merge=lfs -text

@@ -6,7 +6,7 @@ import { Comic } from "@/types";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { formatCurrency } from "@/lib/utils";
-import { Bookmark, Eye, Sparkles } from "lucide-react";
+import { Bookmark, Eye, Sparkles, BookOpen } from "lucide-react";
 import { toggleBookmark, isBookmarked } from "@/lib/api/client";
 import { CheckoutModal } from "@/components/checkout/CheckoutModal";
 import { AddToCartButton } from "@/components/cart/AddToCartButton";
@@ -25,7 +25,7 @@ export function ComicCard({ comic, isOwned = false }: ComicCardProps) {
     isBookmarked(comic.id).then(setBookmarked).catch(() => {});
   }, [comic.id]);
 
-  if (!comic.coverUrl?.trim() || imageFailed) {
+  if (!comic.coverUrl?.trim()) {
     return null;
   }
 
@@ -54,13 +54,21 @@ export function ComicCard({ comic, isOwned = false }: ComicCardProps) {
           className="relative w-full overflow-hidden bg-[#07100D] p-3 flex items-center justify-center border-b border-theme/60"
         >
           <div className="relative w-full rounded-lg overflow-hidden bg-[#07100D] border border-amber-400/20 shadow-md">
-            <img
-              src={comic.coverUrl}
-              alt={comic.title}
-              onError={() => setImageFailed(true)}
-              className="w-full h-[360px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.015]"
-              loading="lazy"
-            />
+            {!imageFailed ? (
+              <img
+                src={comic.coverUrl}
+                alt={comic.title}
+                onError={() => setImageFailed(true)}
+                className="w-full h-[360px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.015]"
+                loading="lazy"
+              />
+            ) : (
+              <div className="w-full h-[360px] flex flex-col items-center justify-center p-4 bg-gradient-to-br from-[#0D1B16] to-[#07100D] text-center">
+                <BookOpen className="w-12 h-12 text-[#DFB260] mb-2" />
+                <span className="font-shine-bubble text-base text-[#DFB260] mb-1">{comic.title}</span>
+                <span className="font-heading text-xs text-secondary-token">Comic Issue</span>
+              </div>
+            )}
             <div className="absolute bottom-2 right-2 px-2.5 py-1 rounded bg-black/85 border border-[#DFB260]/40 text-xs font-shine-bubble tracking-wide text-[#DFB260] pointer-events-none">
               Full Comic Sheet
             </div>

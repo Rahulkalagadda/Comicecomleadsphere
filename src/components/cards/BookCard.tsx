@@ -25,7 +25,7 @@ export function BookCard({ book, isOwned = false }: BookCardProps) {
     isBookmarked(book.id).then(setBookmarked).catch(() => {});
   }, [book.id]);
 
-  if (!book.coverUrl?.trim() || imageFailed) {
+  if (!book.coverUrl?.trim()) {
     return null;
   }
 
@@ -51,13 +51,20 @@ export function BookCard({ book, isOwned = false }: BookCardProps) {
         {/* Book Cover Presentation — full blueprint framing without cropping */}
         <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#07100D] p-3 flex items-center justify-center">
           <div className="relative w-full h-full rounded-md overflow-hidden book-cover-3d bg-[#07100D] shadow-md flex items-center justify-center">
-            <img
-              src={book.coverUrl}
-              alt={book.title}
-              onError={() => setImageFailed(true)}
-              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-              loading="lazy"
-            />
+            {!imageFailed ? (
+              <img
+                src={book.coverUrl}
+                alt={book.title}
+                onError={() => setImageFailed(true)}
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center p-4 bg-gradient-to-br from-[#0D1B16] to-[#07100D] text-center border border-theme rounded-md">
+                <BookOpen className="w-10 h-10 text-[#DFB260] mb-2" />
+                <span className="font-heading text-xs font-semibold text-white/90 line-clamp-2">{book.title}</span>
+              </div>
+            )}
             <div className="absolute inset-0 bg-gradient-to-tr from-black/15 via-transparent to-amber-300/5 pointer-events-none" />
           </div>
 

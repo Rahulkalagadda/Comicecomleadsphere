@@ -142,7 +142,7 @@ export function VideoPlayerShell({ series, episode }: VideoPlayerShellProps) {
           <>
             <video
               ref={videoRef}
-              src={episode.videoStreamUrl || "/media/videos/jungle-audit-ep1-full.mp4"}
+              src={episode.videoStreamUrl || "/media/videos/clip-01-jungle-is-changing.mp4"}
               poster={episode.thumbnailUrl}
               playsInline
               preload="metadata"
@@ -152,6 +152,14 @@ export function VideoPlayerShell({ series, episode }: VideoPlayerShellProps) {
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleTimeUpdate}
               onEnded={() => setIsPlaying(false)}
+              onError={(e) => {
+                const video = e.currentTarget;
+                if (!video.dataset.fallbackApplied) {
+                  video.dataset.fallbackApplied = "true";
+                  video.src = "/media/videos/clip-01-jungle-is-changing.mp4";
+                  video.load();
+                }
+              }}
               className="w-full h-full object-contain cursor-pointer"
               onClick={togglePlay}
             />
@@ -359,6 +367,7 @@ export function VideoPlayerShell({ series, episode }: VideoPlayerShellProps) {
                     {ep.videoStreamUrl ? (
                       <video
                         src={`${ep.videoStreamUrl}#t=0.5`}
+                        poster={ep.thumbnailUrl}
                         preload="metadata"
                         muted
                         playsInline

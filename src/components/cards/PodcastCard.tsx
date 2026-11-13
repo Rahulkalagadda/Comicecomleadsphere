@@ -13,26 +13,24 @@ export interface PodcastCardProps {
 
 export function PodcastCard({ series }: PodcastCardProps) {
   const [imageFailed, setImageFailed] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
   const firstEpisode = series.episodes[0];
-
-  if (!series.coverUrl?.trim() || imageFailed) {
-    return null;
-  }
 
   return (
     <div className="group flex flex-col rounded-xl bg-surface-primary border border-theme/80 soft-surface overflow-hidden transition-all duration-200 hover:-translate-y-1">
       {/* Cinematic 16:9 Studio Video Preview Frame (Real Video Frame, Not Cropped Comic Strip) */}
       <div className="relative aspect-video w-full overflow-hidden bg-[#07100D]">
-        {firstEpisode?.videoStreamUrl ? (
+        {firstEpisode?.videoStreamUrl && !videoFailed ? (
           <video
             src={`${firstEpisode.videoStreamUrl}#t=0.5`}
+            poster={series.coverUrl}
             preload="metadata"
             muted
             playsInline
-            onError={() => setImageFailed(true)}
+            onError={() => setVideoFailed(true)}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
-        ) : (
+        ) : !imageFailed && series.coverUrl ? (
           <img
             src={series.coverUrl}
             alt={series.title}
@@ -40,6 +38,11 @@ export function PodcastCard({ series }: PodcastCardProps) {
             className="w-full h-full object-contain bg-[#07100D] transition-transform duration-500 group-hover:scale-[1.02]"
             loading="lazy"
           />
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center p-4 bg-gradient-to-br from-[#0D1B16] to-[#07100D] text-center">
+            <Film className="w-10 h-10 text-[#DFB260] mb-2" />
+            <span className="font-heading text-xs font-semibold text-white/90 line-clamp-1">{series.title}</span>
+          </div>
         )}
 
         {/* Cinematic gradient scrim */}
