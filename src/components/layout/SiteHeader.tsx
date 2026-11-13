@@ -84,10 +84,10 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "px-3.5 py-1.5 rounded-xl font-fredoka text-[15px] font-semibold tracking-wide transition-all duration-150 flex items-center gap-1.5",
+                  "px-4 py-1.5 rounded-full font-fredoka text-[15px] font-semibold tracking-wide transition-all duration-150 flex items-center gap-1.5",
                   isActive
-                    ? "bg-white/[0.08] text-[#DFB260] border border-white/[0.1] shadow-sm"
-                    : "text-slate-300 hover:text-white hover:bg-white/[0.04]"
+                    ? "clay-btn-secondary text-[#DFB260] border border-white/[0.12] shadow-sm"
+                    : "text-slate-300 hover:text-white hover:bg-white/[0.06]"
                 )}
               >
                 {link.label === "Comics" ? (

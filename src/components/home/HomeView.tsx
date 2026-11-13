@@ -255,7 +255,7 @@ export function HomeView() {
                 <div className="flex flex-wrap items-center gap-4 pt-1">
                   <Link
                     href="/books/ai-jungle-safari-transformation-blueprint"
-                    className="font-heading px-6 py-3 rounded-xl bg-brand hover:bg-brand-hover text-[#07100D] font-semibold text-sm shadow-md transition-all flex items-center gap-2 group"
+                    className="clay-btn-primary font-fredoka px-6 py-3 rounded-full text-sm font-semibold shadow-md transition-all flex items-center gap-2 group"
                   >
                     <span>Explore Blueprints</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -263,9 +263,9 @@ export function HomeView() {
 
                   <a
                     href="#curations"
-                    className="font-heading px-6 py-3 rounded-xl bg-surface-secondary text-primary-token font-semibold text-sm border border-theme hover:bg-surface-primary transition-all flex items-center gap-2"
+                    className="clay-btn-secondary font-fredoka px-6 py-3 rounded-full text-sm font-semibold border border-white/[0.14] text-white transition-all flex items-center gap-2"
                   >
-                    <BookOpen className="w-4 h-4 text-brand-token" />
+                    <BookOpen className="w-4 h-4 text-[#DFB260]" />
                     <span>Collector Bundles</span>
                   </a>
 
@@ -403,7 +403,7 @@ export function HomeView() {
                       <div className="pt-3 flex flex-wrap items-center gap-2">
                         <Link
                           href="/read/book-jungle-safari"
-                          className="font-heading flex-1 min-w-[120px] py-2 px-3 rounded-lg bg-surface-secondary hover:bg-surface-primary border border-theme text-xs font-semibold text-center text-primary-token transition-colors"
+                          className="clay-btn-secondary font-fredoka flex-1 min-w-[120px] py-2 px-4 rounded-full text-xs font-semibold text-center text-white transition-all"
                         >
                           Read 10p Preview
                         </Link>
@@ -424,7 +424,7 @@ export function HomeView() {
                         />
                         <Link
                           href="/checkout?type=book&id=book-jungle-safari"
-                          className="font-heading py-2 px-3 rounded-lg bg-brand hover:bg-brand-hover text-[#07100D] text-xs font-semibold text-center transition-colors shadow-sm"
+                          className="clay-btn-primary font-fredoka py-2 px-4 rounded-full text-xs font-semibold text-center transition-all shadow-md"
                         >
                           Unlock
                         </Link>
@@ -568,7 +568,7 @@ export function HomeView() {
                         />
                         <Link
                           href={`/checkout?type=book&id=${book.id}`}
-                          className="font-heading px-3.5 py-1.5 rounded-lg bg-brand hover:bg-brand-hover text-[#07100D] font-semibold text-xs transition-all"
+                          className="clay-btn-primary font-fredoka px-4 py-1.5 rounded-full text-xs font-semibold shadow-md transition-all"
                         >
                           Unlock
                         </Link>
@@ -683,7 +683,7 @@ export function HomeView() {
                       />
                       <Link
                         href={`/checkout?type=comic&id=${comic.id}`}
-                        className="font-heading px-3 py-2 rounded-xl bg-brand hover:bg-brand-hover text-[#07100D] font-semibold text-xs transition-all"
+                        className="clay-btn-primary font-fredoka px-4 py-1.5 rounded-full text-xs font-semibold shadow-md transition-all"
                       >
                         Unlock
                       </Link>
@@ -869,7 +869,7 @@ export function HomeView() {
                 <div className="relative z-10 pt-8 flex flex-wrap items-center gap-3">
                   <Link
                     href="/checkout?type=bundle&id=season-1-collector"
-                    className="font-heading px-6 py-2.5 rounded-xl bg-brand hover:bg-brand-hover text-[#07100D] font-semibold tabular-nums text-xs sm:text-sm transition-all shadow-sm"
+                    className="clay-btn-primary font-fredoka px-6 py-2.5 rounded-full font-semibold tabular-nums text-xs sm:text-sm transition-all shadow-md"
                   >
                     Access Anthology (₹1,999)
                   </Link>
@@ -944,7 +944,7 @@ export function HomeView() {
                     />
                     <Link
                       href="/checkout?type=bundle&id=jungle-audit-pack"
-                      className="font-heading flex-1 text-center block py-2.5 rounded-xl bg-surface-primary hover:bg-brand hover:text-[#07100D] hover:border-brand text-primary-token font-semibold text-xs border border-theme transition-all"
+                      className="clay-btn-secondary font-fredoka flex-1 text-center block py-2.5 px-4 rounded-full text-white font-semibold text-xs border border-white/[0.12] transition-all shadow-sm"
                     >
                       Inspect Pack
                     </Link>
@@ -977,7 +977,7 @@ export function HomeView() {
                   <button
                     type="button"
                     onClick={() => setTheme("jungle")}
-                    className="font-heading px-6 py-3 rounded-full bg-brand hover:bg-brand-hover text-[#07100D] font-semibold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2 cursor-pointer"
+                    className="clay-btn-primary font-fredoka px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-md transition-all flex items-center gap-2 cursor-pointer"
                   >
                     <TreePine className="w-4 h-4" />
                     <span>Switch to Jungle Canopy</span>

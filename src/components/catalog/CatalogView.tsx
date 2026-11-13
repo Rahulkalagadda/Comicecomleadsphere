@@ -180,15 +180,10 @@ export function CatalogView({ title, subtitle, contentType, items }: CatalogView
             <button
               type="button"
               onClick={() => setSelectedCategory("all")}
-              style={
+              className={`px-4 py-1.5 rounded-full font-fredoka text-xs whitespace-nowrap transition-all cursor-pointer ${
                 selectedCategory === "all"
-                  ? { backgroundColor: "var(--brand-primary)", color: "var(--brand-primary-foreground)" }
-                  : undefined
-              }
-              className={`px-3 py-1.5 rounded-lg font-medium whitespace-nowrap transition-colors cursor-pointer ${
-                selectedCategory === "all"
-                  ? "bg-brand text-[#07100D] font-semibold shadow-sm"
-                  : "bg-surface-secondary text-secondary-token hover:text-primary-token"
+                  ? "clay-btn-primary font-semibold shadow-md"
+                  : "clay-btn-secondary font-medium text-secondary-token hover:text-white"
               }`}
             >
               All Categories
@@ -198,15 +193,10 @@ export function CatalogView({ title, subtitle, contentType, items }: CatalogView
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCategory(cat)}
-                style={
+                className={`px-4 py-1.5 rounded-full font-fredoka text-xs whitespace-nowrap transition-all cursor-pointer ${
                   selectedCategory === cat
-                    ? { backgroundColor: "var(--brand-primary)", color: "var(--brand-primary-foreground)" }
-                    : undefined
-                }
-                className={`px-3 py-1.5 rounded-lg font-medium whitespace-nowrap transition-colors cursor-pointer ${
-                  selectedCategory === cat
-                    ? "bg-brand text-[#07100D] font-semibold shadow-sm"
-                    : "bg-surface-secondary text-secondary-token hover:text-primary-token"
+                    ? "clay-btn-primary font-semibold shadow-md"
+                    : "clay-btn-secondary font-medium text-secondary-token hover:text-white"
                 }`}
               >
                 {cat}

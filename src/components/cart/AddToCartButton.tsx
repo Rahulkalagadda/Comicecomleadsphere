@@ -37,10 +37,10 @@ export function AddToCartButton({
 
   const sizeClasses =
     size === "lg"
-      ? "px-5 py-3 text-sm rounded-xl"
+      ? "px-5 py-2.5 text-sm rounded-full"
       : size === "md"
-        ? "px-4 py-2 text-xs rounded-lg"
-        : "px-2.5 py-1.5 text-xs rounded-md";
+        ? "px-4 py-2 text-xs rounded-full"
+        : "px-3 py-1.5 text-xs rounded-full";
 
   if (inCart) {
     return (
@@ -48,7 +48,7 @@ export function AddToCartButton({
         href="/checkout"
         aria-label={`View ${item.title} in Cart`}
         className={cn(
-          "clay-btn-emerald inline-flex items-center justify-center gap-1.5 font-sniglet font-semibold whitespace-nowrap",
+          "clay-btn-emerald inline-flex items-center justify-center gap-1.5 font-fredoka font-semibold whitespace-nowrap",
           sizeClasses,
           className
         )}
@@ -72,7 +72,7 @@ export function AddToCartButton({
       onClick={handleAdd}
       aria-label={`Add ${item.title} to cart`}
       className={cn(
-        "clay-btn-secondary inline-flex items-center justify-center gap-1.5 font-sniglet font-semibold whitespace-nowrap hover:text-[#DFB260]",
+        "clay-btn-secondary inline-flex items-center justify-center gap-1.5 font-fredoka font-semibold whitespace-nowrap hover:text-[#DFB260]",
         sizeClasses,
         className
       )}

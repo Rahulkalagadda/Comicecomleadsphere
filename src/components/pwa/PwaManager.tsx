@@ -122,7 +122,7 @@ export function PwaManager() {
             <button
               type="button"
               onClick={handleInstallClick}
-              className="clay-btn-primary px-3 py-1.5 rounded-xl font-fredoka text-xs font-bold flex items-center gap-1 shadow-md hover:scale-105 active:scale-95 transition-transform"
+              className="clay-btn-primary px-3.5 py-1.5 rounded-full font-fredoka text-xs font-bold flex items-center gap-1 shadow-md hover:scale-105 active:scale-95 transition-transform"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Install</span>

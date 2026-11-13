@@ -46,13 +46,13 @@ export default function AboutPage() {
               <div className="flex flex-wrap gap-3 pt-1">
                 <Link
                   href="/books/ai-jungle-safari-transformation-blueprint"
-                  className="font-heading text-xs font-semibold px-4 py-2 rounded-lg bg-brand hover:bg-brand-hover text-[#07100D] transition-colors"
+                  className="clay-btn-primary font-fredoka text-xs font-semibold px-5 py-2 rounded-full shadow-md transition-all"
                 >
                   Explore the 13-Chapter Blueprint
                 </Link>
                 <Link
                   href="/episodes/ep-jungle-01"
-                  className="font-heading text-xs font-semibold px-4 py-2 rounded-lg bg-surface-primary border border-theme text-primary-token hover:bg-surface-secondary transition-colors"
+                  className="clay-btn-secondary font-fredoka text-xs font-semibold px-5 py-2 rounded-full text-white border border-white/[0.14] transition-all"
                 >
                   Watch AI Jungle Podcast Ep. 1
                 </Link>

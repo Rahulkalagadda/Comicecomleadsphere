@@ -840,7 +840,7 @@ function CheckoutContent() {
                   type="button"
                   disabled={isProcessing || displayedItems.length === 0}
                   onClick={handleAuthorizeAndSettle}
-                  className="font-heading w-full py-3.5 px-6 rounded-xl bg-brand hover:bg-brand-hover text-[#07100D] font-semibold tabular-nums text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="clay-btn-primary font-fredoka w-full py-3.5 px-6 rounded-full font-semibold tabular-nums text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isProcessing ? (
                     <>
@@ -947,14 +947,14 @@ function CheckoutContent() {
                   <div className="flex flex-wrap items-center justify-center gap-2">
                     <Link
                       href="/books"
-                      className="px-3.5 py-2 rounded-xl bg-brand text-[#07100D] text-xs font-semibold hover:bg-brand-hover transition-colors"
+                      className="clay-btn-primary font-fredoka px-4 py-2 rounded-full text-xs font-semibold shadow-md"
                     >
                       Browse Catalog
                     </Link>
                     <button
                       type="button"
                       onClick={handleRestoreDefaultFolio}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-secondary border border-theme text-xs font-semibold text-primary-token hover:bg-surface-primary transition-colors cursor-pointer"
+                      className="clay-btn-secondary font-fredoka inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold text-white border border-white/[0.12] transition-all cursor-pointer shadow-sm"
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                       Restore Sample Folio
@@ -1031,7 +1031,7 @@ function CheckoutContent() {
                   <button
                     type="button"
                     onClick={handleApplyPromo}
-                    className="font-heading px-4 py-2 rounded-xl bg-surface-secondary hover:bg-surface-primary border border-theme text-primary-token font-semibold text-xs transition-colors cursor-pointer"
+                    className="clay-btn-secondary font-fredoka px-5 py-2 rounded-full text-xs font-semibold shadow-sm transition-all cursor-pointer"
                   >
                     Apply
                   </button>

@@ -61,7 +61,7 @@ export default function HelpPage() {
             </div>
             <Link
               href="/contact"
-              className="font-heading px-4 py-2 rounded-xl bg-brand text-[#07100D] font-semibold text-xs hover:opacity-95 shrink-0"
+              className="clay-btn-primary font-fredoka px-5 py-2.5 rounded-full text-xs font-semibold shrink-0 shadow-md"
             >
               Contact Support
             </Link>
